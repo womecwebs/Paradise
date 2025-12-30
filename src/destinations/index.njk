@@ -1,0 +1,14 @@
+---
+title: Destinations
+layout: base.njk
+---
+
+<h1>Luxury Destinations</h1>
+
+<ul>
+  {% for dest in collections.destinations %}
+    <li>
+      <a href="{{ dest.url }}">{{ dest.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
