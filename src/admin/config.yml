@@ -4,8 +4,12 @@ backend:
 
   publish_mode: editorial_workflow
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dxqnpsj8k
+    api_key: 145836922335926
+    upload_preset: netlify_cms
 
 collections:
   - name: "blog"
