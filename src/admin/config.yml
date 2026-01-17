@@ -46,6 +46,27 @@ collections:
 
       - { label: "Publish Date", name: "date", widget: "datetime" }
 
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+
+      - {
+          label: "Popular Score",
+          name: "popularScore",
+          widget: "number",
+          required: false,
+        }
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["blog"]
+
       - label: "Continent"
         name: "continent"
         widget: "relation"
@@ -100,7 +121,7 @@ collections:
     label: "Destinations"
     folder: "src/destinations"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.slug}}"
 
     fields:
       - {
@@ -113,6 +134,18 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
 
       - { label: "Excerpt", name: "excerpt", widget: "text" }
+
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["destination"]
+
+      - label: "Popularity"
+        name: "popularity"
+        widget: "number"
+        default: 50
 
       - label: "Hero Image"
         name: "heroImage"
@@ -134,12 +167,10 @@ collections:
         value_field: "slug"
         display_fields: ["title"]
 
-      - {
-          label: "Featured",
-          name: "featured",
-          widget: "boolean",
-          default: false,
-        }
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
 
       - label: "FAQs"
         name: "faqs"
@@ -169,6 +200,20 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
 
       - { label: "Excerpt", name: "excerpt", widget: "text" }
+
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+
+      - {
+          label: "Popular Score",
+          name: "popularScore",
+          widget: "number",
+          default: 50,
+        }
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["experience"]
 
       - label: "Hero Image"
         name: "heroImage"
@@ -231,6 +276,20 @@ collections:
 
       - { label: "Excerpt", name: "excerpt", widget: "text" }
 
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["country"]
+
       - label: "Hero Image"
         name: "heroImage"
         widget: "image"
@@ -267,5 +326,12 @@ collections:
       - label: "Hero Image"
         name: "heroImage"
         widget: "image"
+
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["continent"]
 
       - { label: "Body", name: "body", widget: "markdown" }
