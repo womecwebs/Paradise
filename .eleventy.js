@@ -91,7 +91,7 @@ module.exports = function (eleventyConfig) {
   // Map: destinations grouped by country
   eleventyConfig.addCollection("destinationsByCountry", (collectionApi) => {
     const destinations = collectionApi.getFilteredByGlob(
-      "src/destinations/*.md"
+      "src/destinations/*.md",
     );
     const map = {};
     destinations.forEach((dest) => {
@@ -105,7 +105,7 @@ module.exports = function (eleventyConfig) {
   // Map: destinations grouped by continent (optional)
   eleventyConfig.addCollection("destinationsByContinent", (collectionApi) => {
     const destinations = collectionApi.getFilteredByGlob(
-      "src/destinations/*.md"
+      "src/destinations/*.md",
     );
     const map = {};
     destinations.forEach((dest) => {
@@ -172,7 +172,7 @@ module.exports = function (eleventyConfig) {
     return posts.filter(
       (post) =>
         Array.isArray(post.data.destinations) &&
-        post.data.destinations.includes(slug)
+        post.data.destinations.includes(slug),
     );
   });
 
@@ -194,7 +194,9 @@ module.exports = function (eleventyConfig) {
         (item) =>
           item.url !== page.url &&
           Array.isArray(item.data.tags) &&
-          item.data.tags.some((tag) => page.data.internal.related.includes(tag))
+          item.data.tags.some((tag) =>
+            page.data.internal.related.includes(tag),
+          ),
       )
       .slice(0, 4);
   });
@@ -215,6 +217,21 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("date", (dateObj) => {
     return new Date(dateObj).toISOString().split("T")[0];
   });
+
+  /* ---------------- SITEMAP ---------------- */
+
+  const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+
+  eleventyConfig.addPlugin(sitemap, {
+    sitemap: {
+      hostname: "https://paradize.life",
+      changefreq: "weekly",
+      priority: 0.8,
+    },
+  });
+
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPassthroughCopy("src/llms.txt");
 
   return {
     dir: {

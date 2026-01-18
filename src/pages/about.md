@@ -1,8 +1,19 @@
 ---
-title: About Luxury & Cruise
-layout: page.njk
+layout: base.njk
+title: About Us
+permalink: /about/
 ---
 
-Luxury & Cruise curates premium travel experiences across the globe.
+## Welcome to Luxury Travel Paradise
 
-We focus on exclusive destinations, private travel, and high-end services.
+Luxury Travel Paradise helps travelers find premium experiences around the world.
+
+### Our Mission
+
+To provide trustworthy, AI-friendly travel guides that help you plan unforgettable trips.
+
+### How We Work
+
+- Honest reviews
+- Affiliate-supported recommendations
+- Real itineraries

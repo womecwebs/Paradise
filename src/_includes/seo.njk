@@ -5,7 +5,7 @@
   or (page.fileSlug | replace("-", " ") | title)
 %}
 
-<title>{{ metaTitle }} | Paradize</title>
+<title>{{ seo.title or title or metaTitle }} | Paradise</title>
 
 {# ===== DESCRIPTION ===== #}
 {% set metaDescription =

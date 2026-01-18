@@ -24,6 +24,8 @@ collections:
     folder: "src/blogs"
     create: true
     slug: "{{slug}}"
+    permalink: "/blogs/{{ slug }}/"
+
     editor:
       preview: false
 
@@ -122,6 +124,7 @@ collections:
     folder: "src/destinations"
     create: true
     slug: "{{fields.slug}}"
+    permalink: "/destinations/{{ slug }}/"
 
     fields:
       - {
@@ -188,6 +191,7 @@ collections:
     folder: "src/experiences"
     create: true
     slug: "{{slug}}"
+    permalink: "/experiences/{{ slug }}/"
 
     fields:
       - {
@@ -263,6 +267,7 @@ collections:
     folder: "src/countries"
     create: true
     slug: "{{slug}}"
+    permalink: "/countries/{{ slug }}/"
 
     fields:
       - {
@@ -310,6 +315,7 @@ collections:
     folder: "src/continents"
     create: true
     slug: "{{slug}}"
+    permalink: "/continents/{{ slug }}/"
 
     fields:
       - {
