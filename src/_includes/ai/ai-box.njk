@@ -1,0 +1,67 @@
+<div class="ai-box">
+  <textarea
+    id="aiPrompt"
+    placeholder="Ask AI anything about Travel..."
+  ></textarea>
+
+  <button type="button" onclick="sendToAI()">
+    ➤
+  </button>
+</div>
+
+<style>
+  .ai-box {
+    position: relative;
+    max-width: 800px;
+    margin: 20px 0;
+  }
+
+  .ai-box textarea {
+    width: 100%;
+    padding: 16px 60px 16px 16px;
+    border-radius: 16px;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+        box-sizing: border-box;
+  }
+
+  .ai-box textarea::placeholder {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .ai-box button {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d4af37;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .ai-box button:hover {
+    background-color: #187bcd;
+  }
+</style>
+
+<script>
+  function sendToAI() {
+    const prompt = document.getElementById("aiPrompt").value.trim();
+    if (!prompt) return;
+
+    const encodedPrompt = encodeURIComponent(prompt);
+
+    const aiUrl = "/paradise-ai?q=" + encodedPrompt;
+
+    window.location.href = aiUrl;
+  }
+</script>

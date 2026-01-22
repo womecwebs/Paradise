@@ -1,6 +1,8 @@
-
 {% set expImage = image or heroImage or "/images/default-experience.jpg" %}
 {% set expDesc = excerpt or description or title %}
+{% set continentSlug = continent | slug %}
+{% set countrySlug = country | slug %}
+{% set destSlug = destination | slug %}
 
 <script type="application/ld+json">
 {
@@ -30,7 +32,10 @@
       }
     },
 
-    "keywords": "{{ title }}, {{ destination }}, {{ country }}, {{ continent }}, luxury experience",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Luxury traveler"
+    },
 
     "subjectOf": {
       "@type": "WebPage",
@@ -38,58 +43,6 @@
     }
   },
 
-  {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://paradize.life/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "{{ continent }}",
-        "item": "https://paradize.life/continents/{{ continent }}/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "{{ country }}",
-        "item": "https://paradize.life/countries/{{ country }}/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": "{{ destination }}",
-        "item": "https://paradize.life/destinations/{{ destination }}/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "name": "{{ title | escape }}",
-        "item": "https://paradize.life{{ page.url }}"
-      }
-    ]
-  },
-"audience": {
- "@type": "Audience",
- "audienceType": "Luxury traveler"
-},
-
-"additionalType": "https://schema.org/TouristTrip",
-
-"SpeakableSpecification": {
- "xpath": [
-   "/html/head/title",
-   "//h1",
-   "//p[1]"
- ]
-}
-
-
  ]
 }
 </script>
-

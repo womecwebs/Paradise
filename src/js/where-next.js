@@ -10,7 +10,7 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
     !document.getElementById("resultsGrid")
   ) {
     console.log(
-      "where-next.js: skipping page-specific initialization (blog page detected)"
+      "where-next.js: skipping page-specific initialization (blog page detected)",
     );
     return;
   }
@@ -56,7 +56,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tropical beaches, buzzing nightlife, Thai cuisine, and island hopping—perfect for escaping winter chills and enjoying sunshine.",
           bestFor: ["Beach", "Food & Wine", "Summer"],
           travelerType: "Couples",
-          image: "/images/thailand-phuket.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648647/thailand-phuket_st9eg1.webp",
         },
         {
           month: "January",
@@ -65,7 +66,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Ski down the Matterhorn slopes, enjoy après-ski in alpine lodges, and explore Swiss winter culture in stunning mountain scenery.",
           bestFor: ["Skiing", "Winter", "Luxury"],
           travelerType: "Families",
-          image: "/images/zermatt.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648863/zermatt_z9z0t6.webp",
         },
         {
           month: "January",
@@ -74,7 +76,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Witness wildlife migrations, big cats, and safari drives across vast plains—an unforgettable African adventure during cooler, dry January weather.",
           bestFor: ["Safari", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/serengeti.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648509/serengeti_ointks.jpg",
         },
         {
           month: "January",
@@ -83,7 +86,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Chase the Northern Lights, relax in geothermal spas, and explore Icelandic winter landscapes including glaciers and waterfalls.",
           bestFor: ["Winter", "Adventure", "Wellness"],
           travelerType: "Couples",
-          image: "/images/reykjavik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648310/reykjavik_znlsp6.jpg",
         },
         {
           month: "January",
@@ -92,7 +96,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Crystal-clear lagoons, overwater villas, and luxury honeymoon escapes—January offers perfect weather for romance and relaxation.",
           bestFor: ["Honeymoon", "Beach", "Luxury"],
           travelerType: "Couples",
-          image: "/images/maldives-luxury-resorts.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/maldives-luxury-resorts_wjjoum.jpg",
         },
         {
           month: "January",
@@ -101,7 +106,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny skies, luxury shopping, desert safaris, and extravagant hotels make Dubai an ideal winter sun escape.",
           bestFor: ["Luxury", "City", "Adventure"],
           travelerType: "Families",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646385/dubai_geckji.webp",
         },
         {
           month: "January",
@@ -110,7 +116,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Take a once-in-a-lifetime cruise through icy waters, spotting penguins, seals, and whales in untouched landscapes.",
           bestFor: ["Cruise", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/antarctica.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646179/antarctica_uzawpp.webp",
         },
         {
           month: "January",
@@ -119,7 +126,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Enjoy peaceful temples, tea ceremonies, and winter gardens in Japan’s cultural capital during quiet January days.",
           bestFor: ["Culture", "History", "Wellness"],
           travelerType: "Solo",
-          image: "/images/kyoto.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646827/kyoto_ahvfoo.jpg",
         },
         {
           month: "January",
@@ -128,7 +136,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vibrant festivals, golden beaches, yoga retreats, and colorful markets attract sun-seekers escaping colder regions.",
           bestFor: ["Festival", "Beach", "Wellness"],
           travelerType: "Groups",
-          image: "/images/goa.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646476/goa_ofz1vn.webp",
         },
         {
           month: "January",
@@ -137,7 +146,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snow-capped peaks, skiing, ice walks, and cozy log cabins define Banff’s magical winter wonderland.",
           bestFor: ["Skiing", "Winter", "Nature"],
           travelerType: "Families",
-          image: "/images/banff.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646204/banff_dqmow3.jpg",
         },
         {
           month: "January",
@@ -146,7 +156,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer in the southern hemisphere brings tango shows, local cuisine, and lively neighborhoods to explore.",
           bestFor: ["City", "Summer", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/buenosaires.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/buenosaires_tniwei.webp",
         },
         {
           month: "January",
@@ -155,7 +166,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wander through ancient rock-carved architecture, desert canyons, and rich Middle Eastern history.",
           bestFor: ["History", "Adventure", "Culture"],
           travelerType: "Solo",
-          image: "/images/petra.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648227/petra_stsc1m.jpg",
         },
         {
           month: "January",
@@ -164,7 +176,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Thrill-seekers flock here for bungee jumping, hiking trails, and breathtaking lake views in warm summer weather.",
           bestFor: ["Adventure", "Hiking", "Summer"],
           travelerType: "Groups",
-          image: "/images/queenstown.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648311/queenstown_b9fzub.webp",
         },
         {
           month: "January",
@@ -173,7 +186,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Elegant winter balls, historic architecture, and warm coffee houses offer a refined European cultural experience.",
           bestFor: ["Culture", "Winter", "History"],
           travelerType: "Couples",
-          image: "/images/vienna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648687/vienna_yquqv9.jpg",
         },
         {
           month: "January",
@@ -182,7 +196,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Golden beaches, ancient temples, tea plantations, and safari parks make Sri Lanka a diverse January escape.",
           bestFor: ["Beach", "Safari", "History"],
           travelerType: "Families",
-          image: "/images/srilanka.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648535/srilanka_fa3yzj.jpg",
         },
         {
           month: "January",
@@ -191,7 +206,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snowy forests, reindeer rides, husky sledding, and the magical Northern Lights create a fairytale winter escape.",
           bestFor: ["Winter", "Festival", "Adventure"],
           travelerType: "Families",
-          image: "/images/lapland.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646861/lapland_bbewsr.webp",
         },
         {
           month: "January",
@@ -200,7 +216,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Quieter winter months make Santorini perfect for romantic cliffside sunsets and exploring historic villages without crowds.",
           bestFor: ["Honeymoon", "History", "Luxury"],
           travelerType: "Couples",
-          image: "/images/santorini.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648421/santorini_sryzrq.jpg",
         },
         {
           month: "January",
@@ -209,7 +226,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "January’s summer sunshine makes Cape Town ideal for beaches, hiking Table Mountain, and local wine tours.",
           bestFor: ["Hiking", "Beach", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/capetown.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646257/capetown_zb4nhs.webp",
         },
         {
           month: "January",
@@ -218,7 +236,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sail through tropical islands, enjoy onboard luxury, and stop for snorkeling and cultural tours along the way.",
           bestFor: ["Cruise", "Luxury", "Summer"],
           travelerType: "Families",
-          image: "/images/caribbean-cruise.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646259/caribbean-cruise_njvrey.webp",
         },
         {
           month: "January",
@@ -227,7 +246,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snow-dusted castles, Gothic architecture, and cozy winter pubs define Prague’s January charm.",
           bestFor: ["Winter", "History", "Culture"],
           travelerType: "Couples",
-          image: "/images/prague.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648262/prague_usgcjq.webp",
         },
         {
           month: "January",
@@ -236,7 +256,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "January’s lush landscapes invite yoga retreats, rice terrace hikes, and cultural festivals.",
           bestFor: ["Wellness", "Hiking", "Festival"],
           travelerType: "Solo",
-          image: "/images/bali.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645850/bali_vivapm.jpg",
         },
         {
           month: "January",
@@ -245,7 +266,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Winter fog and quiet canals make Venice mysterious and romantic before Carnival season begins.",
           bestFor: ["History", "Culture", "Honeymoon"],
           travelerType: "Couples",
-          image: "/images/venice.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648689/venice_q9tqq6.webp",
         },
         {
           month: "January",
@@ -254,7 +276,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Trek glaciers, hike wild landscapes, and witness pristine nature in its summer peak season.",
           bestFor: ["Hiking", "Nature", "Adventure"],
           travelerType: "Groups",
-          image: "/images/patagonia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648165/patagonia_ofiggk.jpg",
         },
         {
           month: "January",
@@ -263,7 +286,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "January warms up with pre-Mardi Gras festivities, jazz clubs, and Cajun cuisine.",
           bestFor: ["Festival", "Food & Wine", "City"],
           travelerType: "Groups",
-          image: "/images/neworleans.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648007/neworleans_mwoznz.webp",
         },
 
         {
@@ -273,7 +297,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Idyllic white sands, snorkeling in coral reefs, and secluded resorts create a dream honeymoon destination.",
           bestFor: ["Beach", "Honeymoon", "Luxury"],
           travelerType: "Couples",
-          image: "/images/sychelles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sychelles_jktsv0.webp",
         },
         {
           month: "January",
@@ -282,7 +307,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Trek the Inca Trail in cooler weather to uncover the legendary citadel of the Andes.",
           bestFor: ["History", "Hiking", "Adventure"],
           travelerType: "Groups",
-          image: "/images/machu-picchu.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647221/machu-picchu_cky3g3.webp",
         },
         {
           month: "January",
@@ -291,7 +317,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Experience Arctic adventures like dog sledding, fjord cruises, and northern light safaris.",
           bestFor: ["Winter", "Cruise", "Adventure"],
           travelerType: "Families",
-          image: "/images/tromso.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648674/tromso_w5k79b.webp",
         },
         {
           month: "January",
@@ -300,7 +327,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Colorful souks, desert excursions, palaces, and January sunshine bring Morocco’s culture alive.",
           bestFor: ["Culture", "History", "Adventure"],
           travelerType: "Couples",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_tdrdyj.webp",
         },
         {
           month: "January",
@@ -309,7 +337,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "One of the world’s best ski resorts with snowboarding, luxury lodges, and après-ski fun.",
           bestFor: ["Skiing", "Winter", "Luxury"],
           travelerType: "Groups",
-          image: "/images/whistler.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648697/whistler_hf0kzu.webp",
         },
         {
           month: "January",
@@ -318,7 +347,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild winter sun, volcanic landscapes and Teide National Park — perfect for beach days, hiking volcanic trails, whale watching and family-friendly resorts.",
           bestFor: ["Beach", "Hiking", "Nature", "Winter"],
           travelerType: "Families",
-          image: "/images/tenerife.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648561/tenerife_t6nns8.webp",
         },
         {
           month: "January",
@@ -327,7 +357,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Theme parks, family resorts and warm winter days — ideal for families seeking fun-filled holidays with kids.",
           bestFor: ["Family", "Shopping", "Entertainment"],
           travelerType: "Families",
-          image: "/images/orlando.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648114/orlando_qmf8x6.webp",
         },
         {
           month: "January",
@@ -336,7 +367,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vibrant nightlife, bustling shopping malls and floating markets — a dynamic urban start to the year.",
           bestFor: ["Nightlife", "Shopping", "City"],
           travelerType: "Couples",
-          image: "/images/thailand-elephants.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648639/thailand-elephants_hcctgp.webp",
         },
         {
           month: "January",
@@ -345,7 +377,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm beaches by day, buzzing clubs by night — a nightlife hotspot with romantic beachfront stays.",
           bestFor: ["Nightlife", "Romance", "Beach"],
           travelerType: "Couples",
-          image: "/images/cancun.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646244/cancun_a7lmrp.webp",
         },
         {
           month: "January",
@@ -354,7 +387,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "World-famous shopping festival, luxury malls and desert excursions — January is Dubai’s shopping season.",
           bestFor: ["Shopping", "Luxury", "City"],
           travelerType: "Families",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646385/dubai_geckji.webp",
         },
         {
           month: "January",
@@ -363,7 +397,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild weather for a winter road trip — explore beaches, Hollywood and Pacific Coast drives.",
           bestFor: ["Road trip", "Shopping", "Family"],
           travelerType: "Group",
-          image: "/images/los-angeles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646921/los-angeles_di2zpp.webp",
         },
         {
           month: "January",
@@ -372,7 +407,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild winter, ocean views and excellent internet — a great city for remote work and cultural discovery.",
           bestFor: ["Remote Work", "Culture", "Food & Wine"],
           travelerType: "Solo",
-          image: "/images/lisbon-remote.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646890/lisbon-remote_oo66ty.webp",
         },
         {
           month: "January",
@@ -381,7 +417,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm weather, art deco vibes, beach clubs and a thriving nightlife scene — a winter escape for fun lovers.",
           bestFor: ["Nightlife", "Romance", "Beach"],
           travelerType: "Couples",
-          image: "/images/miami.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647868/miami_judmrq.webp",
         },
         {
           month: "January",
@@ -390,7 +427,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Serene temples, light snow and intimate ryokans — a peaceful and romantic January escape.",
           bestFor: ["Romance", "Culture", "Winter"],
           travelerType: "Couples",
-          image: "/images/kyoto-winter.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646826/kyoto-winter_cziiv2.webp",
         },
         {
           month: "January",
@@ -399,7 +437,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunshine, sandy beaches, family resorts and good infrastructure for remote work — a balanced winter getaway.",
           bestFor: ["Family", "Remote Work", "Beach"],
           travelerType: "Families",
-          image: "/images/cape-verde.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646246/cape-verde_blfhnl.webp",
         },
         {
           month: "January",
@@ -408,7 +447,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny skies, family attractions like the zoo, and scenic coastal drives — ideal for a road trip and family fun.",
           bestFor: ["Family", "Road trip", "Nature"],
           travelerType: "Families",
-          image: "/images/san-diego.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648421/san-diego_aehy2f.webp",
         },
       ],
     },
@@ -424,7 +464,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Carnival energy, golden beaches and samba nightlife — February is vibrant with parades, music and seaside romance.",
           bestFor: ["Festival", "Nightlife", "Beach"],
           travelerType: "Couples",
-          image: "/images/rio.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648361/rio_cykjzo.webp",
         },
         {
           month: "February",
@@ -433,7 +474,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Famous snow and ice sculptures, winter festivals and nearby ski resorts — a top winter experience for families and culture lovers.",
           bestFor: ["Winter", "Festival", "Skiing"],
           travelerType: "Families",
-          image: "/images/sapporo.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648422/sapporo_r7k07r.webp",
         },
         {
           month: "February",
@@ -442,7 +484,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mardi Gras season brings parades, live jazz, Creole food and a high-energy nightlife scene in historic neighborhoods.",
           bestFor: ["Festival", "Nightlife", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/new-orleans.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647979/new-orleans_cveygi.webp",
         },
         {
           month: "February",
@@ -451,7 +494,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild winter sun, volcanic landscapes and family-friendly resorts — easy island escapes with hiking and whale-watching options.",
           bestFor: ["Beach", "Family", "Hiking"],
           travelerType: "Families",
-          image: "/images/tenerife.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648561/tenerife_t6nns8.webp",
         },
         {
           month: "February",
@@ -460,7 +504,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny winter days, cafes and fast internet make Lisbon great for remote work plus short city escapes and vibrant nightlife.",
           bestFor: ["Remote Work", "City", "Food & Wine"],
           travelerType: "Remote Work",
-          image: "/images/lisbon.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646889/lisbon_batgam.webp",
         },
         {
           month: "February",
@@ -469,7 +514,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Iconic winter mountain scenery, world-class skiing and cozy lodges — perfect for alpine adventures and family ski trips.",
           bestFor: ["Skiing", "Winter", "Nature"],
           travelerType: "Families",
-          image: "/images/banff.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646204/banff_dqmow3.jpg",
         },
         {
           month: "February",
@@ -478,7 +524,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Backwaters, Ayurvedic retreats and cultural experiences — ideal for wellness, gentle trekking and warm-weather winter escapes.",
           bestFor: ["Wellness", "Culture", "Nature"],
           travelerType: "Couples",
-          image: "/images/kerala.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646804/kerala_o4fsae.webp",
         },
         {
           month: "February",
@@ -487,7 +534,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer season with tango, late-night dining and vibrant neighbourhoods — lively nightlife and cultural touring in warm weather.",
           bestFor: ["Nightlife", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/buenos-aires.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/buenos-aires_zvlnvn.webp",
         },
         {
           month: "February",
@@ -496,7 +544,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny days for hikes up Table Mountain, coastal drives and world-class vineyards — great for families and adventure seekers.",
           bestFor: ["Hiking", "Food & Wine", "Nature"],
           travelerType: "Groups",
-          image: "/images/capetown.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646257/capetown_zb4nhs.webp",
         },
         {
           month: "February",
@@ -505,7 +554,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer adventures—bungee, lake cruises and dramatic hikes—perfect for adrenaline activities and scenic day trips.",
           bestFor: ["Adventure", "Hiking", "Luxury"],
           travelerType: "Adventure",
-          image: "/images/queenstown.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648311/queenstown_b9fzub.webp",
         },
         {
           month: "February",
@@ -514,7 +564,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Stable warm weather, overwater villas and private-island luxury — a classic honeymoon and romance destination in February.",
           bestFor: ["Honeymoon", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/maldives-luxury-resorts.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/maldives-luxury-resorts_wjjoum.jpg",
         },
         {
           month: "February",
@@ -523,7 +574,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Temples, quiet winter gardens and cultural experiences — an atmospheric month for cultural exploration and intimate stays.",
           bestFor: ["Culture", "History", "Romance"],
           travelerType: "Couples",
-          image: "/images/kyoto.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646827/kyoto_ahvfoo.jpg",
         },
         {
           month: "February",
@@ -532,7 +584,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Prime safari conditions with dry plains and excellent wildlife viewing in comfortable temperatures—perfect for wildlife safaris.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/masai-mara.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647791/masai-mara_mhqbki.webp",
         },
         {
           month: "February",
@@ -541,7 +594,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cooler weather, epic shopping and family attractions — a winter sun city-break with luxury hotels and desert excursions.",
           bestFor: ["Shopping", "Luxury", "Family"],
           travelerType: "Families",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646382/dubai_j8xryu.jpg",
         },
         {
           month: "February",
@@ -550,7 +604,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "A winter base for Northern Lights hunts, hot springs and glacier tours—adventurous and romantic in equal measure.",
           bestFor: ["Winter", "Adventure", "Wellness"],
           travelerType: "Couples",
-          image: "/images/reykjavik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648361/reykjavik_b2ij5c.webp",
         },
         {
           month: "February",
@@ -559,7 +614,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "World-class powder skiing, cozy ryokans and vibrant resort nightlife—one of Asia’s best winter-sport destinations.",
           bestFor: ["Skiing", "Winter", "Wellness"],
           travelerType: "Groups",
-          image: "/images/niseko.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648033/niseko_zkcr5c.webp",
         },
         {
           month: "February",
@@ -568,7 +624,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Colorful colonial streets, warm weather and romantic plazas—great for couples seeking culture and coastal relaxation.",
           bestFor: ["Romance", "Culture", "Beach"],
           travelerType: "Couples",
-          image: "/images/cartagena.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646272/cartagena_zndcbz.webp",
         },
         {
           month: "February",
@@ -577,7 +634,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sword cliffs, seaside villages and quiet off-season charm—ideal for romantic escapes and coastal drives in mild weather.",
           bestFor: ["Romance", "Food & Wine", "Road trip"],
           travelerType: "Couples",
-          image: "/images/amalfi.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646163/amalfi_flixfc.webp",
         },
         {
           month: "February",
@@ -586,7 +644,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic medinas, riads and warm winter days—good for shopping, culture and short luxury escapes from colder climates.",
           bestFor: ["Culture", "Shopping", "Romance"],
           travelerType: "Couples",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_tdrdyj.webp",
         },
         {
           month: "February",
@@ -595,7 +654,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wildlife cruises, unique endemic species and year-round exploration—February offers abundant marine life and clear waters.",
           bestFor: ["Wildlife", "Cruise", "Nature"],
           travelerType: "Adventure",
-          image: "/images/galapagos.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646448/galapagos_xeksmf.webp",
         },
         {
           month: "February",
@@ -604,7 +664,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Lush year-round island with levada walks, mild climate and good connectivity—popular with remote workers and nature lovers.",
           bestFor: ["Remote Work", "Hiking", "Wellness"],
           travelerType: "Remote Work",
-          image: "/images/madeira.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/madeira_jfwodm.webp",
         },
         {
           month: "February",
@@ -613,7 +674,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vibrant city life with late-night culture, shopping districts and culinary discoveries—great for urban explorers and shoppers.",
           bestFor: ["Shopping", "Nightlife", "Food & Wine"],
           travelerType: "Solo",
-          image: "/images/seoul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648509/seoul_itax2i.webp",
         },
         {
           month: "February",
@@ -622,7 +684,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Live music venues, thriving food scene and energetic nightlife—an eclectic choice for groups and music lovers.",
           bestFor: ["Nightlife", "Music", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/austin.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645851/austin_o9q4ly.webp",
         },
         {
           month: "February",
@@ -631,7 +694,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Modern city with family attractions, rooftop dining and major shopping avenues—warm-weather urban comfort and convenience.",
           bestFor: ["Family", "Shopping", "City"],
           travelerType: "Families",
-          image: "/images/singapore.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648512/singapore_ja0zzz.webp",
         },
         {
           month: "February",
@@ -640,7 +704,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spice-island beaches, Swahili culture and romantic beachfront lodges—a quieter, warm-season honeymoon alternative.",
           bestFor: ["Romance", "Beach", "Culture"],
           travelerType: "Couples",
-          image: "/images/zanzibar.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648800/zanzibar_zitzrr.webp",
         },
         {
           month: "February",
@@ -649,7 +714,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dhow cruises, dramatic cliffs and snorkeling—a short luxury cruise escape from regional hubs.",
           bestFor: ["Cruise", "Adventure", "Nature"],
           travelerType: "Couples",
-          image: "/images/musandam.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647942/musandam_ehfdea.webp",
         },
         {
           month: "February",
@@ -658,7 +724,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cultural museums, tapas culture and designer shopping — pleasant winter city breaks with lively nightlife.",
           bestFor: ["Shopping", "Culture", "Nightlife"],
           travelerType: "Couples",
-          image: "/images/madrid.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647221/madrid_hqrtim.webp",
         },
         {
           month: "February",
@@ -667,7 +734,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Scenic coastal drives, surf towns and family-friendly stops — ideal for a mild winter road trip adventure.",
           bestFor: ["Road trip", "Family", "Nature"],
           travelerType: "Families",
-          image: "/images/pch.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648168/pch-roadtrip_fyhlct.webp",
         },
         {
           month: "February",
@@ -676,7 +744,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Lagoon beaches, coral reefs and upscale resorts—a warm tropical spot for couples and families alike.",
           bestFor: ["Beach", "Romance", "Luxury"],
           travelerType: "Families",
-          image: "/images/mauritius.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647794/mauritius_inzszl.webp",
         },
         {
           month: "February",
@@ -685,7 +754,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tropical islands, private resorts and cultural village visits—excellent for romantic stays and wellness retreats.",
           bestFor: ["Honeymoon", "Wellness", "Beach"],
           travelerType: "Couples",
-          image: "/images/fiji.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646423/fiji_gbme1l.webp",
         },
         {
           month: "February",
@@ -694,7 +764,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Theme parks, family resorts and warm winter days—perfect for families seeking a fun January–February break.",
           bestFor: ["Family", "Entertainment", "Shopping"],
           travelerType: "Families",
-          image: "/images/orlando.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648114/orlando_qmf8x6.webp",
         },
         {
           month: "February",
@@ -703,7 +774,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vibrant nightlife, beachfront bars and romantic rooftop dinners—ideal for couples and party-goers in winter months.",
           bestFor: ["Nightlife", "Romance", "Beach"],
           travelerType: "Couples",
-          image: "/images/miami.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647868/miami_judmrq.webp",
         },
         {
           month: "February",
@@ -712,7 +784,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "High-end boutiques, designer showrooms and winter fashion events — February is excellent for serious shoppers.",
           bestFor: ["Shopping", "Fashion", "City"],
           travelerType: "Couples",
-          image: "/images/milan.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647903/milan_gysqan.webp",
         },
         {
           month: "February",
@@ -721,7 +794,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Iconic coastal route with beach towns, redwood forests and scenic viewpoints—perfect for a winter road trip itinerary.",
           bestFor: ["Road trip", "Nature", "Family"],
           travelerType: "Families",
-          image: "/images/pch-roadtrip.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648180/pch_ijtpyl.webp",
         },
         {
           month: "February",
@@ -730,7 +804,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Affordable living, strong digital-nomad community and reliable cafes—an excellent February base for remote work and culture.",
           bestFor: ["Remote Work", "Culture", "Wellness"],
           travelerType: "Remote Work",
-          image: "/images/thailand-chiang-mai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648623/thailand-chiang-mai_b7o8cd.webp",
         },
         {
           month: "February",
@@ -739,7 +814,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Family-friendly beaches, coastal road routes and mild winter weather—great for a relaxed family break and scenic drives.",
           bestFor: ["Family", "Road trip", "Beach"],
           travelerType: "Families",
-          image: "/images/algarve.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646158/algarve_sx1pm9.webp",
         },
         {
           month: "February",
@@ -748,7 +824,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer festivals, iconic beaches and outdoor dining — Sydney is vibrant with sunshine and coastal energy in February.",
           bestFor: ["Summer", "Beach", "City"],
           travelerType: "Couples",
-          image: "/images/deals/sydney-bali-flight.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646379/sydney-bali-flight_znasyz.webp",
         },
         {
           month: "February",
@@ -757,7 +834,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm summer days, sailing trips and wine regions — northern New Zealand shines in February for adventure and relaxation.",
           bestFor: ["Summer", "Adventure", "Nature"],
           travelerType: "Families",
-          image: "/images/new-zealand.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647980/new-zealand_cgowbc.webp",
         },
         {
           month: "February",
@@ -766,7 +844,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vineyards in full bloom, summer wine festivals and mountain views — South Africa’s Cape Winelands is perfect for February travel.",
           bestFor: ["Summer", "Food & Wine", "Romance"],
           travelerType: "Couples",
-          image: "/images/south-africa.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648535/south-africa_kuttwb.webp",
         },
 
         {
@@ -776,7 +855,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "World-class nightlife, underground clubs and year-round cultural events—appeals to night owls and music lovers.",
           bestFor: ["Nightlife", "Culture", "Food & Wine"],
           travelerType: "Solo",
-          image: "/images/berlin.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646222/berlin_cuy0fg.webp",
         },
         {
           month: "February",
@@ -785,7 +865,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Compact, historic city with good connectivity and mild winter days—popular for short remote-work stays and island exploration.",
           bestFor: ["Remote Work", "History", "Family"],
           travelerType: "Remote Work",
-          image: "/images/valletta.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648672/valletta_ubrz0f.webp",
         },
         {
           month: "February",
@@ -794,7 +875,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Romantic lakeside villas and intimate winter charm—a refined choice for couples seeking quiet romance and scenic walks.",
           bestFor: ["Romance", "Luxury", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/lake-como.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646858/lake-como_l6m6v8.webp",
         },
         {
           month: "February",
@@ -803,7 +885,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fashion districts, electronics markets and late-night izakayas—Tokyo serves both serious shoppers and vibrant nightlife seekers.",
           bestFor: ["Shopping", "Nightlife", "City"],
           travelerType: "Solo",
-          image: "/images/tokyo.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648663/tokyo_m0koff.webp",
         },
       ],
     },
@@ -819,7 +902,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Late summer game drives with excellent wildlife sightings and luxury lodges — perfect for safari adventures in March.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Families",
-          image: "/images/kruger.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646825/kruger_qy4iik.webp",
         },
         {
           month: "March",
@@ -828,7 +912,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Clear skies for hiking, summer landscapes and wildlife — prime time for Patagonian road trips and expeditions.",
           bestFor: ["Road Trip", "Summer", "Wildlife"],
           travelerType: "Adventure",
-          image: "/images/patagonia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648165/patagonia_ofiggk.jpg",
         },
         {
           month: "March",
@@ -837,7 +922,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snowy wonderland with reindeer safaris, skiing and Northern Lights tours — ideal for winter magic.",
           bestFor: ["Winter", "Skiing", "Family"],
           travelerType: "Families",
-          image: "/images/lapland.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646861/lapland_bbewsr.webp",
         },
         {
           month: "March",
@@ -846,7 +932,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snow festivals linger, ski resorts thrive and seafood season peaks — Japan’s winter paradise.",
           bestFor: ["Winter", "Skiing", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/hokkaido.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646503/hokkaido_zrsaav.webp",
         },
         {
           month: "March",
@@ -855,7 +942,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tropical islands with calm seas — perfect for honeymooners, wellness retreats and barefoot luxury.",
           bestFor: ["Honeymoon", "Wellness", "Beach"],
           travelerType: "Couples",
-          image: "/images/sychelles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sychelles_jktsv0.webp",
         },
         {
           month: "March",
@@ -864,7 +952,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Extended ski season with snowboarding, après-ski nightlife and family-friendly mountain villages.",
           bestFor: ["Skiing", "Winter", "Nightlife"],
           travelerType: "Families",
-          image: "/images/whistler.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648697/whistler_hf0kzu.webp",
         },
         {
           month: "March",
@@ -873,7 +962,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Calving season brings predator action — March safaris show Africa’s wildlife spectacles at their best.",
           bestFor: ["Safari", "Wildlife", "Adventure"],
           travelerType: "Couples",
-          image: "/images/serengeti.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648509/serengeti_ointks.jpg",
         },
         {
           month: "March",
@@ -882,7 +972,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild temperatures for hiking, wellness retreats and road trips through volcanic landscapes.",
           bestFor: ["Road Trip", "Wellness", "Family"],
           travelerType: "Families",
-          image: "/images/tenerife.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648561/tenerife_t6nns8.webp",
         },
         {
           month: "March",
@@ -891,7 +982,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry-season beaches and nightlife hotspots — also a favorite for couples on honeymoon getaways.",
           bestFor: ["Honeymoon", "Nightlife", "Beach"],
           travelerType: "Couples",
-          image: "/images/thailand-phuket.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648647/thailand-phuket_st9eg1.webp",
         },
         {
           month: "March",
@@ -900,7 +992,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cruises start running through dramatic fjords, with snowy peaks still lining the waterways.",
           bestFor: ["Cruise", "Winter", "Nature"],
           travelerType: "Couples",
-          image: "/images/norway-fjords.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648070/norway-fjords_xhffdt.webp",
         },
         {
           month: "March",
@@ -909,7 +1002,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Whale-watching, scenic road trips on the Hana Highway and beach days — a perfect March family escape.",
           bestFor: ["Road Trip", "Family", "Wildlife"],
           travelerType: "Families",
-          image: "/images/maui.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647791/maui_y0vwzf.webp",
         },
         {
           month: "March",
@@ -918,7 +1012,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Late summer adventure hub — bungee, hiking and wine tasting under perfect weather.",
           bestFor: ["Summer", "Adventure", "Remote Work"],
           travelerType: "Solo",
-          image: "/images/queenstown.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648309/queenstown_xkhqnl.jpg",
         },
         {
           month: "March",
@@ -927,7 +1022,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Luxury shopping, desert road trips and nightlife — a mix of modern glam and family fun.",
           bestFor: ["Shopping", "Nightlife", "Road Trip"],
           travelerType: "Families",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646382/dubai_j8xryu.jpg",
         },
         {
           month: "March",
@@ -936,7 +1032,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry-season romance, snorkeling and luxury villas — a honeymooner’s paradise in March.",
           bestFor: ["Honeymoon", "Wellness", "Luxury"],
           travelerType: "Couples",
-          image: "/images/maldives-luxury-resorts.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647753/maldives-luxury-resorts_y8m3er.webp",
         },
         {
           month: "March",
@@ -945,7 +1042,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Aurora season continues, with winter landscapes, waterfalls and geothermal wellness escapes.",
           bestFor: ["Winter", "Road Trip", "Wellness"],
           travelerType: "Adventure",
-          image: "/images/reykjavik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648361/reykjavik_b2ij5c.webp",
         },
         {
           month: "March",
@@ -954,7 +1052,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "A hotspot for digital nomads — coworking villas, yoga retreats and cultural festivals thrive in March.",
           bestFor: ["Remote Work", "Wellness", "Culture"],
           travelerType: "Remote Work",
-          image: "/images/bali.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645850/bali_vivapm.jpg",
         },
         {
           month: "March",
@@ -963,7 +1062,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring skiing with alpine wellness resorts — great snow and luxury chalets remain open into March.",
           bestFor: ["Skiing", "Wellness", "Luxury"],
           travelerType: "Couples",
-          image: "/images/swiss-alps.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648549/swiss-alps-summer_ulsqnt.jpg",
         },
         {
           month: "March",
@@ -972,7 +1072,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "March is warm and wet, but wildlife thrives — a top choice for small-ship cruises.",
           bestFor: ["Cruise", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/galapagos.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646448/galapagos_xeksmf.webp",
         },
         {
           month: "March",
@@ -981,7 +1082,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Late summer in the Cape means beaches, wine harvests and stunning family-friendly hikes.",
           bestFor: ["Summer", "Family", "Food & Wine"],
           travelerType: "Families",
-          image: "/images/capetown.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646257/capetown_zb4nhs.webp",
         },
         {
           month: "March",
@@ -990,7 +1092,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm summer evenings with tango, nightlife and romantic dining — ideal for couples exploring South America.",
           bestFor: ["Nightlife", "Summer", "Romance"],
           travelerType: "Couples",
-          image: "/images/buenosaires.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646241/buenosaires_eqa9aq.jpg",
         },
 
         {
@@ -1000,7 +1103,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Early sakura blooms, temples and refined culinary culture—iconic springtime experience.",
           bestFor: ["Culture", "Nature", "Romance"],
           travelerType: "Couples",
-          image: "/images/kyoto.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646828/kyoto_sklj9y.webp",
         },
         {
           month: "March",
@@ -1009,7 +1113,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Markets, riads and fragrant cuisine—mild spring weather for cultural exploration.",
           bestFor: ["Culture", "Shopping", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_esdxwl.jpg",
         },
         {
           month: "March",
@@ -1018,7 +1123,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring festivals, orange blossom scent and tapas culture—great time for lively city breaks.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/seville.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648512/seville_qnpdl3.webp",
         },
         {
           month: "March",
@@ -1027,7 +1133,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Comfortable weather, coastal day-trips and seafood dining—walkable city with scenic viewpoints.",
           bestFor: ["City", "Food & Wine", "Remote Work"],
           travelerType: "Solo",
-          image: "/images/lisbon.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646889/lisbon_batgam.webp",
         },
         {
           month: "March",
@@ -1036,7 +1143,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Hot-air balloons, lunar landscapes and boutique cave hotels—romantic and adventurous spring option.",
           bestFor: ["Adventure", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/cappadocia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646257/cappadocia_wixkvr.webp",
         },
         {
           month: "March",
@@ -1045,7 +1153,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Start of trekking season, clear mountain views and cultural sites—gateway to Himalayan adventures.",
           bestFor: ["Trekking", "Adventure", "Culture"],
           travelerType: "Adventure",
-          image: "/images/Kathmandu.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646783/Kathmandu_rjxu1k.webp",
         },
         {
           month: "March",
@@ -1054,7 +1163,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Comfortable spring weather for desert exploration, Petra and scenic Wadi Rum camps.",
           bestFor: ["Culture", "Adventure", "History"],
           travelerType: "Couples",
-          image: "/images/jordan.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646771/jordan_egbwp3.webp",
         },
         {
           month: "March",
@@ -1063,7 +1173,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring hiking, volcanic trails and quiet coastal towns—great for outdoor nature in mild weather.",
           bestFor: ["Nature", "Hiking", "Relaxation"],
           travelerType: "Adventure",
-          image: "/images/canary-islands.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/canary-islands_eevcto.webp",
         },
         {
           month: "March",
@@ -1072,7 +1183,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Pleasant temperatures for temples and Nile cruises—heritage-rich, comfortable sightseeing.",
           bestFor: ["Culture", "History", "Luxury"],
           travelerType: "Couples",
-          image: "/images/egypt-luxor.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646403/egypt-luxor_mgygkh.webp",
         },
         {
           month: "March",
@@ -1081,7 +1193,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Lakeside lodges, trekking starts and Himalayan views—tranquil and adventure-ready.",
           bestFor: ["Trekking", "Nature", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/pokhara.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648258/Pokhara_b2kq5z.webp",
         },
         {
           month: "March",
@@ -1090,7 +1203,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Quieter temples and seasonal food—classic cultural spring experience with fewer crowds early March.",
           bestFor: ["Culture", "Food & Wine", "Romance"],
           travelerType: "Couples",
-          image: "/images/kyoto.webp",
+          image:
+            "/https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646828/kyoto_sklj9y.webp",
         },
         {
           month: "March",
@@ -1099,7 +1213,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Harvest preparation, vineyards and Andes views—wine-focused trips with outdoor leisure.",
           bestFor: ["Food & Wine", "Nature", "Luxury"],
           travelerType: "Couples",
-          image: "/images/mendoza.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647793/mendoza_uhl03g.webp",
         },
         {
           month: "March",
@@ -1108,7 +1223,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Unique wildlife encounters and guided cruises—must-visit for nature and conservation-minded travelers.",
           bestFor: ["Wildlife", "Nature", "Cruise"],
           travelerType: "Adventure",
-          image: "/images/galapagos.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646448/galapagos_xeksmf.webp",
         },
         {
           month: "March",
@@ -1117,7 +1233,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild spring weather, Bosphorus cruises and historic sites—blend of culture and cuisine.",
           bestFor: ["Culture", "City", "Food & Wine"],
           travelerType: "Solo",
-          image: "/images/istanbul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646755/istanbul_y315cq.webp",
         },
         {
           month: "March",
@@ -1126,7 +1243,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Coastal trails, surf and seaside dining—quick escape from the city with relaxed beaches.",
           bestFor: ["Beach", "City", "Food & Wine"],
           travelerType: "Family",
-          image: "/images/cascais.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646273/cascais_d1h07v.webp",
         },
         {
           month: "March",
@@ -1135,7 +1253,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Early trekking season, mountain lodges and local culture—accessible Himalayan routes for active travelers.",
           bestFor: ["Trekking", "Adventure", "Nature"],
           travelerType: "Adventure",
-          image: "/images/annapurna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646179/annapurna_jyoxay.webp",
         },
         {
           month: "March",
@@ -1144,7 +1263,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cultural processions and springtime tapas—rich traditions before peak festival season.",
           bestFor: ["Culture", "Food & Wine", "Festival"],
           travelerType: "Couples",
-          image: "/images/seville.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648512/seville_qnpdl3.webp",
         },
         {
           month: "March",
@@ -1153,7 +1273,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Culinary capital with coastal breezes—excellent food scene and cultural day trips.",
           bestFor: ["Food & Wine", "City", "Culture"],
           travelerType: "Solo",
-          image: "/images/lima.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646859/lima_xict97.webp",
         },
         {
           month: "March",
@@ -1162,7 +1283,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Relaxing mineral-rich waters and spa escapes—gentle climate for relaxation and wellness.",
           bestFor: ["Wellness", "Relaxation", "Culture"],
           travelerType: "Couples",
-          image: "/images/dead-sea.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646342/dead-sea_scldjo.webp",
         },
         {
           month: "March",
@@ -1171,7 +1293,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring flowers, levada walks and dramatic cliffs—compact island for active nature escapes.",
           bestFor: ["Hiking", "Nature", "Wellness"],
           travelerType: "Adventure",
-          image: "/images/madeira.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/madeira_jfwodm.webp",
         },
         {
           month: "March",
@@ -1180,7 +1303,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "World-class museums, markets and vibrant gastronomy—urban cultural hub with great neighborhoods.",
           bestFor: ["Culture", "Food & Wine", "City"],
           travelerType: "Solo",
-          image: "/images/mexico-city.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647869/mexico-city_pydwt5.webp",
         },
         {
           month: "March",
@@ -1189,7 +1313,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Whale watching, crater lakes and green landscapes—remote island nature escapes in spring.",
           bestFor: ["Nature", "Adventure", "Whale Watching"],
           travelerType: "Adventure",
-          image: "/images/azores.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646193/azores_ntpqxf.webp",
         },
         {
           month: "March",
@@ -1198,7 +1323,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cooler spring air, seafood and early flower fields—less crowded pockets of northern Japan.",
           bestFor: ["Nature", "Food & Wine", "Adventure"],
           travelerType: "Solo",
-          image: "/images/hokkaido.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646503/hokkaido_zrsaav.webp",
         },
         {
           month: "March",
@@ -1207,7 +1333,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Andean landscapes, condor viewing and cultural villages—adventurous trekking less crowded than other trails.",
           bestFor: ["Adventure", "Nature", "Culture"],
           travelerType: "Adventure",
-          image: "/images/colca-canyon.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646299/colca-canyon_g46q5s.webp",
         },
         {
           month: "March",
@@ -1216,7 +1343,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wind-swept beaches, coastal seafood and artistic villages—calmer alternative to Marrakech.",
           bestFor: ["Beach", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/essaouira.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646403/essaouira_mdyjdd.jpg",
         },
         {
           month: "March",
@@ -1225,7 +1353,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Accessible trekking, Himalayan culture and dramatic vistas—spring clarity and moderate trails.",
           bestFor: ["Trekking", "Nature", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/langtang.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646857/langtang_uqw1vz.webp",
         },
       ],
     },
@@ -1240,7 +1369,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tulips in bloom, canal cruises and spring charm — one of Europe’s best April escapes.",
           bestFor: ["Culture", "Festival", "Romance"],
           travelerType: "Couples",
-          image: "/images/amsterdam.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645843/amsterdam_n5w7hm.webp",
         },
         {
           title: "Paris, France",
@@ -1256,7 +1386,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "World’s largest flower garden with millions of tulips — peak bloom season in April.",
           bestFor: ["Festival", "Nature", "Family"],
           travelerType: "Family",
-          image: "/images/keukenhof.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646801/keukenhof_hkoc2w.webp",
         },
 
         {
@@ -1266,7 +1397,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cliffside coastal drives, lemon groves and quiet spring towns — ideal for a scenic road trip and romantic stays before high season.",
           bestFor: ["Road Trip", "Romance", "Luxury"],
           travelerType: "Couples",
-          image: "/images/amalfi.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645845/amalfi_unhr9v.webp",
         },
         {
           month: "April",
@@ -1275,7 +1407,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Winding river roads, vineyard villas and wine tasting tours — a calm April road trip for food and wine lovers.",
           bestFor: ["Road Trip", "Food & Wine", "Luxury"],
           travelerType: "Couples",
-          image: "/images/douro-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646380/douro-april_fxdtsl.webp",
         },
         {
           month: "April",
@@ -1284,7 +1417,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Early-spring coastal drive with dramatic viewpoints, seaside towns and family stops — milder weather and fewer crowds in April.",
           bestFor: ["Road Trip", "Scenic", "Family"],
           travelerType: "Families",
-          image: "/images/pch.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648168/pch-roadtrip_fyhlct.webp",
         },
         {
           month: "April",
@@ -1293,7 +1427,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring cruises return to the fjords — dramatic scenery, waterfalls and shoulder-season calm before the summer crowds arrive.",
           bestFor: ["Cruise", "Hiking", "Nature"],
           travelerType: "Couples",
-          image: "/images/norway-fjords-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648041/norway-fjords-april_ltms0v.webp",
         },
         {
           month: "April",
@@ -1302,7 +1437,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Off-season island-hopping, medieval towns and quieter harbours — April is perfect for early-season coastal cruises.",
           bestFor: ["Cruise", "Beach", "History"],
           travelerType: "Couples",
-          image: "/images/dalmatian-cruise.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646343/dalmatian-cruise_a5gphm.webp",
         },
         {
           month: "April",
@@ -1311,7 +1447,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Steep coastal trails, levada hikes and a growing digital-nomad community — ideal for hiking and remote-work stays in April.",
           bestFor: ["Hiking", "Remote Work", "Wellness"],
           travelerType: "Remote Work",
-          image: "/images/madeira.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/madeira_jfwodm.webp",
         },
         {
           month: "April",
@@ -1320,7 +1457,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Green volcanic scenery, crater-lake hikes and relaxed island life — excellent for hiking and remote-work breakouts in spring.",
           bestFor: ["Hiking", "Remote Work", "Nature"],
           travelerType: "Remote Work",
-          image: "/images/azores-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646192/azores-april_icalj5.webp",
         },
         {
           month: "April",
@@ -1329,7 +1467,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wild coastal vistas, heritage roads and spring wildflowers — a dramatic hiking-and-road-trip combo with fewer visitors in April.",
           bestFor: ["Hiking", "Road Trip", "Nature"],
           travelerType: "Groups",
-          image: "/images/scotland-highlands.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648425/scotland-highlands_nx24ad.webp",
         },
         {
           month: "April",
@@ -1338,7 +1477,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild winter-to-spring climate, volcanic hikes and family beaches — summer-like weather without high-season crowds.",
           bestFor: ["Summer", "Beach", "Hiking"],
           travelerType: "Families",
-          image: "/images/tenerife.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648561/tenerife_t6nns8.webp",
         },
         {
           month: "April",
@@ -1347,7 +1487,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Island trails, coastal drives and refined seaside towns — superb for combined hiking, luxury stays and off-season road trips.",
           bestFor: ["Hiking", "Road Trip", "Luxury"],
           travelerType: "Couples",
-          image: "/images/corsica-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646313/corsica-april_fj0esr.webp",
         },
         {
           month: "April",
@@ -1356,7 +1497,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Early dry-season safari with good wildlife concentrations near waterways — excellent game viewing and luxury camps in April/May.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/okavango-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648072/okavango-april_lzsfih.webp",
         },
         {
           month: "April",
@@ -1365,7 +1507,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm days and comfortable game drives—Kruger is a strong April safari pick with family and guided options.",
           bestFor: ["Safari", "Wildlife", "Family"],
           travelerType: "Families",
-          image: "/images/kruger.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646825/kruger_qy4iik.webp",
         },
         {
           month: "April",
@@ -1374,7 +1517,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Rich wildlife viewing in tents and lodges—April marks the start of great safari windows in parts of southern Africa.",
           bestFor: ["Safari", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/south-luangwa.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648538/south-luangwa_wlpyfi.webp",
         },
         {
           month: "April",
@@ -1383,7 +1527,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Late-winter landscapes, hot springs and geothermal wellness — a great time for fewer crowds and outdoor spas.",
           bestFor: ["Winter", "Wellness", "Adventure"],
           travelerType: "Couples",
-          image: "/images/iceland-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646526/iceland-april_ow7o9q.webp",
         },
         {
           month: "April",
@@ -1392,7 +1537,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Final weeks of winter magic, snow activities and aurora possibilities — family-friendly winter adventures into early April.",
           bestFor: ["Winter", "Northern Lights", "Family"],
           travelerType: "Families",
-          image: "/images/lapland.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646861/lapland_bbewsr.webp",
         },
         {
           month: "April",
@@ -1401,7 +1547,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Clear seas, calm weather and private overwater villas — April is still excellent for honeymooners seeking luxury and privacy.",
           bestFor: ["Honeymoon", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/maldives.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647754/maldives_qsxcgk.webp",
         },
         {
           month: "April",
@@ -1410,7 +1557,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Idyllic private-island resorts, calm beaches and exclusive escapes — a refined honeymoon or luxury beach choice in April.",
           bestFor: ["Honeymoon", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/sychelles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sychelles_jktsv0.webp",
         },
         {
           month: "April",
@@ -1419,7 +1567,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm temperatures, high-end hotels and luxury shopping — spring is ideal for sun-and-luxury city breaks before summer heat peaks.",
           bestFor: ["Luxury", "City", "Remote Work"],
           travelerType: "Families",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646385/dubai_geckji.webp",
         },
         {
           month: "April",
@@ -1428,7 +1577,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Early-season seaside glamour, boutique hotels and coastal drives — a luxury and romantic choice before summer crowds arrive.",
           bestFor: ["Luxury", "Road Trip", "Romance"],
           travelerType: "Couples",
-          image: "/images/french-riviera.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646448/french-riviera_abyncc.webp",
         },
         {
           month: "April",
@@ -1437,7 +1587,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Charming coastal roads, whitewashed towns and seaside villas — quiet April road-trip routes with excellent local food.",
           bestFor: ["Road Trip", "Food & Wine", "Family"],
           travelerType: "Families",
-          image: "/images/puglia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648308/puglia_sueinc.webp",
         },
 
         {
@@ -1446,7 +1597,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild weather for markets, Bosphorus cruises and tulip festivals in this cultural crossroad.",
           bestFor: ["Culture", "Shopping", "History"],
           travelerType: "Solo",
-          image: "/images/istanbul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646755/istanbul_y315cq.webp",
         },
         {
           title: "Madeira, Portugal",
@@ -1454,7 +1606,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dramatic coastal cliffs, spring flowers and levada hiking trails — compact nature paradise.",
           bestFor: ["Hiking", "Nature", "Wellness"],
           travelerType: "Adventure",
-          image: "/images/madeira.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/madeira_jfwodm.webp",
         },
         {
           title: "Santorini, Greece",
@@ -1462,7 +1615,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Pre-summer calm, blue domes and luxury villas — ideal for couples before peak crowds.",
           bestFor: ["Romance", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/santorini.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648423/santorini_nkitf1.webp",
         },
         {
           title: "Tuscany, Italy",
@@ -1470,7 +1624,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring landscapes, blossoming hills and vineyard tours — great time for food and wine.",
           bestFor: ["Food & Wine", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/tuscany.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648670/tuscany_l4bikm.webp",
         },
         {
           title: "Kyoto, Japan",
@@ -1478,7 +1633,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cherry blossoms at their peak, shrines and traditional gardens — magical cultural spring.",
           bestFor: ["Culture", "Festival", "Romance"],
           travelerType: "Couples",
-          image: "/images/kyoto.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646827/kyoto_ahvfoo.jpg",
         },
         {
           title: "Dubrovnik, Croatia",
@@ -1486,7 +1642,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic city walls, Adriatic views and mild temperatures — quieter before summer rush.",
           bestFor: ["Culture", "Beach", "History"],
           travelerType: "Family",
-          image: "/images/dubrovnik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646402/dubrovnik_arnbdn.webp",
         },
         {
           title: "Seville, Spain",
@@ -1494,7 +1651,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Semana Santa processions and vibrant spring tapas culture — cultural depth and festivals.",
           bestFor: ["Culture", "Festival", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/seville.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648512/seville_qnpdl3.webp",
         },
         {
           title: "Rome, Italy",
@@ -1502,7 +1660,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Eternal city with comfortable spring days for ruins, piazzas and gelato tours.",
           bestFor: ["Culture", "History", "Food & Wine"],
           travelerType: "Family",
-          image: "/images/rome.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648363/rome_quqgh8.webp",
         },
         {
           title: "Azores, Portugal",
@@ -1510,7 +1669,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Green volcanic islands, whale watching and quiet spring hikes — perfect for nature lovers.",
           bestFor: ["Nature", "Wildlife", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/azores.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645849/azores_ir7rak.webp",
         },
         {
           title: "Vienna, Austria",
@@ -1518,7 +1678,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Classical concerts, coffee houses and spring gardens — cultured and refined April trip.",
           bestFor: ["Culture", "Romance", "History"],
           travelerType: "Couples",
-          image: "/images/vienna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648687/vienna_rtxovq.webp",
         },
         {
           title: "Berlin, Germany",
@@ -1526,7 +1687,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Outdoor cafés, street art tours and cultural festivals — modern and historic blend in spring.",
           bestFor: ["Culture", "City", "Nightlife"],
           travelerType: "Solo",
-          image: "/images/berlin.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646221/berlin-munich-train-scenery_zo0gzk.jpg",
         },
         {
           title: "Funchal, Madeira",
@@ -1534,7 +1696,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Colorful floats, floral carpets and lively parades — spring flower festival highlight.",
           bestFor: ["Festival", "Culture", "Family"],
           travelerType: "Family",
-          image: "/images/madeira.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/madeira_jfwodm.webp",
         },
         {
           title: "Prague, Czech Republic",
@@ -1542,7 +1705,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Medieval streets, castle views and Easter markets — springtime charm without crowds.",
           bestFor: ["Culture", "History", "Romance"],
           travelerType: "Couples",
-          image: "/images/prague.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648262/prague_usgcjq.webp",
         },
         {
           title: "Copenhagen, Denmark",
@@ -1550,7 +1714,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Harbors, bicycles and blossoming parks — stylish Scandinavian spring destination.",
           bestFor: ["Culture", "City", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/copenhagen.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646308/copenhagen_khzqjy.webp",
         },
         {
           title: "Chefchaouen, Morocco",
@@ -1558,7 +1723,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Blue-painted mountain town with mild spring weather — photogenic and cultural escape.",
           bestFor: ["Culture", "Adventure", "Photography"],
           travelerType: "Solo",
-          image: "/images/chefchaouen.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646282/chefchaouen_gpiqtp.webp",
         },
         {
           title: "Seoul, South Korea",
@@ -1566,7 +1732,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cherry blossom festivals, temples and vibrant nightlife — spring season buzz.",
           bestFor: ["Festival", "Culture", "Nightlife"],
           travelerType: "Couples",
-          image: "/images/seoul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648509/seoul_itax2i.webp",
         },
         {
           title: "Barcelona, Spain",
@@ -1574,7 +1741,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Gaudí landmarks, tapas culture and beach walks — lively spring Mediterranean city.",
           bestFor: ["Culture", "Food & Wine", "Nightlife"],
           travelerType: "Couples",
-          image: "/images/barcelona.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646206/barcelona_nezo4d.webp",
         },
         {
           title: "Ljubljana, Slovenia",
@@ -1582,7 +1750,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fairytale old town, river cafés and blooming parks — perfect underrated spring trip.",
           bestFor: ["Culture", "Romance", "City"],
           travelerType: "Couples",
-          image: "/images/ljubljana.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646890/ljubljana_lamejx.jpg",
         },
         {
           title: "Petra, Jordan",
@@ -1590,7 +1759,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Comfortable April weather to explore ancient Nabatean wonders — one of the world’s best heritage sites.",
           bestFor: ["History", "Culture", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/petra.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648260/petra_iglrap.webp",
         },
         {
           title: "Lisbon, Portugal",
@@ -1598,7 +1768,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tram rides, tiled streets and Atlantic breezes — springtime in Portugal’s capital.",
           bestFor: ["Culture", "Food & Wine", "City"],
           travelerType: "Solo",
-          image: "/images/lisbon.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646890/lisbon-remote_oo66ty.webp",
         },
         {
           title: "Bali, Indonesia",
@@ -1606,7 +1777,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "End of rainy season, green rice terraces and temples — affordable April escape.",
           bestFor: ["Beach", "Wellness", "Culture"],
           travelerType: "Couples",
-          image: "/images/bali.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646202/bali_zmtydi.jpgp",
         },
         {
           title: "Los Angeles, USA",
@@ -1614,7 +1786,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny weather, Hollywood tours and beaches — April is shoulder season in LA.",
           bestFor: ["City", "Beach", "Shopping"],
           travelerType: "Family",
-          image: "/images/los-angeles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646921/los-angeles_di2zpp.webp",
         },
         {
           title: "Washington D.C., USA",
@@ -1622,7 +1795,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cherry blossom festival along the Tidal Basin — iconic spring in the capital.",
           bestFor: ["Festival", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/washington-dc.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648696/washington-dc_aprrbn.webp",
         },
         {
           title: "Marrakech, Morocco",
@@ -1630,7 +1804,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vibrant souks, gardens and mild weather — springtime magic in North Africa.",
           bestFor: ["Culture", "Shopping", "Food & Wine"],
           travelerType: "Solo",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_esdxwl.jpg",
         },
         {
           title: "Jerusalem, Israel",
@@ -1638,7 +1813,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Religious festivals, old city culture and warm spring weather — unique spiritual trip.",
           bestFor: ["Culture", "Festival", "History"],
           travelerType: "Family",
-          image: "/images/jerusalem.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646755/jerusalem_y8gqr1.webp",
         },
         {
           title: "Malta",
@@ -1646,7 +1822,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mediterranean fortress towns, beaches and spring sunshine — great value April trip.",
           bestFor: ["Culture", "Beach", "History"],
           travelerType: "Family",
-          image: "/images/malta.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647754/malta_e4d8o6.webp",
         },
         {
           title: "Buenos Aires, Argentina",
@@ -1654,7 +1831,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn tango, steak culture and vibrant streets — southern hemisphere April city break.",
           bestFor: ["Culture", "Food & Wine", "Nightlife"],
           travelerType: "Solo",
-          image: "/images/buenosaires.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646241/buenosaires_eqa9aq.jpg",
         },
       ],
     },
@@ -1669,7 +1847,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Lemon groves, coastal drives and cliffside villas — Mediterranean romance at its best.",
           bestFor: ["Romance", "Luxury", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/amalfi.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645845/amalfi_unhr9v.webp",
         },
         {
           title: "Provence, France",
@@ -1677,7 +1856,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Lavender beginnings, vineyards and colorful villages — ideal May countryside escape.",
           bestFor: ["Food & Wine", "Romance", "Nature"],
           travelerType: "Couples",
-          image: "/images/france.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646447/france_kht746.jpg",
         },
         {
           title: "Iceland",
@@ -1685,7 +1865,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Waterfalls, glaciers and long daylight hours — great time for adventurous road trips.",
           bestFor: ["Adventure", "Road Trip", "Nature"],
           travelerType: "Adventure",
-          image: "/images/iceland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646706/iceland_dl6rfv.jpg",
         },
         {
           title: "Cinque Terre, Italy",
@@ -1693,7 +1874,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Colorful seaside villages and cliff trails — perfect for hiking and romance.",
           bestFor: ["Hiking", "Romance", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/cinque-terre.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646295/cinque-terre_srtqgq.jpg",
         },
         {
           title: "Algarve, Portugal",
@@ -1701,7 +1883,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Golden beaches, golf and seaside towns — family-friendly May sunshine.",
           bestFor: ["Beach", "Family", "Golf"],
           travelerType: "Family",
-          image: "/images/algarve.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645847/algarve_gdn50p.webp",
         },
         {
           title: "Santorini, Greece",
@@ -1709,7 +1892,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Blue domes and sunsets over the caldera — quieter before peak summer crowds.",
           bestFor: ["Romance", "Luxury", "Photography"],
           travelerType: "Couples",
-          image: "/images/santorini.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648423/santorini_nkitf1.webp",
         },
         {
           title: "Budapest, Hungary",
@@ -1717,7 +1901,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Thermal baths, Danube cruises and spring festivals — lively city break in May.",
           bestFor: ["Culture", "Festival", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/budapest.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646231/budapest_pw0tda.jpg",
         },
         {
           title: "Croatia (Hvar)",
@@ -1725,7 +1910,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Island beaches, nightlife and sailing — May is shoulder season luxury.",
           bestFor: ["Beach", "Nightlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/hvar.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646525/hvar_fyeqhw.jpg",
         },
         {
           title: "Scotland Highlands",
@@ -1733,7 +1919,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Long days, whisky tours and hiking — wild landscapes come alive in May.",
           bestFor: ["Nature", "Hiking", "Road Trip"],
           travelerType: "Adventure",
-          image: "/images/scotland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648508/scotland_stijst.jpg",
         },
         {
           title: "Dubrovnik, Croatia",
@@ -1741,7 +1928,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Game of Thrones scenery, Adriatic charm and mild weather — perfect coastal trip.",
           bestFor: ["Culture", "Beach", "History"],
           travelerType: "Family",
-          image: "/images/dubrovnik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646402/dubrovnik_arnbdn.webp",
         },
         {
           title: "Athens, Greece",
@@ -1749,7 +1937,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Ancient ruins, rooftop bars and Mediterranean cuisine — history and nightlife together.",
           bestFor: ["History", "Culture", "Nightlife"],
           travelerType: "Solo",
-          image: "/images/athens.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645847/athens_maxz3b.jpg",
         },
         {
           title: "Vancouver, Canada",
@@ -1757,7 +1946,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mountains, sea and festivals — May is perfect for outdoor adventure and city life.",
           bestFor: ["Nature", "City", "Adventure"],
           travelerType: "Family",
-          image: "/images/vancouver.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648674/vancouver_u0lexw.jpg",
         },
         {
           title: "Maui, Hawaii",
@@ -1765,7 +1955,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, waterfalls and scenic drives — quieter before peak summer.",
           bestFor: ["Beach", "Romance", "Adventure"],
           travelerType: "Couples",
-          image: "/images/maui.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647791/maui_y0vwzf.webp",
         },
         {
           title: "Barcelona, Spain",
@@ -1773,7 +1964,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tapas, Gaudí and lively nightlife — warm Mediterranean in May.",
           bestFor: ["Culture", "Food & Wine", "Nightlife"],
           travelerType: "Groups",
-          image: "/images/barcelona.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646206/barcelona_nezo4d.webp",
         },
         {
           title: "Florence, Italy",
@@ -1781,7 +1973,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Renaissance art, Tuscan food and warm piazzas — perfect for culture lovers.",
           bestFor: ["Culture", "Food & Wine", "History"],
           travelerType: "Couples",
-          image: "/images/florence.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646424/florence_qqixre.jpg",
         },
         {
           title: "Peru (Machu Picchu)",
@@ -1789,7 +1982,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season starts — trek the Inca Trail with fewer crowds.",
           bestFor: ["Hiking", "Adventure", "History"],
           travelerType: "Adventure",
-          image: "/images/machu-picchu.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647221/machu-picchu_cky3g3.webp",
         },
         {
           title: "Tokyo, Japan",
@@ -1797,7 +1991,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm weather, food culture and spring festivals — a vibrant May city trip.",
           bestFor: ["City", "Food & Wine", "Festival"],
           travelerType: "Solo",
-          image: "/images/tokyo.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648663/tokyo_m0koff.webp",
         },
         {
           title: "Lisbon, Portugal",
@@ -1805,7 +2000,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny streets, trams and sardine festivals — May is prime cultural season.",
           bestFor: ["Culture", "Festival", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/lisbon.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646890/lisbon-june-three_q5fo8u.jpg",
         },
         {
           title: "Marrakech, Morocco",
@@ -1813,7 +2009,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vibrant souks, desert escapes and rooftop dining — May is warm and lively.",
           bestFor: ["Culture", "Shopping", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_tdrdyj.webp",
         },
         {
           title: "Capri, Italy",
@@ -1821,7 +2018,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Luxury island, grottos and yachting — elite Mediterranean vibe.",
           bestFor: ["Luxury", "Romance", "Cruise"],
           travelerType: "Luxury",
-          image: "/images/capri.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646260/capri_qulmcp.jpg",
         },
         {
           title: "Bali, Indonesia",
@@ -1829,7 +2027,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season starts — beaches, temples and wellness retreats in May.",
           bestFor: ["Beach", "Wellness", "Culture"],
           travelerType: "Couples",
-          image: "/images/bali.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645850/bali_vivapm.jpg",
         },
         {
           title: "San Diego, USA",
@@ -1837,7 +2036,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, surfing and family attractions — great May destination in California.",
           bestFor: ["Beach", "Family", "Adventure"],
           travelerType: "Family",
-          image: "/images/san-diego.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648421/san-diego_o1oy8r.jpg",
         },
         {
           title: "Nice, France",
@@ -1845,7 +2045,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Promenade strolls, beaches and Mediterranean charm — early summer vibe.",
           bestFor: ["Beach", "City", "Romance"],
           travelerType: "Couples",
-          image: "/images/nice.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648032/nice_dttai7.jpg",
         },
         {
           title: "Dubrovnik, Croatia",
@@ -1853,7 +2054,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic town, Adriatic waters and fewer crowds — stunning May destination.",
           bestFor: ["History", "Culture", "Beach"],
           travelerType: "Family",
-          image: "/images/dubrovnik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646402/dubrovnik_arnbdn.webp",
         },
         {
           title: "Crete, Greece",
@@ -1861,7 +2063,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild weather, beaches and Cretan food — great for families and couples alike.",
           bestFor: ["Beach", "Food & Wine", "Family"],
           travelerType: "Family",
-          image: "/images/crete.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646328/crete_gtcosn.jpg",
         },
         {
           title: "Kauai, Hawaii",
@@ -1869,7 +2072,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dramatic cliffs, waterfalls and tropical hikes — paradise in May.",
           bestFor: ["Adventure", "Nature", "Beach"],
           travelerType: "Adventure",
-          image: "/images/kauai.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646784/kauai_g8h5ab.jpg",
         },
         {
           title: "Tuscany, Italy",
@@ -1877,7 +2081,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Rolling hills, vineyards and festivals — perfect for spring romance.",
           bestFor: ["Food & Wine", "Romance", "Culture"],
           travelerType: "Couples",
-          image: "/images/tuscany.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648670/tuscany_l4bikm.webp",
         },
         {
           title: "Mexico City, Mexico",
@@ -1885,7 +2090,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Food markets, Aztec ruins and culture — vibrant in May.",
           bestFor: ["Culture", "Food & Wine", "History"],
           travelerType: "Solo",
-          image: "/images/mexico-city.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647869/mexico-city_pydwt5.webp",
         },
         {
           title: "Vienna, Austria",
@@ -1893,7 +2099,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Music, coffee houses and spring charm — elegant May escape.",
           bestFor: ["Culture", "Romance", "History"],
           travelerType: "Couples",
-          image: "/images/vienna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648687/vienna_rtxovq.webp",
         },
         {
           title: "Sardinia, Italy",
@@ -1901,7 +2108,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Pristine beaches, Italian cuisine and culture — underrated May island gem.",
           bestFor: ["Beach", "Culture", "Food & Wine"],
           travelerType: "Family",
-          image: "/images/sardinia.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648424/sardinia_hgeapf.jpg",
         },
 
         {
@@ -1911,7 +2119,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "High-altitude glacier runs keep ski options open into late spring — luxury chalets and alpine wellness available in May.",
           bestFor: ["Skiing", "Luxury", "Wellness"],
           travelerType: "Couples",
-          image: "/images/zermatt.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648863/zermatt_z9z0t6.webp",
         },
         {
           month: "May",
@@ -1920,7 +2129,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Reliable glacier skiing and training in May — a practical choice for spring ski trips and mountain wellness.",
           bestFor: ["Skiing", "Adventure", "Wellness"],
           travelerType: "Groups",
-          image: "/images/hintertux-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646475/hintertux-may_gvjh5p.jpg",
         },
         {
           month: "May",
@@ -1929,7 +2139,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Transition into excellent dry-season game viewing — May sees wildlife concentrate near channels for strong safari sightings.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/okavango-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648072/okavango-april_lzsfih.webp",
         },
         {
           month: "May",
@@ -1938,7 +2149,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry-season movement makes May a rewarding time to spot big game and enjoy intimate safari camps.",
           bestFor: ["Safari", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/south-luangwa-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648534/south-luangwa-may_wufrck.jpg",
         },
         {
           month: "May",
@@ -1947,7 +2159,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm seas and active wildlife — May cruise windows offer close encounters with endemic species and snorkeling.",
           bestFor: ["Cruise", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/galapagos-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646447/galapagos-may_nmmaji.jpg",
         },
         {
           month: "May",
@@ -1956,7 +2169,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Thermal spas, geothermal wellness and longer days — May is calm for spa-focused trips and light outdoor adventure.",
           bestFor: ["Wellness", "Nature", "Romance"],
           travelerType: "Couples",
-          image: "/images/blue-lagoon-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646228/blue-lagoon-may_nr106o.jpg",
         },
         {
           month: "May",
@@ -1965,7 +2179,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild temperatures, good connectivity and nomad-friendly coworking — May is excellent for remote work and hiking days off.",
           bestFor: ["Remote Work", "Hiking", "Wellness"],
           travelerType: "Remote Work",
-          image: "/images/madeira-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647234/madeira-may_yggb4e.jpg",
         },
         {
           month: "May",
@@ -1974,7 +2189,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Calmer seas and secluded villas — May shoulder-season offers romance and private resort experiences for honeymooners.",
           bestFor: ["Honeymoon", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/maldives-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647753/maldives-may_iuohdg.jpg",
         },
         {
           month: "May",
@@ -1983,7 +2199,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm seas, luxury resorts and honeymoon villas — May brings great beach weather and calmer resorts before peak season.",
           bestFor: ["Honeymoon", "Beach", "Luxury"],
           travelerType: "Couples",
-          image: "/images/mauritius-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647790/mauritius-may_gvbrta.jpg",
         },
         {
           month: "May",
@@ -1992,7 +2209,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Designer boutiques, spring sales and city sophistication — May is a top time for style-savvy shoppers and city breaks.",
           bestFor: ["Shopping", "City", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/milan-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647901/milan-may_cyjzen.jpg",
         },
         {
           month: "May",
@@ -2001,7 +2219,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Peak shoulder-season for Mediterranean sailings — warm weather, island stops and quieter ports in May.",
           bestFor: ["Cruise", "Beach", "Culture"],
           travelerType: "Couples",
-          image: "/images/med-cruise-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647791/med-cruise-may_sjeqw5.jpg",
         },
         {
           month: "May",
@@ -2010,7 +2229,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wildlife and glacier viewing ramps up in May — early-season cruises run with good chances for whales and bears.",
           bestFor: ["Cruise", "Wildlife", "Nature"],
           travelerType: "Families",
-          image: "/images/alaska-cruise-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646152/alaska-cruise-may_rv5da1.jpg",
         },
         {
           month: "May",
@@ -2019,7 +2239,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mountain spas, hot springs and late-spring hikes — mix wellness, mild alpine days and nature therapy in May.",
           bestFor: ["Wellness", "Nature", "Hiking"],
           travelerType: "Couples",
-          image: "/images/banff-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646204/banff-may_wjc5hg.jpg",
         },
         {
           month: "May",
@@ -2028,7 +2249,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny spring days, great food and reliable internet — May is ideal for remote workers who want city life and short trips.",
           bestFor: ["Remote Work", "City", "Food & Wine"],
           travelerType: "Remote Work",
-          image: "/images/lisbon-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646888/lisbon-may_jb4nnh.jpg",
         },
         {
           month: "May",
@@ -2037,7 +2259,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Drier days for both safari extensions and relaxing beaches — perfect mix of wildlife day trips and romantic coastal stays.",
           bestFor: ["Wildlife", "Honeymoon", "Beach"],
           travelerType: "Couples",
-          image: "/images/zanzibar-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648800/zanzibar-may_x4bgh4.jpg",
         },
       ],
     },
@@ -2052,7 +2275,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cruising, kayaking and dramatic scenery — enjoy the midnight sun in June.",
           bestFor: ["Nature", "Cruise", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/norway-fjords-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648042/norway-fjords-june_eihodr.jpg",
         },
         {
           title: "French Riviera, France",
@@ -2060,7 +2284,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Yachting, glamorous beaches and summer nightlife — luxury hotspot in June.",
           bestFor: ["Luxury", "Beach", "Nightlife"],
           travelerType: "Luxury",
-          image: "/images/french-riviera.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646448/french-riviera_abyncc.webp",
         },
         {
           title: "Zermatt, Switzerland",
@@ -2068,7 +2293,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer hiking, glacier views and alpine villages — stunning mountain scenery.",
           bestFor: ["Hiking", "Luxury", "Nature"],
           travelerType: "Couples",
-          image: "/images/zermatt.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648863/zermatt_z9z0t6.webp",
         },
         {
           title: "Mykonos, Greece",
@@ -2076,7 +2302,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beach clubs, nightlife and upscale stays — lively June island atmosphere.",
           bestFor: ["Beach", "Nightlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/mykonos.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647977/mykonos_dcrxsj.jpg",
         },
         {
           title: "Isle of Skye, Scotland",
@@ -2084,7 +2311,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dramatic moors, quiet beaches and long days — nature escape in June.",
           bestFor: ["Nature", "Hiking", "Romance"],
           travelerType: "Couples",
-          image: "/images/skye.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648514/skye_nbmtx2.jpg",
         },
         {
           title: "Barcelona, Spain",
@@ -2092,7 +2320,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer festivals, beaches and Gaudí culture — buzzing Mediterranean city.",
           bestFor: ["Festival", "Nightlife", "Culture"],
           travelerType: "Groups",
-          image: "/images/barcelona.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646206/barcelona_nezo4d.webp",
         },
         {
           title: "Iceland",
@@ -2100,7 +2329,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "24-hour daylight, waterfalls and volcanic adventures — prime summer exploration.",
           bestFor: ["Nature", "Road Trip", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/iceland-june-two.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646528/iceland-june-two_dkncyv.jpg",
         },
         {
           title: "Hvar, Croatia",
@@ -2108,7 +2338,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Luxury yachts, nightlife and Adriatic beaches — stylish June getaway.",
           bestFor: ["Nightlife", "Luxury", "Beach"],
           travelerType: "Luxury",
-          image: "/images/hvar-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646523/hvar-june_qpcqvq.jpg",
         },
         {
           title: "Banff, Canada",
@@ -2116,7 +2347,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "National parks, turquoise lakes and mountain hikes — breathtaking in summer.",
           bestFor: ["Nature", "Hiking", "Adventure"],
           travelerType: "Family",
-          image: "/images/banff.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646206/banff_tjdzmc.webp",
         },
         {
           title: "Stockholm, Sweden",
@@ -2124,7 +2356,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Midsummer festivals, island hopping and design culture — light-filled northern capital.",
           bestFor: ["Festival", "Culture", "City"],
           travelerType: "Couples",
-          image: "/images/stockholm.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648543/stockholm_x9uskj.jpg",
         },
         {
           title: "Santorini, Greece",
@@ -2132,7 +2365,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Blue domes, luxury hotels and island sunsets — iconic summer romance.",
           bestFor: ["Romance", "Luxury", "Photography"],
           travelerType: "Couples",
-          image: "/images/santorini.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648421/santorini_sryzrq.jpg",
         },
         {
           title: "Amalfi Coast, Italy",
@@ -2140,7 +2374,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Positano, cliffs and beaches — summer Mediterranean hotspot.",
           bestFor: ["Romance", "Luxury", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/amalfi.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646163/amalfi_flixfc.webp",
         },
         {
           title: "Bali, Indonesia",
@@ -2148,7 +2383,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season, beaches and wellness retreats — spiritual and adventurous escape.",
           bestFor: ["Wellness", "Beach", "Culture"],
           travelerType: "Couples",
-          image: "/images/bali-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645852/bali-june_cl979b.jpg",
         },
         {
           title: "Dubrovnik, Croatia",
@@ -2156,7 +2392,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer on the Adriatic, beaches and history — coastal charm in June.",
           bestFor: ["History", "Beach", "Luxury"],
           travelerType: "Family",
-          image: "/images/dubrovnik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646402/dubrovnik_arnbdn.webp",
         },
         {
           title: "Hawaii (Oahu)",
@@ -2164,7 +2401,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Surf, beaches and island adventure — summer paradise in the Pacific.",
           bestFor: ["Adventure", "Beach", "Family"],
           travelerType: "Family",
-          image: "/images/oahu.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648070/oahu_dcq8t8.jpg",
         },
         {
           title: "Vienna, Austria",
@@ -2172,7 +2410,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Concerts, cafés and outdoor charm — elegant summer culture.",
           bestFor: ["Culture", "Romance", "History"],
           travelerType: "Couples",
-          image: "/images/vienna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648687/vienna_rtxovq.webp",
         },
         {
           title: "Berlin, Germany",
@@ -2180,7 +2419,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Open-air festivals, nightlife and history — Europe’s summer hub.",
           bestFor: ["Festival", "Nightlife", "Culture"],
           travelerType: "Solo",
-          image: "/images/berlin.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646222/berlin_cuy0fg.webp",
         },
         {
           title: "Tuscany, Italy",
@@ -2188,7 +2428,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer vineyards, countryside villas and rolling landscapes — ideal for couples.",
           bestFor: ["Food & Wine", "Romance", "Culture"],
           travelerType: "Couples",
-          image: "/images/tuscany.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648670/tuscany_l4bikm.webp",
         },
         {
           title: "Lisbon, Portugal",
@@ -2196,7 +2437,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sardine festival, trams and sunny weather — lively summer atmosphere.",
           bestFor: ["Festival", "Food & Wine", "Culture"],
           travelerType: "Groups",
-          image: "/images/lisbon-june-three.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646890/lisbon-june-three_q5fo8u.jpg",
         },
         {
           title: "French Alps (Chamonix)",
@@ -2204,7 +2446,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Hiking, cable cars and alpine scenery — June is perfect outdoors.",
           bestFor: ["Hiking", "Adventure", "Nature"],
           travelerType: "Adventure",
-          image: "/images/chamonix.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646271/chamonix_tiioof.jpg",
         },
         {
           title: "Capri, Italy",
@@ -2212,7 +2455,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Luxury island escape, grottos and yachting — elite Mediterranean retreat.",
           bestFor: ["Luxury", "Cruise", "Romance"],
           travelerType: "Luxury",
-          image: "/images/capri.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646260/capri_qulmcp.jpg",
         },
         {
           title: "Malta",
@@ -2220,7 +2464,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sun-drenched beaches, history and Mediterranean culture — popular June island break.",
           bestFor: ["Beach", "History", "Culture"],
           travelerType: "Family",
-          image: "/images/malta.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647754/malta_e4d8o6.webp",
         },
         {
           title: "Tokyo, Japan",
@@ -2228,7 +2473,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cultural festivals, shopping and cuisine — lively June city trip.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Solo",
-          image: "/images/tokyo.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648663/tokyo_m0koff.webp",
         },
         {
           title: "New York City, USA",
@@ -2236,7 +2482,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer events, Broadway and rooftop bars — buzzing city in June.",
           bestFor: ["City", "Nightlife", "Shopping"],
           travelerType: "Groups",
-          image: "/images/nyc-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648069/nyc-june_qk2zu1.jpg",
         },
         {
           title: "Istanbul, Turkey",
@@ -2244,7 +2491,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic sites, Bosphorus cruises and lively bazaars — ideal summer city trip.",
           bestFor: ["Culture", "Shopping", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/istanbul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646755/istanbul_y315cq.webp",
         },
         {
           title: "Reykjavik, Iceland",
@@ -2252,7 +2500,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Whale watching, hot springs and 24-hour daylight — unique Arctic summer.",
           bestFor: ["Adventure", "Nature", "Wildlife"],
           travelerType: "Adventure",
-          image: "/images/reykjavik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648361/reykjavik_b2ij5c.webp",
         },
         {
           title: "Prague, Czech Republic",
@@ -2260,7 +2509,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer festivals, castles and lively old town — magical European trip.",
           bestFor: ["Festival", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/prague.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648260/prague_bxffue.jpg",
         },
         {
           title: "Los Angeles, USA",
@@ -2268,7 +2518,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, theme parks and nightlife — perfect family or group trip.",
           bestFor: ["Beach", "Family", "Nightlife"],
           travelerType: "Family",
-          image: "/images/los-angeles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646921/los-angeles_di2zpp.webp",
         },
         {
           title: "Marrakech, Morocco",
@@ -2276,7 +2527,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Desert trips, souks and rooftop dining — hot but atmospheric June.",
           bestFor: ["Culture", "Shopping", "Adventure"],
           travelerType: "Solo",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_esdxwl.jpg",
         },
         {
           title: "Lake Como, Italy",
@@ -2284,7 +2536,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Elegant villas, lakeside towns and mountain views — luxury summer escape.",
           bestFor: ["Luxury", "Romance", "Food & Wine"],
           travelerType: "Luxury",
-          image: "/images/lake-como.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646858/lake-como_l6m6v8.webp",
         },
 
         {
@@ -2294,7 +2547,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Long summer days, fjord cruises and scenic drives — June is ideal for road trippers and small-ship fjord cruises.",
           bestFor: ["Road Trip", "Cruise", "Nature"],
           travelerType: "Couples",
-          image: "/images/norway-fjords-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648041/norway-fjords-april_ltms0v.webp",
         },
         {
           month: "June",
@@ -2303,7 +2557,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "June marks the heart of Alaska cruise season — glaciers, whales and abundant wildlife on small-ship and big-ship itineraries.",
           bestFor: ["Cruise", "Wildlife", "Nature"],
           travelerType: "Families",
-          image: "/images/alaska-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646154/alaska-june_etxciz.jpg",
         },
         {
           month: "June",
@@ -2312,7 +2567,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild summer days, geothermal baths and accessible highland roads — perfect for an active road trip with wellness stops.",
           bestFor: ["Road Trip", "Wellness", "Remote Work"],
           travelerType: "Solo",
-          image: "/images/iceland-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646616/iceland-june_e6yduo.jpg",
         },
         {
           month: "June",
@@ -2321,7 +2577,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "High-altitude glacier terrain keeps ski access in June—combine summer hiking in lower valleys with glacier skiing experiences.",
           bestFor: ["Skiing", "Adventure", "Luxury"],
           travelerType: "Groups",
-          image: "/images/zermatt-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648801/zermatt-june_vlvwoo.jpg",
         },
         {
           month: "June",
@@ -2330,7 +2587,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Start of the dry-season wildlife buildup — June is excellent for game drives and early migration sightings in East Africa.",
           bestFor: ["Safari", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/masai-mara-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/masai-mara-june_rqhfk5.jpg",
         },
         {
           month: "June",
@@ -2339,7 +2597,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season improves game visibility—June is a top month for safari viewing in many South African reserves.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Families",
-          image: "/images/kruger.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646825/kruger_qy4iik.webp",
         },
         {
           month: "June",
@@ -2348,7 +2607,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Peak dry-season conditions bring concentrated wildlife viewing — June is a premier month for Delta safaris.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/okavango-april.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648072/okavango-april_lzsfih.webp",
         },
         {
           month: "June",
@@ -2357,7 +2617,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Calm lagoons, clear skies and romantic overwater bungalows — June is excellent for honeymooners seeking tropical luxury.",
           bestFor: ["Honeymoon", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/bora-bora.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646229/bora-bora_h32i0c.jpg",
         },
         {
           month: "June",
@@ -2366,7 +2627,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "June is winter in southern Patagonia — dramatic snowscapes, quieter trekking routes and a different, crisp atmosphere for winter adventurers.",
           bestFor: ["Winter", "Hiking", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/patagonia-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648166/patagonia-june_hfmkbv.jpg",
         },
         {
           month: "June",
@@ -2375,7 +2637,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Alpine wellness retreats, glacier walks and summer hiking begin — combine spa time with glacier-ski or mountaintop hikes.",
           bestFor: ["Wellness", "Hiking", "Skiing"],
           travelerType: "Couples",
-          image: "/images/swiss-alps.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648549/swiss-alps-summer_ulsqnt.jpg",
         },
         {
           month: "June",
@@ -2384,7 +2647,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Long daylight, geothermal pools and accessible highlands — ideal for wellness breaks, photography and mild adventure in June.",
           bestFor: ["Wellness", "Nature", "Remote Work"],
           travelerType: "Remote Work",
-          image: "/images/iceland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646706/iceland_dl6rfv.jpg",
         },
         {
           month: "June",
@@ -2393,7 +2657,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny coastal drives, surf towns and outdoor stops — June offers excellent family and scenic road-trip weather on the PCH.",
           bestFor: ["Road Trip", "Family", "Nature"],
           travelerType: "Families",
-          image: "/images/pch-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648166/pch-june_brwejh.jpg",
         },
         {
           month: "June",
@@ -2402,7 +2667,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Arctic summer brings seabird colonies, polarscapes and unique wildlife-spotting cruises — remote and unforgettable in June.",
           bestFor: ["Wildlife", "Cruise", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/svalbard-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648549/svalbard-june_a71ypb.jpg",
         },
         {
           month: "June",
@@ -2411,7 +2677,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny June days, good connectivity and quick coastal escapes make Lisbon and the Algarve excellent for remote-work breaks.",
           bestFor: ["Remote Work", "Beach", "Food & Wine"],
           travelerType: "Remote Work",
-          image: "/images/lisbon-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646888/lisbon-june_bahxcz.jpg",
         },
         {
           month: "June",
@@ -2420,7 +2687,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Pristine beaches and high-end private resorts — June is a calm, luxurious choice for romance and secluded honeymoon stays.",
           bestFor: ["Honeymoon", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/sychelles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sychelles_jktsv0.webp",
         },
       ],
     },
@@ -2435,7 +2703,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Glaciers, waterfalls and festivals under midnight sun — ultimate July adventure.",
           bestFor: ["Nature", "Adventure", "Road Trip"],
           travelerType: "Adventure",
-          image: "/images/iceland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646706/iceland_dl6rfv.jpg",
         },
         {
           title: "Banff, Canada",
@@ -2443,7 +2712,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Turquoise lakes, mountain trails and wildlife in Canada’s national parks — July at its best.",
           bestFor: ["Nature", "Hiking", "Wildlife"],
           travelerType: "Family",
-          image: "/images/banff.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646204/banff_dqmow3.jpg",
         },
         {
           title: "Alaska",
@@ -2451,7 +2721,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Glacier cruises, fjords and wildlife spotting — pristine wilderness for summer explorers.",
           bestFor: ["Cruise", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/alaska.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645841/alaska_hb3dhl.jpg",
         },
         {
           title: "Santorini, Greece",
@@ -2459,7 +2730,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunsets, whitewashed villages and luxury hotels — peak summer romance on the Aegean.",
           bestFor: ["Romance", "Luxury", "Photography"],
           travelerType: "Couples",
-          image: "/images/santorini.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648423/santorini_nkitf1.webp",
         },
         {
           title: "Croatia (Split)",
@@ -2467,7 +2739,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Island hopping, sailing and nightlife — Adriatic summer hotspot.",
           bestFor: ["Sailing", "Nightlife", "Beach"],
           travelerType: "Groups",
-          image: "/images/split.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648536/split_bt50w7.jpg",
         },
         {
           title: "Sardinia, Italy",
@@ -2475,7 +2748,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Luxury beach clubs, turquoise seas and family resorts — Mediterranean jewel.",
           bestFor: ["Luxury", "Beach", "Family"],
           travelerType: "Family",
-          image: "/images/sardinia.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648424/sardinia_hgeapf.jpg",
         },
         {
           title: "Tanzania (Safari)",
@@ -2483,7 +2757,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Great Migration crossings, wildlife lodges and savannah landscapes — iconic July safari.",
           bestFor: ["Safari", "Adventure", "Wildlife"],
           travelerType: "Groups",
-          image: "/images/tanzania.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648558/tanzania_wrnm7w.jpg",
         },
         {
           title: "Bordeaux, France",
@@ -2491,7 +2766,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Vineyards, wine festivals and countryside romance — summer French escape.",
           bestFor: ["Food & Wine", "Festival", "Romance"],
           travelerType: "Couples",
-          image: "/images/bordeaux.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646231/bordeaux_w8yh7i.jpg",
         },
         {
           title: "Ibiza, Spain",
@@ -2499,7 +2775,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beach clubs, nightlife and DJs — iconic July party island.",
           bestFor: ["Nightlife", "Beach", "Luxury"],
           travelerType: "Groups",
-          image: "/images/ibiza.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646525/ibiza_f5onqd.jpg",
         },
         {
           title: "Hokkaido, Japan",
@@ -2507,7 +2784,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Flower fields, cool summer air and seafood — refreshing escape from mainland heat.",
           bestFor: ["Nature", "Food & Wine", "Adventure"],
           travelerType: "Couples",
-          image: "/images/hokkaido-summer.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646503/hokkaido-summer_uvajnz.jpg",
         },
         {
           title: "Norwegian Fjords",
@@ -2515,7 +2793,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cruises, kayaking and long daylight — July is ideal for fjords.",
           bestFor: ["Cruise", "Nature", "Adventure"],
           travelerType: "Adventure",
-          image: "/images/fjords.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646423/fjords_zk4jbv.jpg",
         },
         {
           title: "Maui, Hawaii",
@@ -2523,7 +2802,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Surfing, volcanic hikes and tropical beaches — Pacific paradise.",
           bestFor: ["Beach", "Adventure", "Family"],
           travelerType: "Family",
-          image: "/images/maui.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647791/maui_y0vwzf.webp",
         },
         {
           title: "Edinburgh, Scotland",
@@ -2531,7 +2811,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Castle views, festivals and Highland escapes — Scotland in summer.",
           bestFor: ["Festival", "Culture", "History"],
           travelerType: "Couples",
-          image: "/images/edinburgh.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646404/edinburgh_my8oyx.jpg",
         },
         {
           title: "Berlin, Germany",
@@ -2539,7 +2820,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Open-air clubs, culture and history — buzzing July city.",
           bestFor: ["Nightlife", "Culture", "Festival"],
           travelerType: "Solo",
-          image: "/images/berlin.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646221/berlin-munich-train-scenery_zo0gzk.jpg",
         },
         {
           title: "Swiss Alps",
@@ -2547,7 +2829,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Hiking, mountain lakes and alpine villages — Switzerland in bloom.",
           bestFor: ["Hiking", "Nature", "Luxury"],
           travelerType: "Couples",
-          image: "/images/swiss-alps.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648549/swiss-alps-summer_ulsqnt.jpg",
         },
         {
           title: "Amalfi Coast, Italy",
@@ -2555,7 +2838,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cliffside towns, luxury resorts and Mediterranean charm — peak season beauty.",
           bestFor: ["Romance", "Luxury", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/amalfi.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646163/amalfi_flixfc.webp",
         },
         {
           title: "Greenland",
@@ -2563,7 +2847,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Icebergs, midnight sun and adventure cruises — untouched Arctic July trip.",
           bestFor: ["Adventure", "Cruise", "Nature"],
           travelerType: "Adventure",
-          image: "/images/greenland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646469/greenland_u2ycpy.jpg",
         },
         {
           title: "Barcelona, Spain",
@@ -2571,7 +2856,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tapas, beaches and Gaudí landmarks — lively July atmosphere.",
           bestFor: ["Culture", "Nightlife", "Beach"],
           travelerType: "Groups",
-          image: "/images/barcelona.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646206/barcelona_nezo4d.webp",
         },
         {
           title: "Yosemite, USA",
@@ -2579,14 +2865,16 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Giant waterfalls, granite cliffs and trails — California nature at its finest.",
           bestFor: ["Adventure", "Hiking", "Nature"],
           travelerType: "Family",
-          image: "/images/yosemite.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648797/yosemite_bieq0y.jpg",
         },
         {
           title: "Dubrovnik, Croatia",
           description: "Old town, beaches and island hopping — Adriatic jewel.",
           bestFor: ["History", "Beach", "Luxury"],
           travelerType: "Couples",
-          image: "/images/dubrovnik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646402/dubrovnik_arnbdn.webp",
         },
         {
           title: "French Riviera",
@@ -2594,7 +2882,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Luxury yachts, glamour and Mediterranean beaches — stylish July hotspot.",
           bestFor: ["Luxury", "Nightlife", "Beach"],
           travelerType: "Luxury",
-          image: "/images/french-riviera.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646448/french-riviera_abyncc.webp",
         },
         {
           title: "Lake Tahoe, USA",
@@ -2602,7 +2891,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Kayaking, hiking and alpine landscapes — summer outdoor playground.",
           bestFor: ["Nature", "Adventure", "Hiking"],
           travelerType: "Family",
-          image: "/images/lake-tahoe.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646858/lake-tahoe_jlafwm.jpg",
         },
         {
           title: "Amsterdam, Netherlands",
@@ -2610,7 +2900,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Canal cruises, festivals and cycling — buzzing European city.",
           bestFor: ["Festival", "Culture", "City"],
           travelerType: "Couples",
-          image: "/images/amsterdam.webp",
+          image:
+            "/https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646165/amsterdam_d90igy.webp",
         },
         {
           title: "Montenegro (Kotor)",
@@ -2618,7 +2909,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Bay views, medieval towns and sailing — Adriatic hidden gem.",
           bestFor: ["Sailing", "Culture", "Adventure"],
           travelerType: "Couples",
-          image: "/images/kotor.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646802/kotor_bwnswg.jpg",
         },
         {
           title: "Patagonia, Chile",
@@ -2626,7 +2918,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Winter sports in southern hemisphere — snow and glaciers.",
           bestFor: ["Skiing", "Adventure", "Nature"],
           travelerType: "Adventure",
-          image: "/images/patagonia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648165/patagonia_ofiggk.jpg",
         },
         {
           title: "Lisbon, Portugal",
@@ -2634,7 +2927,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer festivals, trams and seafood — vibrant city in July.",
           bestFor: ["Festival", "Food & Wine", "Culture"],
           travelerType: "Groups",
-          image: "/images/lisbon-july.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646860/lisbon-july_ss8n7i.jpg",
         },
         {
           title: "New York City, USA",
@@ -2642,7 +2936,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Rooftop bars, Broadway and fireworks — summer at its liveliest.",
           bestFor: ["City", "Nightlife", "Shopping"],
           travelerType: "Groups",
-          image: "/images/nyc-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648069/nyc-june_qk2zu1.jpg",
         },
         {
           title: "Stockholm, Sweden",
@@ -2650,7 +2945,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Archipelago cruises, midsummer and design — stylish northern escape.",
           bestFor: ["Festival", "Culture", "Cruise"],
           travelerType: "Couples",
-          image: "/images/stockholm.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648543/stockholm_x9uskj.jpgg",
         },
         {
           title: "Quebec City, Canada",
@@ -2658,7 +2954,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Old town charm, festivals and river cruises — French flair in North America.",
           bestFor: ["Culture", "Festival", "History"],
           travelerType: "Couples",
-          image: "/images/quebec.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648308/quebec_ttlkih.jpg",
         },
         {
           title: "Kenya (Masai Mara)",
@@ -2666,7 +2963,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wildlife migration, safaris and luxury camps — July safari peak.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/kenya.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646785/kenya_xiaoeb.jpg",
         },
       ],
     },
@@ -2681,7 +2979,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fringe Festival, castle views and cultural buzz — August hotspot.",
           bestFor: ["Festival", "Culture", "History"],
           travelerType: "Couples",
-          image: "/images/edinburgh.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646404/edinburgh_my8oyx.jpg",
         },
         {
           title: "San Sebastian, Spain",
@@ -2689,7 +2988,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Pintxos, beaches and festivals — food capital of Spain in summer.",
           bestFor: ["Food & Wine", "Beach", "Festival"],
           travelerType: "Couples",
-          image: "/images/san-sebastian.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648420/san-sebastian_j71mer.jpg",
         },
         {
           title: "Bali, Indonesia",
@@ -2697,7 +2997,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season, temples and beaches — cultural and wellness haven.",
           bestFor: ["Wellness", "Culture", "Beach"],
           travelerType: "Couples",
-          image: "/images/bali.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646202/bali_zmtydi.jpg",
         },
         {
           title: "Dubrovnik, Croatia",
@@ -2705,7 +3006,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer Adriatic jewel with beaches, festivals and medieval charm.",
           bestFor: ["History", "Beach", "Festival"],
           travelerType: "Family",
-          image: "/images/dubrovnik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646402/dubrovnik_arnbdn.webp",
         },
         {
           title: "Kenya (Masai Mara)",
@@ -2713,7 +3015,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Great Migration, safaris and luxury lodges — unforgettable August wildlife experience.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/kenya.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646785/kenya_xiaoeb.jpg",
         },
         {
           title: "Montreal, Canada",
@@ -2721,7 +3024,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer jazz, street festivals and French Canadian culture.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/montreal.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647938/montreal_ctcats.jpg",
         },
         {
           title: "Ibiza, Spain",
@@ -2729,7 +3033,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Nightlife, DJs and upscale beaches — party season peak.",
           bestFor: ["Nightlife", "Beach", "Luxury"],
           travelerType: "Groups",
-          image: "/images/ibiza.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646525/ibiza_f5onqd.jpg",
         },
         {
           title: "Loire Valley, France",
@@ -2737,7 +3042,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Châteaux, vineyards and river landscapes — elegant French August.",
           bestFor: ["Romance", "Food & Wine", "History"],
           travelerType: "Couples",
-          image: "/images/loire-valley.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646919/loire-valley_yrswvi.jpg",
         },
         {
           title: "Sicily, Italy",
@@ -2745,7 +3051,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, volcano hikes and Mediterranean culture — diverse island trip.",
           bestFor: ["Beach", "Adventure", "Culture"],
           travelerType: "Family",
-          image: "/images/sicily.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648511/sicily_gcebkm.jpg",
         },
         {
           title: "Mykonos, Greece",
@@ -2753,7 +3060,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beach clubs, parties and sunsets — iconic August nightlife island.",
           bestFor: ["Nightlife", "Luxury", "Beach"],
           travelerType: "Groups",
-          image: "/images/mykonos.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647977/mykonos_dcrxsj.jpg",
         },
         {
           title: "Peru (Cusco & Machu Picchu)",
@@ -2761,7 +3069,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season for hikes and ruins — bucket-list adventure.",
           bestFor: ["Adventure", "History", "Hiking"],
           travelerType: "Adventure",
-          image: "/images/machu-picchu.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647221/machu-picchu_cky3g3.webp",
         },
         {
           title: "Iceland (Highlands)",
@@ -2769,7 +3078,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Accessible only in summer — surreal landscapes and hiking.",
           bestFor: ["Adventure", "Nature", "Road Trip"],
           travelerType: "Adventure",
-          image: "/images/iceland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646706/iceland_dl6rfv.jpg",
         },
         {
           title: "Zanzibar, Tanzania",
@@ -2777,7 +3087,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tropical beaches, spice tours and Swahili culture — exotic August island.",
           bestFor: ["Beach", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/zanzibar.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648800/zanzibar-may_x4bgh4.jpg",
         },
         {
           title: "Lake Bled, Slovenia",
@@ -2785,7 +3096,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Charming lakeside town, hikes and castles — picture-perfect summer.",
           bestFor: ["Romance", "Hiking", "Nature"],
           travelerType: "Couples",
-          image: "/images/lake-bled.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646829/lake-bled_dco23h.jpg",
         },
         {
           title: "Rio de Janeiro, Brazil",
@@ -2793,7 +3105,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Winter sun, beaches and samba — tropical August city trip.",
           bestFor: ["Beach", "Culture", "Nightlife"],
           travelerType: "Groups",
-          image: "/images/rio.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648361/rio_cykjzo.webp",
         },
         {
           title: "Azores, Portugal",
@@ -2801,7 +3114,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Whale watching, volcanic hikes and island lakes — Atlantic gem.",
           bestFor: ["Nature", "Adventure", "Wellness"],
           travelerType: "Adventure",
-          image: "/images/azores.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645849/azores_ir7rak.webp",
         },
         {
           title: "Tokyo, Japan",
@@ -2809,7 +3123,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer festivals, neon nights and shopping — vibrant August city.",
           bestFor: ["Festival", "Shopping", "Culture"],
           travelerType: "Solo",
-          image: "/images/tokyo.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648663/tokyo_m0koff.webp",
         },
         {
           title: "Swiss Alps (Zermatt)",
@@ -2817,7 +3132,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Summer hiking, glaciers and alpine beauty — August outdoors.",
           bestFor: ["Hiking", "Luxury", "Nature"],
           travelerType: "Couples",
-          image: "/images/zermatt.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648862/zermatt_rqjjyg.jpg",
         },
         {
           title: "Mongolia (Naadam Festival)",
@@ -2825,7 +3141,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Nomadic culture, horse racing and wrestling — unique August event.",
           bestFor: ["Festival", "Adventure", "Culture"],
           travelerType: "Adventure",
-          image: "/images/mongolia.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647904/mongolia_icestk.jpg",
         },
         {
           title: "Crete, Greece",
@@ -2833,7 +3150,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, cuisine and history — largest Greek island in summer.",
           bestFor: ["Beach", "Food & Wine", "History"],
           travelerType: "Family",
-          image: "/images/crete.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646328/crete_gtcosn.jpg",
         },
       ],
     },
@@ -2848,7 +3166,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Harvest, vineyards and countryside romance — September at its finest.",
           bestFor: ["Food & Wine", "Romance", "Culture"],
           travelerType: "Couples",
-          image: "/images/tuscany.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648670/tuscany_l4bikm.webp",
         },
         {
           title: "Bordeaux, France",
@@ -2856,7 +3175,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wine harvest, festivals and gourmet dining — ideal autumn start.",
           bestFor: ["Food & Wine", "Festival", "Luxury"],
           travelerType: "Couples",
-          image: "/images/bordeaux.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646231/bordeaux_w8yh7i.jpg",
         },
         {
           title: "Santorini, Greece",
@@ -2864,7 +3184,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Calmer seas, warm sun and romantic escapes — quieter September paradise.",
           bestFor: ["Romance", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/santorini.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648423/santorini_nkitf1.webp",
         },
         {
           title: "Croatia (Dalmatian Coast)",
@@ -2872,7 +3193,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm Adriatic, sailing and fewer crowds — shoulder season jewel.",
           bestFor: ["Sailing", "Culture", "Beach"],
           travelerType: "Couples",
-          image: "/images/dalmatian-coast.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646342/dalmatian-coast_jruuue.jpg",
         },
         {
           title: "Madeira, Portugal",
@@ -2880,7 +3202,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Hiking, gardens and late-summer sun — lush Atlantic island.",
           bestFor: ["Hiking", "Wellness", "Nature"],
           travelerType: "Adventure",
-          image: "/images/madeira.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647222/madeira_jfwodm.webp",
         },
         {
           title: "Munich, Germany",
@@ -2888,7 +3211,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Oktoberfest, beer tents and Bavarian culture — lively autumn festival.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/munich.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647941/munich_tgub3m.jpg",
         },
         {
           title: "Crete, Greece",
@@ -2896,7 +3220,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Late-season beaches, cuisine and history — quieter Greek escape.",
           bestFor: ["Beach", "Food & Wine", "History"],
           travelerType: "Family",
-          image: "/images/crete.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646328/crete_gtcosn.jpg",
         },
         {
           title: "Portugal (Douro Valley)",
@@ -2904,7 +3229,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Wine harvests, cruises and countryside romance — September delight.",
           bestFor: ["Food & Wine", "Cruise", "Romance"],
           travelerType: "Couples",
-          image: "/images/douro-valley.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646380/douro-valley_jfdul5.jpg",
         },
         {
           title: "Morocco (Atlas Foothills)",
@@ -2912,7 +3238,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild hiking weather, cultural towns and mountain views — early autumn trip.",
           bestFor: ["Adventure", "Culture", "Hiking"],
           travelerType: "Adventure",
-          image: "/images/morocco-atlas.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647939/morocco-atlas_hh1fqi.jpg",
         },
         {
           title: "Japan (Hokkaido)",
@@ -2920,7 +3247,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn colors, seafood festivals and cool weather — serene northern escape.",
           bestFor: ["Food & Wine", "Nature", "Festival"],
           travelerType: "Couples",
-          image: "/images/hokkaido-autumn.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646480/hokkaido-autumn-oct_jw36x1.jpg",
         },
         {
           title: "New York City, USA",
@@ -2928,7 +3256,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fashion Week, Broadway and parks — vibrant September city break.",
           bestFor: ["Shopping", "Culture", "Nightlife"],
           travelerType: "Groups",
-          image: "/images/nyc-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648069/nyc-june_qk2zu1.jpg",
         },
         {
           title: "Istanbul, Turkey",
@@ -2936,7 +3265,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Markets, mosques and Bosphorus cruises — mild autumn days.",
           bestFor: ["Culture", "History", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/istanbul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646755/istanbul_y315cq.webp",
         },
         {
           title: "South Africa (Cape Winelands)",
@@ -2944,7 +3274,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring vineyards, flowers and Cape cuisine — September beauty.",
           bestFor: ["Food & Wine", "Nature", "Romance"],
           travelerType: "Couples",
-          image: "/images/cape-winelands.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646255/cape-winelands_s8ugh2.jpg",
         },
         {
           title: "Sicily, Italy",
@@ -2952,7 +3283,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Harvests, beaches and culture — Mediterranean island in autumn.",
           bestFor: ["Culture", "Beach", "Food & Wine"],
           travelerType: "Family",
-          image: "/images/sicily.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648511/sicily_gcebkm.jpg",
         },
         {
           title: "Vancouver, Canada",
@@ -2960,7 +3292,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild climate, food festivals and nature nearby — west coast gem.",
           bestFor: ["Food & Wine", "Nature", "Culture"],
           travelerType: "Couples",
-          image: "/images/vancouver-september.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648674/vancouver-september_y2bzfs.jpg",
         },
         {
           title: "Athens, Greece",
@@ -2968,7 +3301,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic ruins, mild temperatures and lively nightlife — autumn city trip.",
           bestFor: ["History", "Culture", "Nightlife"],
           travelerType: "Solo",
-          image: "/images/athens.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645847/athens_maxz3b.jpg",
         },
         {
           title: "Andalusia, Spain",
@@ -2976,7 +3310,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Flamenco, tapas and Moorish palaces — cultural September trip.",
           bestFor: ["Culture", "Food & Wine", "Romance"],
           travelerType: "Couples",
-          image: "/images/andalusia.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646170/andalusia_hk1vxa.jpg",
         },
         {
           title: "Slovenia",
@@ -2984,7 +3319,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Alpine hikes, caves and lakes — affordable European September gem.",
           bestFor: ["Adventure", "Nature", "Hiking"],
           travelerType: "Adventure",
-          image: "/images/slovenia.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648516/slovenia_lgthf9.jpg",
         },
         {
           title: "Jordan (Petra)",
@@ -2992,7 +3328,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Comfortable desert weather for exploring ruins — unforgettable autumn trip.",
           bestFor: ["History", "Adventure", "Culture"],
           travelerType: "Adventure",
-          image: "/images/petra.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648227/petra_stsc1m.jpg",
         },
         {
           title: "Budapest, Hungary",
@@ -3000,7 +3337,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Thermal baths, river cruises and culture — autumn charm.",
           bestFor: ["Culture", "Cruise", "Romance"],
           travelerType: "Couples",
-          image: "/images/budapest.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646231/budapest_pw0tda.jpg",
         },
         {
           title: "Amalfi Coast, Italy",
@@ -3008,7 +3346,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cliffside romance, beaches and late-summer charm — quieter now.",
           bestFor: ["Romance", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/amalfi.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645845/amalfi_unhr9v.webp",
         },
         {
           title: "Chile (Atacama Desert)",
@@ -3016,7 +3355,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Stargazing, salt flats and unique landscapes — surreal September adventure.",
           bestFor: ["Adventure", "Nature", "Photography"],
           travelerType: "Adventure",
-          image: "/images/atacama.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645845/atacama_js4zeu.jpg",
         },
         {
           title: "Seville, Spain",
@@ -3024,7 +3364,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic streets, flamenco and mild temperatures — cultural autumn trip.",
           bestFor: ["Culture", "Food & Wine", "History"],
           travelerType: "Couples",
-          image: "/images/seville.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648512/seville_qnpdl3.webp",
         },
         {
           title: "Dubrovnik, Croatia",
@@ -3032,7 +3373,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Quieter beaches, medieval walls and Adriatic charm — ideal September.",
           bestFor: ["History", "Beach", "Romance"],
           travelerType: "Couples",
-          image: "/images/dubrovnik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646402/dubrovnik_arnbdn.webp",
         },
         {
           title: "Prague, Czech Republic",
@@ -3040,7 +3382,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Golden autumn, castles and beer festivals — romantic city trip.",
           bestFor: ["Festival", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/prague.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648260/prague_bxffue.jpg",
         },
       ],
     },
@@ -3055,7 +3398,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Maple foliage, temples and cultural festivals — magical autumn season.",
           bestFor: ["Culture", "Nature", "Romance"],
           travelerType: "Couples",
-          image: "/images/kyoto.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646828/kyoto_sklj9y.webp",
         },
         {
           title: "Tuscany, Italy",
@@ -3063,7 +3407,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Truffle hunts, vineyard festivals and rustic cuisine — fall indulgence.",
           bestFor: ["Food & Wine", "Festival", "Romance"],
           travelerType: "Couples",
-          image: "/images/tuscany.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648670/tuscany_l4bikm.webp",
         },
         {
           title: "New England, USA",
@@ -3071,7 +3416,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Scenic drives, fall foliage and cozy inns — iconic October trip.",
           bestFor: ["Nature", "Road Trip", "Family"],
           travelerType: "Family",
-          image: "/images/new-england.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647977/new-england_tfbiye.jpg",
         },
         {
           title: "Istanbul, Turkey",
@@ -3079,7 +3425,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild weather, bazaars and historic sites — perfect autumn city break.",
           bestFor: ["Culture", "History", "Shopping"],
           travelerType: "Couples",
-          image: "/images/istanbul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646755/istanbul_y315cq.webp",
         },
         {
           title: "Munich, Germany",
@@ -3087,7 +3434,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Oktoberfest, beer tents and Bavarian traditions — lively festival scene.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/munich.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647940/munich-old-town-luxury_x5phq1.jpg",
         },
         {
           title: "Jordan (Petra & Wadi Rum)",
@@ -3095,7 +3443,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Comfortable desert weather for ruins and treks — iconic October trip.",
           bestFor: ["Adventure", "History", "Culture"],
           travelerType: "Adventure",
-          image: "/images/petra.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648227/petra_stsc1m.jpg",
         },
         {
           title: "Seville, Spain",
@@ -3103,7 +3452,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tapas, flamenco and warm autumn evenings — cultural Andalusian trip.",
           bestFor: ["Culture", "Food & Wine", "Romance"],
           travelerType: "Couples",
-          image: "/images/seville.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648512/seville_qnpdl3.webp",
         },
         {
           title: "Lisbon, Portugal",
@@ -3111,7 +3461,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny days, festivals and seafood — lively shoulder-season escape.",
           bestFor: ["Festival", "Food & Wine", "City"],
           travelerType: "Groups",
-          image: "/images/lisbon-may.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646888/lisbon-may_jb4nnh.jpg",
         },
         {
           title: "Cape Town, South Africa",
@@ -3119,7 +3470,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring blooms, vineyards and ocean drives — October outdoor beauty.",
           bestFor: ["Nature", "Food & Wine", "Adventure"],
           travelerType: "Couples",
-          image: "/images/capetown.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646257/capetown_zb4nhs.webp",
         },
         {
           title: "Vietnam (Hoi An)",
@@ -3127,7 +3479,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Lantern festival, riverside dining and beaches — autumn charm.",
           bestFor: ["Festival", "Culture", "Beach"],
           travelerType: "Couples",
-          image: "/images/hoi-an.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646476/hoi-an_bzkwkg.jpg",
         },
         {
           title: "Marrakech, Morocco",
@@ -3135,7 +3488,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Souks, gardens and mild desert climate — exotic autumn city.",
           bestFor: ["Culture", "Shopping", "Adventure"],
           travelerType: "Solo",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_tdrdyj.webp",
         },
         {
           title: "Paris, France",
@@ -3143,7 +3497,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn walks, art museums and wine festivals — romantic fall vibe.",
           bestFor: ["Culture", "Romance", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/paris.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648120/paris-tower_bwhktn.webp",
         },
         {
           title: "Prague, Czech Republic",
@@ -3151,7 +3506,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Castles, beer halls and golden fall leaves — fairy-tale autumn.",
           bestFor: ["Culture", "Festival", "Romance"],
           travelerType: "Couples",
-          image: "/images/prague.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648262/prague_usgcjq.webp",
         },
         {
           title: "Buenos Aires, Argentina",
@@ -3159,7 +3515,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring weather, tango and vibrant nightlife — October city buzz.",
           bestFor: ["Culture", "Nightlife", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/buenos-aires.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/buenos-aires_zvlnvn.webp",
         },
         {
           title: "Santorini, Greece",
@@ -3167,7 +3524,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fewer crowds, sunsets and luxury stays — serene autumn escape.",
           bestFor: ["Romance", "Luxury", "Beach"],
           travelerType: "Couples",
-          image: "/images/santorini.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648421/santorini_sryzrq.jpg",
         },
         {
           title: "Mexico City, Mexico",
@@ -3175,7 +3533,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Food festivals, art museums and lively plazas — autumn urban vibe.",
           bestFor: ["Food & Wine", "Culture", "Festival"],
           travelerType: "Solo",
-          image: "/images/mexico-city.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647869/mexico-city_pydwt5.webp",
         },
         {
           title: "Edinburgh, Scotland",
@@ -3183,7 +3542,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn colors, castles and whisky tastings — cultural Scottish trip.",
           bestFor: ["History", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/edinburgh.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646404/edinburgh_my8oyx.jpg",
         },
         {
           title: "Florence, Italy",
@@ -3191,7 +3551,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Renaissance art, Tuscan cuisine and harvest season — perfect October.",
           bestFor: ["Culture", "Food & Wine", "Romance"],
           travelerType: "Couples",
-          image: "/images/florence.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646424/florence_qqixre.jpg",
         },
         {
           title: "Canada (Quebec)",
@@ -3199,7 +3560,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fall foliage, French charm and seasonal festivals — October delight.",
           bestFor: ["Festival", "Nature", "Culture"],
           travelerType: "Family",
-          image: "/images/quebec-oct.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648310/quebec-oct_mpq0mr.jpg",
         },
         {
           title: "Seoul, South Korea",
@@ -3207,7 +3569,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn foliage, palaces and lively city districts — cultural escape.",
           bestFor: ["Festival", "Culture", "Shopping"],
           travelerType: "Groups",
-          image: "/images/seoul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648509/seoul_itax2i.webp",
         },
         {
           title: "Patagonia, Chile",
@@ -3215,7 +3578,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Springtime treks, glaciers and wildlife — October adventure paradise.",
           bestFor: ["Adventure", "Nature", "Wildlife"],
           travelerType: "Adventure",
-          image: "/images/patagonia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648165/patagonia_ofiggk.jpg",
         },
         {
           title: "Rome, Italy",
@@ -3223,7 +3587,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild weather, piazzas and cultural life — fall in the Eternal City.",
           bestFor: ["Culture", "History", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/rome.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648363/rome_quqgh8.webp",
         },
         {
           title: "Vienna, Austria",
@@ -3231,7 +3596,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Classical concerts, coffee houses and fall charm — elegant October trip.",
           bestFor: ["Culture", "Romance", "History"],
           travelerType: "Couples",
-          image: "/images/vienna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648687/vienna_rtxovq.webp",
         },
         {
           title: "Hokkaido, Japan",
@@ -3239,7 +3605,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn leaves, seafood festivals and cooler air — northern escape.",
           bestFor: ["Festival", "Food & Wine", "Nature"],
           travelerType: "Couples",
-          image: "/images/hokkaido-autumn.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646503/hokkaido-autumn_w26sd6.jpg",
         },
         {
           title: "Madrid, Spain",
@@ -3247,7 +3614,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Museums, tapas and autumn festivals — lively city in October.",
           bestFor: ["Culture", "Food & Wine", "Festival"],
           travelerType: "Groups",
-          image: "/images/madrid.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647221/madrid_hqrtim.webp",
         },
         {
           title: "Cusco, Peru",
@@ -3255,7 +3623,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Andean culture, ruins and mild climate — perfect hiking season.",
           bestFor: ["Adventure", "Culture", "History"],
           travelerType: "Adventure",
-          image: "/images/cusco.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646341/cusco_nroqfn.jpg",
         },
         {
           title: "Cambodia (Siem Reap)",
@@ -3263,7 +3632,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Angkor temples, festivals and cultural depth — autumn visit highlight.",
           bestFor: ["History", "Culture", "Adventure"],
           travelerType: "Couples",
-          image: "/images/angkor.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645847/angkor_nowd4b.jpg",
         },
         {
           title: "Iceland",
@@ -3271,7 +3641,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Northern lights, fewer crowds and crisp air — October magic.",
           bestFor: ["Adventure", "Nature", "Romance"],
           travelerType: "Couples",
-          image: "/images/iceland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646526/iceland-april_ow7o9q.webp",
         },
         {
           title: "Morocco (Chefchaouen)",
@@ -3279,7 +3650,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Blue city, mountains and cooler weather — autumn photogenic trip.",
           bestFor: ["Culture", "Adventure", "Photography"],
           travelerType: "Solo",
-          image: "/images/chefchaouen.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646282/chefchaouen_gpiqtp.webp",
         },
         {
           title: "Los Angeles, USA",
@@ -3287,7 +3659,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild weather, beaches and Halloween events — fun autumn city break.",
           bestFor: ["Beach", "Festival", "City"],
           travelerType: "Family",
-          image: "/images/los-angeles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646921/los-angeles_di2zpp.webp",
         },
         {
           title: "Kyoto, Japan (Autumn)",
@@ -3295,7 +3668,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Peak maple-leaf season, temple strolls and refined kaiseki dining — perfect for culture and romance.",
           bestFor: ["Culture", "Nature", "Romance"],
           travelerType: "Couples",
-          image: "/images/kyoto-oct.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646827/kyoto-oct_heg1vc.jpg",
         },
         {
           title: "Tuscany, Italy (Truffle & Fall)",
@@ -3303,7 +3677,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Truffle hunts, winery dinners and golden hills — a food-lover’s autumn escape.",
           bestFor: ["Food & Wine", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/tuscany.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648670/tuscany_l4bikm.webp",
         },
         {
           title: "New England, USA (Leaf Season)",
@@ -3311,7 +3686,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Classic fall drives, cosy inns and farmers’ markets — the ultimate road-trip for leaf-peeping.",
           bestFor: ["Road Trip", "Nature", "Family"],
           travelerType: "Family",
-          image: "/images/new-england.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647977/new-england_tfbiye.jpg",
         },
         {
           title: "Munich, Germany (Oktoberfest vibe)",
@@ -3319,7 +3695,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn Bavarian culture, beer halls and lively local festivals — energetic city break.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/munich.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647940/munich-old-town-luxury_x5phq1.jpg",
         },
         {
           title: "Istanbul, Turkey",
@@ -3327,7 +3704,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild weather for bazaars, Bosphorus cruises and historic sites — excellent year-round city break.",
           bestFor: ["City", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/istanbul.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646755/istanbul_y315cq.webp",
         },
         {
           title: "Lisbon, Portugal",
@@ -3335,7 +3713,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Comfortable days, café culture and strong remote-work infrastructure for slow city stays.",
           bestFor: ["City", "Remote Work", "Food & Wine"],
           travelerType: "Remote Work",
-          image: "/images/lisbon.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646889/lisbon_batgam.webp",
         },
         {
           title: "Amalfi Coast, Italy (Shoulder)",
@@ -3343,7 +3722,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Quieter coastal drives, lemon groves and romantic boutique hotels off-peak.",
           bestFor: ["Romance", "Luxury", "Road Trip"],
           travelerType: "Couples",
-          image: "/images/amalfi.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645845/amalfi_unhr9v.webp",
         },
         {
           title: "Petra & Wadi Rum, Jordan",
@@ -3351,7 +3731,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Comfortable desert temps for trekking, red-sand camps and ancient Petra exploration.",
           bestFor: ["Adventure", "Culture", "History"],
           travelerType: "Adventure",
-          image: "/images/petra.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648227/petra_stsc1m.jpg",
         },
         {
           title: "Marrakesh, Morocco",
@@ -3359,7 +3740,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm days for souks, riads and rooftop cafés — great for shopping and culture.",
           bestFor: ["Shopping", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_esdxwl.jpg",
         },
         {
           title: "Douro Valley, Portugal",
@@ -3367,7 +3749,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "River cruises and vineyard dinners during mellow autumn weather — ideal for wine lovers.",
           bestFor: ["Food & Wine", "Luxury", "Romance"],
           travelerType: "Couples",
-          image: "/images/douro-valley.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646380/douro-valley_jfdul5.jpg",
         },
         {
           title: "Norway Fjords (Shoulder Cruise)",
@@ -3375,7 +3758,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fjord cruises with autumn colours, fewer crowds and dramatic coastal scenery.",
           bestFor: ["Cruise", "Nature", "Road Trip"],
           travelerType: "Couples",
-          image: "/images/norway-fjords.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648070/norway-fjords_xhffdt.webp",
         },
         {
           title: "Azores, Portugal",
@@ -3383,7 +3767,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Green islands for hiking, whale-watching and peaceful remote-work stays.",
           bestFor: ["Hiking", "Nature", "Remote Work"],
           travelerType: "Remote Work",
-          image: "/images/azores.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645849/azores_ir7rak.webp",
         },
         {
           title: "Sicily, Italy",
@@ -3391,7 +3776,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Rich food, ancient sites and coastal towns with pleasant shoulder-season weather.",
           bestFor: ["Food & Wine", "Beach", "Culture"],
           travelerType: "Couples",
-          image: "/images/sicily.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648511/sicily_gcebkm.jpg",
         },
         {
           title: "Iceland (Northern Lights)",
@@ -3399,7 +3785,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Aurora season begins; warm geothermal pools and dramatic landscapes for short adventure trips.",
           bestFor: ["Nature", "Adventure", "Winter"],
           travelerType: "Couples",
-          image: "/images/iceland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646528/iceland-june-two_dkncyv.jpg",
         },
         {
           title: "Lake Bled, Slovenia",
@@ -3407,7 +3794,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Fairytale lake, castle views and gentle hikes — romantic and compact getaway.",
           bestFor: ["Nature", "Romance", "Hiking"],
           travelerType: "Couples",
-          image: "/images/lake-bled.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646829/lake-bled_dco23h.jpg",
         },
         {
           title: "Isle of Skye, Scotland",
@@ -3415,7 +3803,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dramatic coastlines, moorland hikes and whisky trails — rugged outdoor escape.",
           bestFor: ["Nature", "Hiking", "Road Trip"],
           travelerType: "Adventure",
-          image: "/images/skye.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648514/skye_nbmtx2.jpg",
         },
         {
           title: "Cape Winelands, South Africa",
@@ -3423,7 +3812,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Springtime (southern hemisphere) vineyards, coastal routes and luxury stays near Cape Town.",
           bestFor: ["Food & Wine", "Nature", "Luxury"],
           travelerType: "Couples",
-          image: "/images/cape-winelands.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646255/cape-winelands_s8ugh2.jpg",
         },
         {
           title: "Hokkaido, Japan (Early Autumn)",
@@ -3431,7 +3821,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cooler seas, flower fields and coastal scenery with early fall colours.",
           bestFor: ["Nature", "Food & Wine", "Adventure"],
           travelerType: "Couples",
-          image: "/images/hokkaido-autumn.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646480/hokkaido-autumn-oct_jw36x1.jpg",
         },
         {
           title: "Crete, Greece (Late Season)",
@@ -3439,7 +3830,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm seas, local tavernas and archaeological sites — quiet beaches and culture.",
           bestFor: ["Beach", "Family", "Culture"],
           travelerType: "Families",
-          image: "/images/crete.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646328/crete_gtcosn.jpg",
         },
         {
           title: "Dalmatian Coast, Croatia",
@@ -3447,7 +3839,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Island hopping and coastal towns with gentle autumn sea temperatures — great for sailing.",
           bestFor: ["Sailing", "Beach", "Culture"],
           travelerType: "Groups",
-          image: "/images/dalmatia.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646342/dalmatia_jaqv6i.jpg",
         },
         {
           month: "October",
@@ -3456,7 +3849,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Early skiing starts at higher resorts, with alpine lodges and glacier views.",
           bestFor: ["Skiing", "Winter", "Luxury"],
           travelerType: "Groups",
-          image: "/images/swiss-alps.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648549/swiss-alps-summer_ulsqnt.jpg",
         },
         {
           month: "October",
@@ -3465,7 +3859,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tropical warmth, wellness retreats and private villas ideal for honeymoons.",
           bestFor: ["Honeymoon", "Wellness", "Summer"],
           travelerType: "Couples",
-          image: "/images/bali.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645852/bali-june_cl979b.jpg",
         },
         {
           month: "October",
@@ -3474,7 +3869,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Scenic fall road trips, wildlife viewing and early snow on peaks.",
           bestFor: ["Road Trip", "Nature", "Adventure"],
           travelerType: "Families",
-          image: "/images/rockies-oct.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648361/rockies-oct_ix7ar2.jpg",
         },
         {
           month: "October",
@@ -3483,7 +3879,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Great safari weather with dramatic falls — adventure and romance combined.",
           bestFor: ["Safari", "Adventure", "Honeymoon"],
           travelerType: "Couples",
-          image: "/images/victoria-falls.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648683/victoria-falls_jaq7rs.jpg",
         },
         {
           month: "October",
@@ -3492,11 +3889,11 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Quieter island sunsets, boutique stays and honeymoon-perfect luxury escapes.",
           bestFor: ["Honeymoon", "Romance", "Luxury"],
           travelerType: "Couples",
-          image: "/images/santorini-oct.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648420/santorini-oct_tqmiuk.jpg",
         },
       ],
     },
-
     {
       id: 11,
       name: "November",
@@ -3508,7 +3905,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Markets, gardens and cooler desert climate — great November city.",
           bestFor: ["Culture", "Shopping", "Adventure"],
           travelerType: "Solo",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_tdrdyj.webp",
         },
         {
           title: "Canary Islands, Spain",
@@ -3516,7 +3914,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny beaches, volcano hikes and reliable warmth — European escape.",
           bestFor: ["Beach", "Nature", "Family"],
           travelerType: "Family",
-          image: "/images/canary-islands.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/canary-islands_eevcto.webp",
         },
         {
           title: "Egypt (Luxor & Aswan)",
@@ -3524,7 +3923,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Ancient temples, Nile cruises and mild weather — November ideal.",
           bestFor: ["History", "Culture", "Cruise"],
           travelerType: "Couples",
-          image: "/images/egypt-luxor.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646403/egypt-luxor_mgygkh.webp",
         },
         {
           title: "Phuket, Thailand",
@@ -3532,7 +3932,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season, beaches and nightlife — start of tropical season.",
           bestFor: ["Beach", "Nightlife", "Romance"],
           travelerType: "Groups",
-          image: "/images/thailand-phuket.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648647/thailand-phuket_st9eg1.webp",
         },
         {
           title: "Mexico (Oaxaca)",
@@ -3540,7 +3941,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Day of the Dead, markets and cultural depth — unique festival trip.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/oaxaca.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648072/oaxaca_f3hedg.jpg",
         },
         {
           title: "Dubai, UAE",
@@ -3548,7 +3950,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Events, shopping and luxury resorts — cooler desert season.",
           bestFor: ["Luxury", "City", "Shopping"],
           travelerType: "Luxury",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646382/dubai_j8xryu.jpg",
         },
         {
           title: "Buenos Aires, Argentina",
@@ -3556,7 +3959,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring, tango and vibrant nightlife — South American November vibe.",
           bestFor: ["Culture", "Nightlife", "Food & Wine"],
           travelerType: "Groups",
-          image: "/images/buenos-aires.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/buenos-aires_zvlnvn.webp",
         },
         {
           title: "Cape Town, South Africa",
@@ -3564,14 +3968,16 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring flowers, vineyards and ocean drives — outdoor paradise.",
           bestFor: ["Nature", "Food & Wine", "Luxury"],
           travelerType: "Couples",
-          image: "/images/capetown.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646255/capetown_ujsuxq.jpg",
         },
         {
           title: "Maldives",
           description: "Turquoise waters, villas and diving — tropical luxury.",
           bestFor: ["Beach", "Luxury", "Wellness"],
           travelerType: "Couples",
-          image: "/images/maldives.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647753/maldives-may_iuohdg.jpg",
         },
         {
           title: "New Zealand (North Island)",
@@ -3579,7 +3985,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring gardens, road trips and coastlines — November charm.",
           bestFor: ["Road Trip", "Nature", "Adventure"],
           travelerType: "Family",
-          image: "/images/new-zealand.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647980/new-zealand_cgowbc.webp",
         },
         {
           title: "Havana, Cuba",
@@ -3587,7 +3994,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Retro cars, music and culture — Caribbean November vibe.",
           bestFor: ["Culture", "Music", "Nightlife"],
           travelerType: "Groups",
-          image: "/images/havana.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646474/havana_srhaad.jpg",
         },
         {
           title: "Reykjavik, Iceland",
@@ -3595,7 +4003,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Northern lights, thermal baths and crisp air — winter wonderland.",
           bestFor: ["Nature", "Wellness", "Adventure"],
           travelerType: "Couples",
-          image: "/images/reykjavik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648310/reykjavik_znlsp6.jpg",
         },
         {
           title: "Goa, India",
@@ -3603,14 +4012,16 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, yoga retreats and nightlife — vibrant tropical destination.",
           bestFor: ["Beach", "Nightlife", "Wellness"],
           travelerType: "Groups",
-          image: "/images/goa.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646470/goa_w1w2gu.jpg",
         },
         {
           title: "Vietnam (Hanoi)",
           description: "Markets, history and street food — November city buzz.",
           bestFor: ["Culture", "Food & Wine", "History"],
           travelerType: "Couples",
-          image: "/images/hanoi.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646477/hanoi_utx96g.jpg",
         },
         {
           title: "Canberra, Australia",
@@ -3618,7 +4029,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring festivals, gardens and museums — cultural November trip.",
           bestFor: ["Festival", "Culture", "Nature"],
           travelerType: "Family",
-          image: "/images/canberr.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646243/canberr_sngxlh.jpg",
         },
         {
           title: "Morocco (Essaouira)",
@@ -3626,7 +4038,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Coastal medina, seafood and art — relaxed November escape.",
           bestFor: ["Beach", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/essaouira.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646403/essaouira_mdyjdd.jpg",
         },
         {
           title: "Nepal (Kathmandu)",
@@ -3634,14 +4047,16 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Clear skies, trekking and Himalayan views — peak hiking month.",
           bestFor: ["Adventure", "Hiking", "Culture"],
           travelerType: "Adventure",
-          image: "/images/kathmandu.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646783/Kathmandu_rjxu1k.webp",
         },
         {
           title: "Sri Lanka (South Coast)",
           description: "Golden beaches, tea and temples — November warmth.",
           bestFor: ["Beach", "Culture", "Relaxation"],
           travelerType: "Couples",
-          image: "/images/srilanka.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648535/srilanka_fa3yzj.jpg",
         },
         {
           title: "Seychelles",
@@ -3649,7 +4064,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Private islands, diving and beaches — tropical luxury retreat.",
           bestFor: ["Beach", "Luxury", "Romance"],
           travelerType: "Couples",
-          image: "/images/sychelles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sychelles_jktsv0.webp",
         },
         {
           title: "Madrid, Spain",
@@ -3657,35 +4073,40 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Autumn culture, tapas and nightlife — November city break.",
           bestFor: ["Culture", "Food & Wine", "Nightlife"],
           travelerType: "Groups",
-          image: "/images/madrid.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647221/madrid_hqrtim.webp",
         },
         {
           title: "Johannesburg, South Africa",
           description: "Spring, safaris and culture — gateway to adventure.",
           bestFor: ["Safari", "Culture", "Adventure"],
           travelerType: "Groups",
-          image: "/images/johannesburg.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646769/johannesburg_x2ysdo.jpg",
         },
         {
           title: "Chile (Patagonia)",
           description: "Spring treks, wildlife and glaciers — November wonder.",
           bestFor: ["Adventure", "Nature", "Wildlife"],
           travelerType: "Adventure",
-          image: "/images/patagonia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648165/patagonia_ofiggk.jpg",
         },
         {
           title: "Bangkok, Thailand",
           description: "Temples, markets and nightlife — vibrant tropical hub.",
           bestFor: ["Culture", "Shopping", "Nightlife"],
           travelerType: "Solo",
-          image: "/images/thailand-bangkok.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648634/thailand-bangkok_bxlt3j.webp",
         },
         {
           title: "Sydney, Australia",
           description: "Spring events, beaches and harbor — lively November.",
           bestFor: ["Festival", "City", "Beach"],
           travelerType: "Groups",
-          image: "/images/sydney.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sydney_rky2hw.jpg",
         },
         {
           title: "Hawaii (Oahu)",
@@ -3693,7 +4114,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Surfing, beaches and aloha culture — warm November trip.",
           bestFor: ["Beach", "Adventure", "Family"],
           travelerType: "Family",
-          image: "/images/oahu.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648070/oahu_dcq8t8.jpg",
         },
         {
           title: "Morocco (Fes)",
@@ -3701,7 +4123,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Medina alleys, souks and heritage — cultural November city.",
           bestFor: ["Culture", "Shopping", "History"],
           travelerType: "Couples",
-          image: "/images/fes.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646423/fes_dwag0p.jpg",
         },
         {
           title: "Thailand (Chiang Mai)",
@@ -3709,14 +4132,16 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Loy Krathong festival, lanterns and temples — magical cultural trip.",
           bestFor: ["Festival", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/thailand-chiang-mai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648623/thailand-chiang-mai_b7o8cd.webp",
         },
         {
           title: "Los Angeles, USA",
           description: "Beaches, shopping and Hollywood — fun autumn escape.",
           bestFor: ["Beach", "Shopping", "Nightlife"],
           travelerType: "Groups",
-          image: "/images/los-angeles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646921/los-angeles_di2zpp.webp",
         },
         {
           title: "Mexico (Cancun)",
@@ -3724,7 +4149,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Resorts, nightlife and beaches — warm November paradise.",
           bestFor: ["Beach", "Nightlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/cancun.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646244/cancun_a7lmrp.webp",
         },
         {
           month: "November",
@@ -3733,7 +4159,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snow begins; wellness spas and ski slopes prepare for the winter season.",
           bestFor: ["Skiing", "Wellness", "Winter"],
           travelerType: "Couples",
-          image: "/images/banff.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646206/banff_tjdzmc.webp",
         },
         {
           month: "November",
@@ -3742,7 +4169,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Calm waters and luxury villas — top romantic destination in November.",
           bestFor: ["Honeymoon", "Beach", "Luxury"],
           travelerType: "Couples",
-          image: "/images/maldives-luxury-resorts.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647753/maldives-luxury-resorts_y8m3er.webp",
         },
         {
           month: "November",
@@ -3751,7 +4179,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny spring road trips with wildlife stops and coastal scenery.",
           bestFor: ["Road Trip", "Safari", "Summer"],
           travelerType: "Families",
-          image: "/images/garden-route-nov.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646474/garden-route-nov_tpgqbb.jpg",
         },
         {
           month: "November",
@@ -3760,7 +4189,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Backwater cruises, Ayurveda wellness stays and tropical warmth — rejuvenating retreat.",
           bestFor: ["Wellness", "Summer", "Culture"],
           travelerType: "Couples",
-          image: "/images/kerala-nov.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646800/kerala-nov_tjbxr3.jpg",
         },
         {
           month: "November",
@@ -3769,7 +4199,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Classic safari season, luxury lodges and prime wildlife viewing.",
           bestFor: ["Safari", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/serengeti.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648509/serengeti_ointks.jpg",
         },
 
         {
@@ -3779,7 +4210,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild days for riads, markets and rooftop dining — perfect for culture and shopping.",
           bestFor: ["Culture", "Shopping", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_esdxwl.jpg",
         },
         {
           month: "November",
@@ -3788,7 +4220,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Reliable warmth for beaches, coastal walks and family escapes without summer crowds.",
           bestFor: ["Beach", "Nature", "Family"],
           travelerType: "Family",
-          image: "/images/canary-islands.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/canary-islands_eevcto.webp",
         },
         {
           month: "November",
@@ -3797,7 +4230,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season for Red Sea diving and comfortable Nile river cruises.",
           bestFor: ["Beach", "Cruise", "History"],
           travelerType: "Couples",
-          image: "/images/egypt-nov.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646404/egypt-nov_sktf5g.jpg",
         },
         {
           month: "November",
@@ -3806,7 +4240,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Start of the dry season — island hopping, beaches and lively night markets.",
           bestFor: ["Beach", "Relaxation", "Luxury"],
           travelerType: "Couples",
-          image: "/images/thailand-phuket.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648647/thailand-phuket_st9eg1.webp",
         },
         {
           month: "November",
@@ -3815,7 +4250,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cultural festivals, parades and world-class cuisine in a vibrant autumn setting.",
           bestFor: ["Festival", "Culture", "Food & Wine"],
           travelerType: "Couples",
-          image: "/images/oaxaca.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648072/oaxaca_f3hedg.jpg",
         },
         {
           month: "November",
@@ -3824,7 +4260,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cooler weather, luxury hotels and major events make it a premier November city escape.",
           bestFor: ["Luxury", "City", "Family"],
           travelerType: "Families",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646385/dubai_geckji.webp",
         },
         {
           month: "November",
@@ -3833,7 +4270,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Springtime blossoms, vineyards and coastal drives — great for outdoor dining and safaris nearby.",
           bestFor: ["Nature", "Food & Wine", "Adventure"],
           travelerType: "Couples",
-          image: "/images/capetown.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646255/capetown_ujsuxq.jpg",
         },
         {
           month: "November",
@@ -3842,7 +4280,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring in the city — tango, cultural life and excellent dining options.",
           bestFor: ["Culture", "Nightlife", "Food & Wine"],
           travelerType: "Solo",
-          image: "/images/buenos-aires.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/buenos-aires_zvlnvn.webp",
         },
         {
           month: "November",
@@ -3851,7 +4290,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spring gardens, long coastal drives and remote-work friendly cafés.",
           bestFor: ["Nature", "Road Trip", "Remote Work"],
           travelerType: "Remote Work",
-          image: "/images/new-zealand.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647980/new-zealand_cgowbc.webp",
         },
         {
           month: "November",
@@ -3860,7 +4300,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Quieter resorts, calm seas and excellent conditions for diving and romance.",
           bestFor: ["Beach", "Luxury", "Relaxation"],
           travelerType: "Couples",
-          image: "/images/maldives.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647754/maldives_qsxcgk.webp",
         },
         {
           month: "November",
@@ -3869,7 +4310,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Events, harbour life and beaches — good for culture and outdoor activities.",
           bestFor: ["Festival", "City", "Beach"],
           travelerType: "Groups",
-          image: "/images/sydney.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646379/sydney-bali-flight_znasyz.webp",
         },
         {
           month: "November",
@@ -3878,7 +4320,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Surfing, beaches and family-friendly resorts — warm Pacific escape.",
           bestFor: ["Beach", "Family", "Adventure"],
           travelerType: "Family",
-          image: "/images/oahu.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648070/oahu_dcq8t8.jpg",
         },
         {
           month: "November",
@@ -3887,7 +4330,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Lantern festivals and temple ceremonies make for a magical cultural visit.",
           bestFor: ["Festival", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/thailand-chiang-mai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648623/thailand-chiang-mai_b7o8cd.webp",
         },
         {
           month: "November",
@@ -3896,7 +4340,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic medina, artisan markets and heritage architecture for curious travellers.",
           bestFor: ["Culture", "Shopping", "History"],
           travelerType: "Couples",
-          image: "/images/fes.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646423/fes_dwag0p.jpg",
         },
         {
           month: "November",
@@ -3905,7 +4350,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Cooler, clearer trekking weather for Inca Trail and ancient mountain scenery.",
           bestFor: ["Adventure", "Hiking", "Culture"],
           travelerType: "Adventure",
-          image: "/images/machu-picchu.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647219/machu-picchu_a3oz9v.jpg",
         },
         {
           month: "November",
@@ -3914,7 +4360,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Prime safari opportunities with great wildlife viewing as dry season approaches.",
           bestFor: ["Safari", "Wildlife", "Adventure"],
           travelerType: "Groups",
-          image: "/images/serengeti.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648511/serengeti_pul2fk.webp",
         },
         {
           month: "November",
@@ -3923,7 +4370,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Outstanding safari lodges and big-game viewing in comfortable weather.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/masai-mara.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647791/masai-mara_mhqbki.webp",
         },
         {
           month: "November",
@@ -3932,7 +4380,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Diving, reef exploration and jungle lodges — excellent for marine and wildlife lovers.",
           bestFor: ["Wildlife", "Adventure", "Beach"],
           travelerType: "Adventure",
-          image: "/images/belize.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646216/belize_wibk9p.jpg",
         },
         {
           month: "November",
@@ -3941,7 +4390,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Golden beaches, tea country and cultural sites — warm and varied November options.",
           bestFor: ["Beach", "Culture", "Relaxation"],
           travelerType: "Couples",
-          image: "/images/srilanka.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648539/srilanka_qdsfqv.webp",
         },
       ],
     },
@@ -3956,7 +4406,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Christmas markets, classical concerts and snowy charm — festive December.",
           bestFor: ["Festival", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/vienna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648687/vienna_rtxovq.webp",
         },
         {
           title: "Strasbourg, France",
@@ -3964,7 +4415,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Famous Christmas markets, lights and Alsace charm — holiday gem.",
           bestFor: ["Festival", "Family", "Culture"],
           travelerType: "Family",
-          image: "/images/strasbourg.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648547/strasbourg_ec2u5f.jpg",
         },
         {
           title: "Lapland, Finland",
@@ -3972,7 +4424,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Northern lights, reindeer and Santa — magical Arctic holiday.",
           bestFor: ["Family", "Adventure", "Nature"],
           travelerType: "Family",
-          image: "/images/lapland.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646858/lapland_unetxq.jpg",
         },
         {
           title: "New York City, USA",
@@ -3980,7 +4433,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Broadway, shopping and holiday lights — festive metropolis.",
           bestFor: ["City", "Shopping", "Festival"],
           travelerType: "Groups",
-          image: "/images/nyc-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648069/nyc-june_qk2zu1.jpg",
         },
         {
           title: "Dubai, UAE",
@@ -3988,7 +4442,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "New Year’s Eve, luxury resorts and warm sun — glamorous December.",
           bestFor: ["Luxury", "Events", "City"],
           travelerType: "Luxury",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646385/dubai_geckji.webp",
         },
         {
           title: "Maldives",
@@ -3996,7 +4451,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season, overwater villas and diving — perfect December luxury.",
           bestFor: ["Beach", "Luxury", "Romance"],
           travelerType: "Couples",
-          image: "/images/maldives.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645849/ayada-maldives-dining_nprh5j.jpg",
         },
         {
           title: "Barbados, Caribbean",
@@ -4004,7 +4460,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Tropical beaches, culture and luxury resorts — holiday island escape.",
           bestFor: ["Beach", "Luxury", "Family"],
           travelerType: "Family",
-          image: "/images/barbados.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646207/barbados_fcttml.jpg",
         },
         {
           title: "Zermatt, Switzerland",
@@ -4012,7 +4469,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Skiing, chalets and alpine scenery — iconic winter sports trip.",
           bestFor: ["Skiing", "Luxury", "Adventure"],
           travelerType: "Groups",
-          image: "/images/zermatt.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648863/zermatt_z9z0t6.webp",
         },
         {
           title: "Tokyo, Japan",
@@ -4020,7 +4478,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Illuminations, shopping and food — December urban adventure.",
           bestFor: ["Shopping", "Culture", "Festival"],
           travelerType: "Solo",
-          image: "/images/tokyo.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646359/la-tokyo-flight_kflvyv.webp",
         },
         {
           title: "Sydney, Australia",
@@ -4028,7 +4487,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, fireworks and summer vibes — iconic New Year celebration.",
           bestFor: ["Festival", "Beach", "Events"],
           travelerType: "Groups",
-          image: "/images/sydney.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sydney_rky2hw.jpg",
         },
         {
           title: "Quebec City, Canada",
@@ -4036,7 +4496,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snowy streets, winter carnival and cozy inns — festive holiday city.",
           bestFor: ["Festival", "Culture", "Winter"],
           travelerType: "Couples",
-          image: "/images/quebec.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648308/quebec_ttlkih.jpg",
         },
         {
           title: "London, UK",
@@ -4044,7 +4505,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Christmas lights, theater and markets — festive British capital.",
           bestFor: ["Festival", "Shopping", "Culture"],
           travelerType: "Groups",
-          image: "/images/london.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646920/london_t3augk.jpg",
         },
         {
           title: "Bali, Indonesia",
@@ -4052,7 +4514,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season, beaches and spiritual retreats — tropical holiday escape.",
           bestFor: ["Beach", "Wellness", "Culture"],
           travelerType: "Couples",
-          image: "/images/bali.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646202/bali_zmtydi.jpg",
         },
         {
           title: "Cancun, Mexico",
@@ -4060,7 +4523,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Resorts, nightlife and beaches — sunny holiday party spot.",
           bestFor: ["Beach", "Nightlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/cancun.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646244/cancun_a7lmrp.webp",
         },
         {
           title: "Salzburg, Austria",
@@ -4068,7 +4532,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Christmas markets, concerts and snowy Alps — festive cultural gem.",
           bestFor: ["Festival", "Music", "Romance"],
           travelerType: "Couples",
-          image: "/images/salzburg.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648363/salzburg_gsx3k6.jpg",
         },
         {
           title: "South Africa (Kruger)",
@@ -4076,7 +4541,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Safari, wildlife and luxury lodges — December African adventure.",
           bestFor: ["Safari", "Wildlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/kruger.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646825/kruger_qy4iik.webp",
         },
         {
           title: "Paris, France",
@@ -4084,7 +4550,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Christmas lights, patisseries and romance — holiday in Paris.",
           bestFor: ["Romance", "Festival", "Shopping"],
           travelerType: "Couples",
-          image: "/images/paris-tower.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648120/paris-tower_bwhktn.webp",
         },
         {
           title: "Hawaii (Maui)",
@@ -4092,7 +4559,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Beaches, whales and aloha culture — warm December paradise.",
           bestFor: ["Beach", "Nature", "Family"],
           travelerType: "Family",
-          image: "/images/maui.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647791/maui_y0vwzf.webp",
         },
         {
           title: "Costa Rica",
@@ -4100,7 +4568,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Rainforests, beaches and eco-lodges — December adventure trip.",
           bestFor: ["Adventure", "Nature", "Wellness"],
           travelerType: "Adventure",
-          image: "/images/costa-rica.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646321/costa-rica_wuom08.jpg",
         },
         {
           title: "Berlin, Germany",
@@ -4108,7 +4577,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Christmas markets, nightlife and culture — holiday city escape.",
           bestFor: ["Festival", "Nightlife", "Culture"],
           travelerType: "Groups",
-          image: "/images/berlin.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646222/berlin_cuy0fg.webp",
         },
         {
           title: "Hong Kong",
@@ -4116,7 +4586,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Festive lights, shopping and dim sum — December Asian hub.",
           bestFor: ["Shopping", "Food & Wine", "City"],
           travelerType: "Solo",
-          image: "/images/hong-kong.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646504/hong-kong_d7rler.jpgg",
         },
         {
           title: "Marrakech, Morocco",
@@ -4124,7 +4595,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Souks, gardens and warm winter sun — exotic December trip.",
           bestFor: ["Culture", "Shopping", "Romance"],
           travelerType: "Couples",
-          image: "/images/marrakech.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647755/marrakech_tdrdyj.webp",
         },
         {
           title: "Rome, Italy",
@@ -4132,7 +4604,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Christmas traditions, Vatican and piazzas — holiday Eternal City.",
           bestFor: ["Culture", "Festival", "History"],
           travelerType: "Couples",
-          image: "/images/rome.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646382/toronto-rome-flight_knccwh.webp",
         },
         {
           title: "Phuket, Thailand",
@@ -4140,7 +4613,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Sunny beaches, nightlife and tropical fun — festive Thai escape.",
           bestFor: ["Beach", "Nightlife", "Romance"],
           travelerType: "Groups",
-          image: "/images/thailand-phuket.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648647/thailand-phuket_st9eg1.webp",
         },
         {
           title: "Reykjavik, Iceland",
@@ -4148,7 +4622,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Northern lights, hot springs and snow — December wonderland.",
           bestFor: ["Adventure", "Nature", "Wellness"],
           travelerType: "Couples",
-          image: "/images/reykjavik.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648361/reykjavik_b2ij5c.webp",
         },
         {
           title: "Dubai, UAE",
@@ -4156,7 +4631,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Events, luxury and fireworks — December desert glamour.",
           bestFor: ["Luxury", "Events", "Shopping"],
           travelerType: "Luxury",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646382/dubai_j8xryu.jpg",
         },
         {
           title: "Prague, Czech Republic",
@@ -4164,14 +4640,16 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snowy castles, markets and romance — winter fairy-tale.",
           bestFor: ["Romance", "Festival", "Culture"],
           travelerType: "Couples",
-          image: "/images/prague.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648262/prague_usgcjq.webp",
         },
         {
           title: "Tahiti, French Polynesia",
           description: "Beaches, diving and luxury — holiday island dream.",
           bestFor: ["Beach", "Luxury", "Wellness"],
           travelerType: "Couples",
-          image: "/images/tahiti.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648556/tahiti_stwzuo.jpg",
         },
         {
           title: "Chicago, USA",
@@ -4179,7 +4657,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Christmas markets, jazz and snowy streets — festive city break.",
           bestFor: ["Festival", "Music", "City"],
           travelerType: "Groups",
-          image: "/images/chicago.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646292/chicago_dw3btc.jpg",
         },
         {
           month: "December",
@@ -4188,7 +4667,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "World-class skiing, après-ski nightlife and luxury chalets in peak winter.",
           bestFor: ["Skiing", "Winter", "Luxury"],
           travelerType: "Groups",
-          image: "/images/whistler.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648697/whistler_hf0kzu.webp",
         },
         {
           month: "December",
@@ -4197,7 +4677,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm beaches, luxury stays and honeymoon-perfect romance in the Indian Ocean.",
           bestFor: ["Honeymoon", "Summer", "Romance"],
           travelerType: "Couples",
-          image: "/images/mauritius.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768647794/mauritius_inzszl.webp",
         },
         {
           month: "December",
@@ -4206,7 +4687,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Snowy landscapes with luxury spas and hot springs — winter wellness escape.",
           bestFor: ["Wellness", "Winter", "Luxury"],
           travelerType: "Couples",
-          image: "/images/swiss-alps.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648549/swiss-alps-summer_ulsqnt.jpg",
         },
         {
           month: "December",
@@ -4215,7 +4697,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Southern hemisphere summer trekking, glaciers and dramatic landscapes.",
           bestFor: ["Summer", "Adventure", "Road Trip"],
           travelerType: "Adventure",
-          image: "/images/patagonia.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648167/patagonia_pddckz.webp",
         },
         {
           month: "December",
@@ -4224,7 +4707,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Great safari lodges, wildlife drives and sunny summer weather.",
           bestFor: ["Safari", "Wildlife", "Summer"],
           travelerType: "Families",
-          image: "/images/kruger.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646825/kruger_qy4iik.webp",
         },
 
         {
@@ -4233,7 +4717,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Festivals, nightlife and temples — December tropical energy.",
           bestFor: ["Nightlife", "Festival", "Culture"],
           travelerType: "Groups",
-          image: "/images/thailand-bangkok.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648634/thailand-bangkok_bxlt3j.webp",
         },
         {
           month: "December",
@@ -4242,7 +4727,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Iconic markets, classical concerts and festive café culture — classic European December trip.",
           bestFor: ["Festival", "Culture", "Romance"],
           travelerType: "Couples",
-          image: "/images/vienna.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648687/vienna_rtxovq.webp",
         },
         {
           month: "December",
@@ -4251,7 +4737,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Alsace charm, illuminated streets and world-famous markets — perfect family holiday vibe.",
           bestFor: ["Festival", "Family", "Culture"],
           travelerType: "Family",
-          image: "/images/strasbourg.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648547/strasbourg_ec2u5f.jpg",
         },
         {
           month: "December",
@@ -4260,7 +4747,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Reindeer, aurora hunts and family winter experiences in the Arctic.",
           bestFor: ["Family", "Adventure", "Nature"],
           travelerType: "Family",
-          image: "/images/lapland.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646861/lapland_bbewsr.webp",
         },
         {
           month: "December",
@@ -4269,7 +4757,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Broadway shows, holiday lights and world-class shopping make for an iconic December visit.",
           bestFor: ["City", "Festival", "Shopping"],
           travelerType: "Groups",
-          image: "/images/nyc-june.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648069/nyc-june_qk2zu1.jpg",
         },
         {
           month: "December",
@@ -4278,7 +4767,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Spectacular New Year events, warm weather and luxury hotels for festive celebrations.",
           bestFor: ["Luxury", "Events", "City"],
           travelerType: "Luxury",
-          image: "/images/dubai.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646382/dubai_j8xryu.jpg",
         },
         {
           month: "December",
@@ -4287,7 +4777,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Peak dry season, overwater villas and calm seas — premium honeymoon choice.",
           bestFor: ["Beach", "Luxury", "Romance"],
           travelerType: "Couples",
-          image: "/images/maldives.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646214/baros-maldives-water-villa_koflnd.webp",
         },
         {
           month: "December",
@@ -4296,7 +4787,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Warm holiday islands, coral beaches and upscale resorts for family or luxury escapes.",
           bestFor: ["Beach", "Family", "Luxury"],
           travelerType: "Family",
-          image: "/images/barbados.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646207/barbados_fcttml.jpg",
         },
         {
           month: "December",
@@ -4305,7 +4797,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Skiing, chalets and alpine luxury near the Matterhorn — classic winter sports holiday.",
           bestFor: ["Skiing", "Luxury", "Romance"],
           travelerType: "Couples",
-          image: "/images/zermatt.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648801/zermatt-june_vlvwoo.jpg",
         },
         {
           month: "December",
@@ -4314,7 +4807,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry-season islands with boutique resorts and wellness retreats — warm escape in December.",
           bestFor: ["Beach", "Wellness", "Luxury"],
           travelerType: "Couples",
-          image: "/images/thailand-koh-samui.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648639/thailand-koh-samui_vbnfl0.jpg",
         },
         {
           month: "December",
@@ -4323,7 +4817,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Private islands, calm seas and high-end resorts — secluded holiday luxury.",
           bestFor: ["Beach", "Luxury", "Romance"],
           travelerType: "Couples",
-          image: "/images/sychelles.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648555/sychelles_jktsv0.webp",
         },
         {
           month: "December",
@@ -4332,7 +4827,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Premier North American skiing, high-end chalets and lively après-ski.",
           bestFor: ["Skiing", "Luxury", "Winter"],
           travelerType: "Groups",
-          image: "/images/aspen.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646179/aspen_msg8ty.jpg",
         },
         {
           month: "December",
@@ -4341,7 +4837,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Iconic winter resort with skiing, designer shops and alpine luxury experiences.",
           bestFor: ["Skiing", "Luxury", "Winter"],
           travelerType: "Luxury",
-          image: "/images/st-moritz-dec.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648537/st-moritz-dec_gpxp1e.jpg",
         },
         {
           month: "December",
@@ -4350,7 +4847,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Northern lights viewing, snowy excursions and Arctic culture.",
           bestFor: ["Nature", "Adventure", "Winter"],
           travelerType: "Couples",
-          image: "/images/tromso-dec.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648664/tromso-dec_ahk9hw.jpg",
         },
         {
           month: "December",
@@ -4359,7 +4857,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Exceptional powder skiing and winter onsens — excellent early-winter snow conditions.",
           bestFor: ["Skiing", "Adventure", "Winter"],
           travelerType: "Groups",
-          image: "/images/niseko-dec.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648034/niseko-dec_hlunzn.jpg",
         },
         {
           month: "December",
@@ -4368,7 +4867,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Dry season wildlife, surf and tropical nature for adventurous families and couples.",
           bestFor: ["Wildlife", "Adventure", "Nature"],
           travelerType: "Adventure",
-          image: "/images/costa-rica.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646321/costa-rica_wuom08.jpg",
         },
         {
           month: "December",
@@ -4377,7 +4877,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Mild winter sunshine, coastal hiking and family resorts for a sun break without long haul.",
           bestFor: ["Beach", "Family", "Nature"],
           travelerType: "Family",
-          image: "/images/canary-islands.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646242/canary-islands_eevcto.webp",
         },
         {
           month: "December",
@@ -4386,7 +4887,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Resorts, beaches and lively nightlife — popular December getaways for sun seekers.",
           bestFor: ["Beach", "Nightlife", "Luxury"],
           travelerType: "Groups",
-          image: "/images/cancun.webp",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646244/cancun_a7lmrp.webp",
         },
         {
           month: "December",
@@ -4395,7 +4897,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Combine thermal-spa wellness and aurora hunting for an active-relaxing winter trip.",
           bestFor: ["Wellness", "Nature", "Adventure"],
           travelerType: "Couples",
-          image: "/images/iceland.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646526/iceland-april_ow7o9q.webp",
         },
         {
           month: "December",
@@ -4404,7 +4907,8 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
             "Historic towns, winter castle ambience and local traditions for a unique holiday experience.",
           bestFor: ["History", "Culture", "Winter"],
           travelerType: "Couples",
-          image: "/images/transylvania.jpg",
+          image:
+            "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648665/transylvania_hlchjf.jpg",
         },
       ],
     },
@@ -4448,7 +4952,7 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
       btn.setAttribute("data-month-id", m.id);
       btn.setAttribute(
         "aria-pressed",
-        m.id === selectedMonthId ? "true" : "false"
+        m.id === selectedMonthId ? "true" : "false",
       );
       if (m.id === selectedMonthId) btn.classList.add("active");
       btn.addEventListener("click", () => {
@@ -4500,7 +5004,7 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
         const matches = selectedExperiences.some((e) =>
           (place.bestFor || [])
             .map((b) => b.toLowerCase())
-            .includes(e.toLowerCase())
+            .includes(e.toLowerCase()),
         );
         if (!matches) return false;
       }
@@ -4511,14 +5015,14 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
         if (
           partyType === "solo" &&
           !["Adventure", "Nature", "Culture", "Remote Work"].some((t) =>
-            (place.bestFor || []).includes(t)
+            (place.bestFor || []).includes(t),
           )
         )
           return false;
         if (
           partyType === "couple" &&
           !["Romance", "Luxury", "Beach"].some((t) =>
-            (place.bestFor || []).includes(t)
+            (place.bestFor || []).includes(t),
           )
         )
           return false;
@@ -4573,7 +5077,7 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
       link.className = "link";
       link.textContent = "Explore details";
       link.href = `${VIATOR_BASE_URL}?text=${encodeURIComponent(
-        place.title
+        place.title,
       )}&${VIATOR_PARAMS}`;
       link.target = "_blank";
       link.rel = "sponsored noopener";
@@ -4612,7 +5116,7 @@ const VIATOR_PARAMS = "pid=P00218939&mcid=42383&medium=link";
         name: p.title,
         url: `https://paradize.life/destinations/${encodeURIComponent(p.slug)}`,
         sameAs: `${VIATOR_BASE_URL}?text=${encodeURIComponent(
-          p.title
+          p.title,
         )}&${VIATOR_PARAMS}`,
       })),
     };
@@ -4777,13 +5281,11 @@ document.addEventListener("DOMContentLoaded", function () {
 (function () {
   // ✅ Only activate this script on the "where-to-visit-next.html" page
   const isWhereNextPage = window.location.pathname.includes(
-    "/travellers/where-to-visit-next.html"
+    "/travellers/where-next",
   );
 
   if (!isWhereNextPage) {
-    console.log(
-      "where-next.js skipped: not on /travellers/where-to-visit-next.html"
-    );
+    console.log("where-next.js skipped: not on /travellers/where-next");
     return; // ❌ Skip running on other pages (no tour guide, no UI)
   }
   const STORAGE_KEY = "paradize_tour_hide";
@@ -5227,7 +5729,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         setTimeout(
           () => elem.scrollIntoView({ behavior: "smooth", block: "start" }),
-          300
+          300,
         );
       }
     }

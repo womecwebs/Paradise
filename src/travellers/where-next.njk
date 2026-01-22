@@ -1,0 +1,354 @@
+---
+layout: base.njk
+title: Where should i visit next?
+---
+
+<div class="where-next">
+  <div class="bg-visuals" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  {% include "travellers/where-next/where-next-sidebar.njk" %}
+
+  <!-- small screens toggle button -->
+  <button
+    id="sidebarToggle"
+    class="sidebar-toggle"
+    aria-expanded="false"
+    aria-controls="leftSidebar"
+    aria-label="Open promotions menu"
+  >
+    ☰
+  </button>
+
+  <main class="containerss" id="app">
+    <header>
+      {% include "nav-blog.njk" %}
+
+      <h1>Where should I travel next?</h1>
+      <p>
+        Choose a month, pick experiences, and discover the top recommended
+        places — curated for timing, weather and vibe.
+      </p>
+
+      <!-- Months -->
+      <div class="months" id="months">
+        <!-- Buttons injected by JS -->
+      </div>
+
+      <div class="controls" role="region" aria-label="Search and filters">
+        <div>
+          <input
+            id="search"
+            class="search-input"
+            type="search"
+            placeholder="Search places, experiences or keywords (e.g. 'beach', 'wine')"
+            aria-label="Search places"
+          />
+          <div
+            class="experience-list"
+            id="experiences"
+            aria-label="Experience filters"
+            role="group"
+            style="margin-top: 10px"
+          >
+            <!-- Experience buttons injected by JS -->
+          </div>
+        </div>
+
+        <aside class="filters" aria-label="Traveller filters">
+          <label for="party">Traveling as</label>
+          <select id="party" class="select" aria-label="Travel type">
+            <option value="any">Anyone</option>
+            <option value="family">Family</option>
+            <option value="solo">Solo traveller</option>
+            <option value="couple">Couple</option>
+            <option value="group">Small group</option>
+          </select>
+
+          <label for="numTrav" style="margin-top: 10px"
+            >Travellers (optional)</label
+          >
+          <input
+            id="numTrav"
+            class="number-input"
+            type="number"
+            min="1"
+            value="2"
+            aria-label="Number of travellers"
+          />
+
+          <button id="resetFilters" class="reset-btn" type="button">
+            Reset filters
+          </button>
+        </aside>
+      </div>
+
+      <div class="meta-note" id="month-note">
+        <strong>September</strong> — Shoulder season, harvests, and quieter
+        beaches
+      </div>
+    </header>
+    <!-- Cards grid -->
+    <section style="margin-top: 18px">
+      <div id="resultsGrid" class="grid" aria-live="polite">
+        <!-- september cards default -->
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Tuscany - Grape harvest & vineyards"
+            src="/images/bhutan.webp"
+          />
+          <div class="card-body">
+            <h3>Tuscany, Italy (Harvest)</h3>
+            <p>
+              Grape harvest, wine tastings and cooler days — perfect for food &
+              wine lovers.
+            </p>
+            <div class="tags">
+              <span class="tag">Food &amp; Wine</span
+              ><span class="tag">Culture</span><span class="tag">Romance</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/tuscany-sep"
+                >Explore details</a
+              >
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Food &amp; Wine
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Bordeaux - Vineyards"
+            src="/images/cruise.webp"
+          />
+          <div class="card-body">
+            <h3>Bordeaux, France</h3>
+            <p>
+              Harvest events and vineyard dinners — excellent for a luxe wine
+              getaway.
+            </p>
+            <div class="tags">
+              <span class="tag">Food &amp; Wine</span
+              ><span class="tag">Luxury</span><span class="tag">Culture</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/bordeaux-sep"
+                >Explore details</a
+              >
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Food &amp; Wine
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Santorini in September"
+            src="https://source.unsplash.com/800x600/?santorini"
+          />
+          <div class="card-body">
+            <h3>Santorini (shoulder)</h3>
+            <p>
+              Warm sea and calmer crowds — ideal for romance and luxury stays.
+            </p>
+            <div class="tags">
+              <span class="tag">Romance</span><span class="tag">Beach</span
+              ><span class="tag">Luxury</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/santorini-sep"
+                >Explore details</a
+              >
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Romance
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Dalmatian Coast, Croatia"
+            src="https://source.unsplash.com/800x600/?dalmatia"
+          />
+          <div class="card-body">
+            <h3>Croatia (Dalmatian Coast)</h3>
+            <p>
+              Sailing season extends and warm seas — great for coastal
+              exploration.
+            </p>
+            <div class="tags">
+              <span class="tag">Sailing</span><span class="tag">Beach</span
+              ><span class="tag">Culture</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/dalmatia">Explore details</a>
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Sailing
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Madeira island"
+            src="https://source.unsplash.com/800x600/?madeira"
+          />
+          <div class="card-body">
+            <h3>Madeira, Portugal (mild)</h3>
+            <p>
+              Late-summer hikes and gardens — mild weather for nature lovers.
+            </p>
+            <div class="tags">
+              <span class="tag">Nature</span><span class="tag">Hiking</span
+              ><span class="tag">Wellness</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/madeira-sep"
+                >Explore details</a
+              >
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Nature
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Munich Oktoberfest"
+            src="https://source.unsplash.com/800x600/?oktoberfest"
+          />
+          <div class="card-body">
+            <h3>Munich, Germany (Oktoberfest)</h3>
+            <p>
+              Beer festivals and Bavarian culture — lively late-September
+              events.
+            </p>
+            <div class="tags">
+              <span class="tag">Festival</span><span class="tag">Culture</span
+              ><span class="tag">Food &amp; Wine</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/munich">Explore details</a>
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Festival
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Crete island"
+            src="https://source.unsplash.com/800x600/?crete"
+          />
+          <div class="card-body">
+            <h3>Greece (Crete)</h3>
+            <p>
+              Warm seas and late-season island life — family friendly and
+              relaxed.
+            </p>
+            <div class="tags">
+              <span class="tag">Beach</span><span class="tag">Family</span
+              ><span class="tag">Culture</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/crete">Explore details</a>
+              <div style="font-size: 12px; color: #94a3b8">Best for: Beach</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Douro valley"
+            src="https://source.unsplash.com/800x600/?douro-valley"
+          />
+          <div class="card-body">
+            <h3>Portugal (Douro Valley)</h3>
+            <p>
+              Wine harvests and river calm — perfect for romantic vineyard
+              cruises.
+            </p>
+            <div class="tags">
+              <span class="tag">Food &amp; Wine</span
+              ><span class="tag">Romance</span><span class="tag">Luxury</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/douro-sep">Explore details</a>
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Food &amp; Wine
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            loading="lazy"
+            alt="Hokkaido autumn"
+            src="https://source.unsplash.com/800x600/?hokkaido"
+          />
+          <div class="card-body">
+            <h3>Japan (Hokkaido early autumn)</h3>
+            <p>
+              Early autumn colors and fresh seafood — a nature & food lover's
+              delight.
+            </p>
+            <div class="tags">
+              <span class="tag">Nature</span
+              ><span class="tag">Food &amp; Wine</span
+              ><span class="tag">Adventure</span>
+            </div>
+            <div class="card-footer">
+              <a class="link" href="/destinations/hokkaido-sep"
+                >Explore details</a
+              >
+              <div style="font-size: 12px; color: #94a3b8">
+                Best for: Nature
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 18px;
+          font-size: 13px;
+          color: var(--muted);
+        "
+      >
+        Tip: Click an experience tag to refine results. Use the traveller
+        options to tailor recommendations.
+      </div>
+    </section>
+
+    {% include "travellers/where-next/where-next-faq.njk" %} {% include
+    "blocks/affiliate-disclaimer.njk" %}
+    <footer>
+      © <span id="year"></span> Paradize — Your gateway to curated travel
+      experiences. All rights reserved.
+    </footer>
+  </main>
+</div>
+<button class="tour-card" id="howToUseBtn">
+  How to use
+</button>

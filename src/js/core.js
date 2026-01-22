@@ -116,7 +116,7 @@
     if (nextBtn) nextBtn.addEventListener("click", nextSlide);
     if (prevBtn)
       prevBtn.addEventListener("click", () =>
-        showSlide((currentIndex - 1 + slides.length) % slides.length)
+        showSlide((currentIndex - 1 + slides.length) % slides.length),
       );
 
     autoSlide();
@@ -210,7 +210,7 @@
 
   function initAffiliatePlaceholders() {
     const placeholders = Array.from(
-      document.querySelectorAll(".affiliate-placeholder[data-affiliate-url]")
+      document.querySelectorAll(".affiliate-placeholder[data-affiliate-url]"),
     );
     if (!placeholders.length) return;
 
@@ -281,7 +281,7 @@
             }
           });
         },
-        { rootMargin: "800px" }
+        { rootMargin: "800px" },
       ); // bigger margin to load earlier
       placeholders.forEach((p) => io.observe(p));
     }
@@ -326,7 +326,7 @@
             }
           });
         },
-        { rootMargin: "200px" }
+        { rootMargin: "200px" },
       );
       imgs.forEach((i) => io.observe(i));
     } else {
@@ -364,6 +364,48 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add("active");
     }, delay);
+  }
+
+  /* ---------- CONTENT + IMAGE ROTATOR ---------- */
+  function initContentImageRotator() {
+    const slides = document.querySelectorAll(".rotator-slide");
+    const images = document.querySelectorAll(".image-rotator img");
+
+    if (!slides.length || !images.length) return;
+    if (slides.length !== images.length) return;
+
+    let index = 0;
+    const delay = 9000;
+
+    function rotate() {
+      slides.forEach((s) => s.classList.remove("active"));
+      images.forEach((i) => i.classList.remove("active"));
+
+      slides[index].classList.add("active");
+      images[index].classList.add("active");
+
+      index = (index + 1) % slides.length;
+    }
+
+    rotate(); // ensure first state is synced
+    setInterval(rotate, delay);
+  }
+
+  /* ---------- EBOOK STACK ROTATOR ---------- */
+  function initEbookStack() {
+    const covers = document.querySelectorAll(".ebook-cover");
+    if (covers.length < 3) return;
+
+    let index = 0;
+
+    function rotate() {
+      covers.forEach((c) => c.classList.remove("active"));
+      covers[index].classList.add("active");
+      index = (index + 1) % covers.length;
+    }
+
+    rotate();
+    setInterval(rotate, 5000);
   }
 
   /* ---------- NEWSLETTER POPUP ---------- */
@@ -461,9 +503,10 @@
     initAffiliatePlaceholders();
     initLazyImages();
     loadPageScript();
-    // Swiper: only load if any swiper is present
     loadSwiperOnceAndInit();
     initHeroSlider();
     initNewsletterPopup();
+    initContentImageRotator();
+    initEbookStack();
   });
 })();

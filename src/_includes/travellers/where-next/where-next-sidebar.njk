@@ -1,59 +1,13 @@
- <aside
+    <!-- Left sidebar cards -->
+    <aside
       id="leftSidebar"
-      class="left-sidebar blog-sidebar"
+      class="left-sidebar"
       aria-label="Affiliate & promotions"
     >
       <div class="sidebar-inner">
         <div class="sidebar-brand">
           <h2>Paradise</h2>
           <small>Travel deals & Experiences</small>
-        </div>
-
-        <div
-          aria-label="Breadcrumb"
-          class="breadcrumbs"
-          itemscope
-          itemtype="https://schema.org/BreadcrumbList"
-        >
-          <ul class="list-style-none pl-1-5">
-            <li
-              itemprop="itemListElement"
-              itemscope
-              itemtype="https://schema.org/ListItem"
-              itemprop="position"
-              content="1"
-            >
-              <a itemprop="item" class="color-secondary" href="/index.html"
-                ><span itemprop="name">Home</span></a
-              >
-              ›
-            </li>
-            <li
-              itemprop="itemListElement"
-              itemscope
-              itemtype="https://schema.org/ListItem"
-              itemprop="position"
-              content="2"
-            >
-              <a
-                itemprop="item"
-                class="color-secondary"
-                ><span itemprop="name">{{ continent }}</span></a
-              >
-              ›
-            </li>
-            <li
-              itemprop="itemListElement"
-              itemscope
-              itemtype="https://schema.org/ListItem"
-              itemprop="position"
-              content="3"
-            >
-              <span class="color-secondary" itemprop="name"
-                >{{ title }}
-              </span>
-            </li>
-          </ul>
         </div>
 
         <!-- nav bar on small screens -->
@@ -120,6 +74,7 @@
         </div>
 
         {% include "blocks/affiliate-cards.njk" %}
+
 
         <div style="margin-top: 16px">
           <small style="color: var(--muted)"

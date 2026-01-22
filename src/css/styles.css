@@ -9,7 +9,9 @@
   --backing-color: lightblue;
   --affiliate-color: #f4f7fb;
   --bg-2: #06243f;
+  --color-blue: #003366;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -71,9 +73,11 @@ dd,
 dt {
   font-size: 1.7rem;
 }
-h2,
 h3 {
   color: var(--heading-color);
+}
+h2 {
+  color: var(--color-blue);
 }
 input,
 button {
@@ -365,7 +369,8 @@ h4 {
 /* luxury travel deals hero  */
 
 .deals-hero {
-  background: linear-gradient(rgb(0, 0, 0, 0.55), rgb(0, 0, 0, 0.55)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.55), rgb(0, 0, 0, 0.55)),
     url(/images/beautiful-landscapes.webp);
   height: 90vh;
   clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
@@ -430,8 +435,9 @@ h4 {
   text-align: center;
   flex-direction: column;
   padding: 3rem 1rem;
-  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0, 0.7)),
-    url(/images/thailand-girl.webp);
+  background:
+    linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0, 0.4)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648797/yosemite_bieq0y.jpg);
   background-attachment: fixed;
 }
 
@@ -456,7 +462,8 @@ h4 {
   text-align: left;
 }
 .blogs-section {
-  background: linear-gradient(rgb(6, 6, 6, 0.4), rgb(6, 6, 6, 0.4)),
+  background:
+    linear-gradient(rgb(6, 6, 6, 0.4), rgb(6, 6, 6, 0.4)),
     url(/images/airplane.webp) no-repeat center/cover;
   width: 90%;
   height: fit-content;
@@ -619,27 +626,18 @@ h4 {
 }
 
 .destine-flexlg {
-  background-image: linear-gradient(
-      to top,
-      rgb(0, 0, 0, 0.8),
-      rgb(0, 0, 0, 0.1)
-    ),
+  background-image:
+    linear-gradient(to top, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.1)),
     url("/images/island.webp");
 }
 .destine-flexsm {
-  background-image: linear-gradient(
-      to top,
-      rgb(0, 0, 0, 0.8),
-      rgb(0, 0, 0, 0.1)
-    ),
+  background-image:
+    linear-gradient(to top, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.1)),
     url("/images/thailand.webp");
 }
 .destine-flexsm2 {
-  background-image: linear-gradient(
-      to top,
-      rgb(0, 0, 0, 0.9),
-      rgb(0, 0, 0, 0.1)
-    ),
+  background-image:
+    linear-gradient(to top, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.1)),
     url("/images/tradition.webp");
 }
 @media screen and (max-width: 1260px) {
@@ -654,42 +652,99 @@ h4 {
   }
 }
 /* EBOOK SECTION */
-
-.ebooks {
+/* section layout */
+.paradise-ebooks {
+  background: linear-gradient(135deg, #0b1d26, #122c34);
   width: 100%;
-  background: var(--secondary-color);
-  text-align: center;
-  margin: 4rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* grid-template: auto / 1fr 1fr;
-  justify-items: center; */
 }
-.ebook-container,
-.ebookimg-container {
-  text-align: left;
+.ebooks {
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.ebook-stack,
+.ebooks {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.ebook-stack,
+.ebook-container {
+  flex: 1;
+  max-width: 520px;
   padding: 3rem 2rem;
   max-width: 600px;
-  margin: 2rem 0;
 }
-.ebook-img {
-  width: 305px;
-  height: 480px;
-  padding: 3rem 1rem;
-  transition: 0.5s ease-in;
+
+.ebook-intro {
+  margin: 14px 0 24px;
+  line-height: 1.6;
 }
-.ebook-img:hover {
-  transform: rotate(6deg);
+.ebook-stack {
+  position: relative;
+  height: 460px;
+  min-width: 320px;
 }
-@media screen and (max-width: 944px) {
-  .ebookimg-container {
-    margin: 0;
-    padding: 0 1rem;
+
+/* EBOOK COVERS */
+.ebook-cover {
+  position: absolute;
+  width: 260px;
+  height: auto;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease,
+    z-index 0.6s ease;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* LEFT (BACK) */
+.ebook-cover:nth-child(2) {
+  transform: translateX(-90px) scale(0.85);
+}
+
+/* RIGHT (BACK) */
+.ebook-cover:nth-child(3) {
+  transform: translateX(90px) scale(0.85);
+}
+
+/* FRONT (ACTIVE) */
+.ebook-cover.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .paradise-ebooks {
+    height: 60rem;
   }
-  .ebook-container {
-    margin-bottom: 0;
-    padding-bottom: 0;
+  .ebooks {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ebook-stack {
+    height: 380px;
+    margin-top: 8rem;
+  }
+
+  .ebook-cover {
+    width: 220px;
+  }
+}
+@media (max-width: 375px) {
+  .ebook-cover {
+    width: 190px;
+  }
+}
+@media (max-width: 355px) {
+  .ebook-cover {
+    width: 160px;
+  }
+  .ebook-stack {
+    margin-top: 5rem;
   }
 }
 
@@ -726,23 +781,28 @@ h4 {
   color: var(--button-hover);
 }
 .card1 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
     url(/images/food.webp) no-repeat center/cover;
 }
 .card2 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
     url(/images/pool.webp) no-repeat center/cover;
 }
 .card3 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
     url(/images/airplane.webp) no-repeat center/cover;
 }
 .card4 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
     url(/images/dome.webp) no-repeat center/cover;
 }
 .card5 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
     url(/images/valley.webp) no-repeat center/cover;
 }
 .card-daelz {
@@ -756,28 +816,40 @@ h4 {
   justify-content: center;
 }
 .cardz1 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
-    url(/images/paris-tower.webp) no-repeat center/cover;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648120/paris-tower_bwhktn.webp)
+      no-repeat center/cover;
 }
 .cardz2 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
-    url(/images/thailand-elephants.webp) no-repeat center/cover;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648639/thailand-elephants_hcctgp.webp)
+      no-repeat center/cover;
 }
 .cardz3 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
-    url(/images/thailand-bangkok.webp) no-repeat center/cover;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648634/thailand-bangkok_bxlt3j.webp)
+      no-repeat center/cover;
 }
 .cardz4 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
-    url(/images/thailand-helocopter.webp) no-repeat center/cover;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648637/thailand-helocopter_usy4p0.webp)
+      no-repeat center/cover;
 }
 .cardz5 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
-    url(/images/yacht.webp) no-repeat center/cover;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648656/thailand-yacht-adamson_l2kcmp.webp)
+      no-repeat center/cover;
 }
 .cardz6 {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
-    url(/images/zanzibar.webp) no-repeat center/cover;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.7)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648800/zanzibar_zitzrr.webp)
+      no-repeat center/cover;
 }
 @media screen and (min-width: 1000px) {
   .card-daelz {
@@ -814,8 +886,10 @@ h4 {
 #subscribe {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.4)),
-    url(/images/cruise.webp) no-repeat center/cover;
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.4)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646330/cruise_pngztg.webp)
+      no-repeat center/cover;
   border-radius: 10px;
 }
 #subscribe h2 {
@@ -1128,15 +1202,18 @@ textarea {
   margin: 3rem 0;
 }
 .bloglead-card {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(/images/beautiful-landscapes.webp);
 }
 .bloglead-card-two {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(/images/charters.webp);
 }
 .bloglead-card-three {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(/images/person.webp);
 }
 .bloglead-overlay {
@@ -1331,49 +1408,56 @@ textarea {
 }
 
 .bloggingcard-one {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
-    url(/images/thailand-plane.webp);
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648646/thailand-plane_kn9pds.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bloggingcard-two {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
-    url(/images/airplane.webp);
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768645842/airplane_ciogj9.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bloggingcard-three {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
-    url(/images/thailand-hotels.webp);
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648637/thailand-hotels_tiznqd.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bloggingcard-four {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
-    url(/images/thailand-gears.webp);
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648635/thailand-gears_shcaxm.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bloggingcard-five {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
-    url(/images/thailand-girl.webp);
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648637/thailand-girl_wpkfia.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bloggingcard-six {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
-    url(/images/thailand-taxi.webp);
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
+    url(https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648653/thailand-taxi_eytl9d.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bloggingcard-seven {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)),
     url(/images/charters.webp);
   background-size: cover;
   background-position: center;
@@ -1465,7 +1549,8 @@ textarea {
 
   height: 15rem;
   padding: 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
     url(/images/water.png) no-repeat center/cover;
 }
 .maldives,
@@ -1522,23 +1607,28 @@ textarea {
   padding: 1rem;
 }
 .top-rated-zero {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
     url(/images/couples.webp);
 }
 .top-rated-one {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
     url(/images/0verwater.webp);
 }
 .top-rated-two {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
     url(/images/hotel2.webp);
 }
 .top-rated-three {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
     url(/images/dome.webp);
 }
 .top-rated-four {
-  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
     url(/images/paris-tower.webp);
 }
 .experience-cta {
@@ -2155,7 +2245,9 @@ blockquote p {
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   text-decoration: none;
-  transition: background 0.3s, transform 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s;
 }
 .sub-buttons .float-btn:hover {
   background: #0077ff;
@@ -2210,6 +2302,7 @@ blockquote p {
 .private-charters {
   width: 100%;
   margin: 3rem 0;
+  height: fit-content;
 }
 .privatejets-container {
   width: 90%;
@@ -2217,7 +2310,8 @@ blockquote p {
 }
 .jets-grid {
   display: grid;
-  grid-template: auto/1fr 1fr;
+  grid-template: 60rem/1fr 1fr;
+  height: fit-content;
 }
 
 .jetsgrid-firsttextcontainer,
@@ -2226,9 +2320,6 @@ blockquote p {
   margin: 1rem 0;
   align-items: start;
   flex-direction: column;
-}
-.jetsgrid-firsttextcontainer ul {
-  padding: 1.5rem 0;
 }
 .thai-container ul {
   padding: 1rem 0 0 0.4rem;
@@ -2252,6 +2343,10 @@ blockquote p {
   text-align: center;
   width: 100%;
 }
+.jets-image {
+  height: 100%;
+  display: flex;
+}
 .jets-image img {
   width: 100%;
   height: 100%;
@@ -2261,7 +2356,7 @@ blockquote p {
 @media screen and (max-width: 768px) {
   .jets-grid {
     display: grid;
-    grid-template: 1fr 1fr / auto;
+    grid-template: 50rem 45rem / auto;
   }
 }
 @media screen and (max-width: 425px) {
@@ -2290,7 +2385,19 @@ blockquote p {
   }
   .jets-grid {
     display: grid;
-    grid-template: 1fr 35rem / auto;
+    grid-template: 53.5rem 35rem / auto;
+  }
+}
+@media screen and (max-width: 490px) {
+  .jets-grid {
+    display: grid;
+    grid-template: 55rem 35rem / auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .jets-grid {
+    display: grid;
+    grid-template: 60rem 35rem / auto;
   }
 }
 /* youtube video embeded */
@@ -2305,13 +2412,10 @@ blockquote p {
 }
 
 .custom-video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  border: none;
 }
 
 @media (min-width: 768px) {
@@ -2479,7 +2583,9 @@ blockquote p {
 .faq-answer {
   max-height: 0;
   overflow: auto;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
   padding: 0 15px;
   background-color: var(--secondary-color);
 }
@@ -2499,7 +2605,9 @@ blockquote p {
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .luxury-card:hover {
@@ -2567,7 +2675,8 @@ blockquote p {
   width: 100%;
   margin: auto;
   padding: 60px 20px;
-  background: linear-gradient(rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.8)),
+  background:
+    linear-gradient(rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.8)),
     url(/images/zanzibar.webp);
   background-position: center;
   background-repeat: no-repeat;
@@ -3107,7 +3216,9 @@ blockquote p {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   margin: 20px auto;
   cursor: pointer;
 }
@@ -3185,7 +3296,9 @@ blockquote p {
   font-weight: 600;
   border-radius: 999px;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
   box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.6);
   animation: pulseBtn 2.5s infinite;
   font-size: 1.7rem;
@@ -3245,4 +3358,375 @@ blockquote p {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+/* ROTATOR CORE */
+.content-rotator {
+  position: relative;
+  min-height: 360px;
+}
+
+.rotator-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  pointer-events: none;
+}
+
+.rotator-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* IMAGE ROTATOR */
+.image-rotator {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+
+.image-rotator img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.image-rotator img.active {
+  opacity: 1;
+}
+
+.cta-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  width: 60%;
+}
+
+/* MOBILE SAFETY */
+@media (max-width: 768px) {
+  .content-rotator {
+    min-height: 360px;
+  }
+
+  .image-rotator {
+    min-height: 260px;
+  }
+}
+
+/* AI */
+/* AI response base */
+/* #ai-response {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+} */
+
+/* Video */
+/* .ai-video {
+  margin-bottom: 32px;
+}
+
+.ai-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.ai-video p {
+  margin-top: 8px;
+  font-weight: 600;
+} */
+
+/* Content */
+/* #ai-content h2 {
+  margin-top: 32px;
+  font-size: 1.6rem;
+}
+
+#ai-content h3 {
+  margin-top: 24px;
+  font-size: 1.2rem;
+}
+
+#ai-content p {
+  margin-top: 12px;
+  line-height: 1.6;
+  color: #333;
+} */
+
+/* Affiliate links */
+/* .affiliate-link {
+  color: #1a73e8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.affiliate-link:hover {
+  text-decoration: underline;
+} */
+
+/* Related guides */
+/* .ai-guides {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.ai-guide-card {
+  min-width: 220px;
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 16px;
+  flex-shrink: 0;
+}
+
+.ai-guide-card h4 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.ai-guide-card span {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.affiliate-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.affiliate-link:hover {
+  text-decoration: underline;
+}
+.ai-experiences,
+.ai-guides {
+  margin-top: 2rem;
+}
+
+.ai-card {
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ai-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+}
+
+.experience-card {
+  border-left: 4px solid #1d4ed8;
+}
+
+.guide-card {
+  text-decoration: none;
+  color: inherit;
+  border-left: 4px solid #059669;
+}
+.paradise-ai {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  line-height: 1.7;
+} */
+
+/* VIDEO */
+/* .ai-video {
+  margin-bottom: 32px;
+}
+
+.ai-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  border: none;
+}
+
+.ai-video p {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #444;
+} */
+
+/* CONTENT */
+/* .ai-content h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.ai-content h3 {
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+.ai-content p {
+  margin-top: 12px;
+  color: #333;
+} */
+
+/* AFFILIATE LINKS */
+/* .affiliate-link {
+  color: #1a73e8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.affiliate-link:hover {
+  text-decoration: underline;
+} */
+
+/* RELATED GUIDES */
+/* .ai-guides {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.ai-guide-card {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid #eee;
+}
+
+.ai-guide-card h4 {
+  margin: 0 0 6px;
+}
+
+.ai-guide-card span {
+  font-size: 13px;
+  color: #666;
+} */
+
+.paradise-ai {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont;
+  line-height: 1.7;
+}
+
+/* VIDEO */
+.ai-video {
+  margin-bottom: 32px;
+}
+
+.ai-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  border: none;
+}
+
+.ai-video p {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* CONTENT */
+.ai-content h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.ai-content h3 {
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+.ai-content p {
+  margin-top: 12px;
+  color: #333;
+}
+
+/* AFFILIATE LINKS */
+.affiliate-link {
+  color: #1a73e8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.affiliate-link:hover {
+  text-decoration: underline;
+}
+
+/* RELATED GUIDES */
+.ai-guides {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.ai-guide-card {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid #eee;
+}
+
+.ai-guide-card h4 {
+  margin: 0 0 6px;
+}
+
+.ai-guide-card span {
+  font-size: 13px;
+  color: #666;
+}
+.ai-input-box {
+  margin-top: 40px;
+  display: flex;
+  gap: 12px;
+}
+
+.ai-input-box textarea {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  resize: none;
+  font-size: 15px;
+}
+
+.ai-input-box button {
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ai-input-box button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

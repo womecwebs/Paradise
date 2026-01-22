@@ -7,7 +7,7 @@ layout: base.njk
     <section class="hero thailand-hero">
       <div class="slideshow-images">
         <img
-          src="/images/thai-pool-villa-phuket.webp"
+          src="https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648597/thai-pool-villa-phuket_m59fww.webp"
           width="600"
           height="400"
           loading="lazy"
@@ -15,7 +15,7 @@ layout: base.njk
           class="slide active"
         />
         <img
-          src="/images/0verwater.webp"
+          src="https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646155/0verwater_andbak.webp"
           width="600"
           height="400"
           loading="lazy"
@@ -23,7 +23,7 @@ layout: base.njk
           class="slide"
         />
         <img
-          src="/images/thailand-elephants.webp"
+          src="https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648639/thailand-elephants_hcctgp.webp"
           alt="travellers having an unforgattable elephant tour experience"
           loading="lazy"
           width="600"
@@ -31,7 +31,7 @@ layout: base.njk
           class="slide"
         />
         <img
-          src="/images/thailand-gears.webp"
+          src="https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648635/thailand-gears_shcaxm.webp"
           alt="traveller in a private jet with added privacy and luxury"
           loading="lazy"
           width="600"
@@ -42,23 +42,10 @@ layout: base.njk
       <div class="hero-overlay">
         <div id="search-container-hero">
           <h1 class="hero-title">
-            Discover the World's Finest Luxury Destinations <br />
+            Discover the World's Finest Destinations
           </h1>
-          <!-- Search bar and autocomplet -->
-          <div id="search-container ">
-            <input
-              id="searchInput"
-              type="text"
-              placeholder="e.g. flights to Dubai, luxury safari, private jet..."
-              autocomplete="off"
-            />
-            <button class="search-btn" type="button">Search</button>
-
-            <!-- Suggestions dropdown -->
-            <ul id="suggestions" class="search-suggestions"></ul>
-          </div>
-          <!-- load search script -->
-          <script defer src="/js/search.js"></script>
+          <!-- AI textarea to Paradise-ai -->  
+          {%include "ai/ai-box.njk"%}
         </div>
       </div>
     </section>

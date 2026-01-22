@@ -1,0 +1,28 @@
+{% set segments = page.url | replace("^/|/$", "") | safe %}
+{% set parts = segments.split("/") %}
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://paradize.life/"
+  }
+
+  {% for part in parts if part %}
+  ,{
+    "@type": "ListItem",
+    "position": {{ loop.index + 1 }},
+    "name": "{{ part | replace('-', ' ') | title }}",
+    "item": "https://paradize.life/{% for p in parts.slice(0, loop.index) %}{{ p }}/{% endfor %}"
+  }
+  {% endfor %}
+
+ ]
+}
+</script>

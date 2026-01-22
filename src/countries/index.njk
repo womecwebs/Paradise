@@ -13,7 +13,7 @@ description: Discover the world’s best countries for luxury travel, private to
         rgba(0, 0, 0, 0.7),
         rgba(28, 25, 10, 0.5)
       ),
-      url('/images/amalfi.webp');
+      url('https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768646163/amalfi_flixfc.webp');
   "
 >
   <div class="flights-hero-overlay">
@@ -25,19 +25,9 @@ description: Discover the world’s best countries for luxury travel, private to
         <p class="color-secondary max-w-700">{{ description }}</p>
         <!-- Search bar and autocomplet -->
         <div id="search-container mb-40">
-          <input
-            id="searchInput"
-            type="text"
-            placeholder="e.g. flights to Dubai, luxury safari, private jet..."
-            autocomplete="off"
-          />
-          <button class="search-btn" type="button">Search</button>
-
-          <!-- Suggestions dropdown -->
-          <ul id="suggestions" class="search-suggestions"></ul>
+        <!-- AI textarea to Paradise-ai -->
+        {%include "ai/ai-box.njk"%}
         </div>
-        <!-- load search script -->
-        <script defer src="/js/search.js"></script>
       </div>
     </div>
   </div>

@@ -22,21 +22,10 @@ layout: base.njk
         <div class="w-90 text-left">
           <h1>{{ title }}</h1>
           <p class="color-secondary max-w-700">{{ description }}</p>
-          <!-- Search bar and autocomplet -->
+          <!-- AI SEARCH -->
           <div id="search-container mb-40">
-            <input
-              id="searchInput"
-              type="text"
-              placeholder="e.g. flights to Dubai, luxury safari, private jet..."
-              autocomplete="off"
-            />
-            <button class="search-btn" type="button">Search</button>
-
-            <!-- Suggestions dropdown -->
-            <ul id="suggestions" class="search-suggestions"></ul>
+           {%include "ai/ai-box.njk"%}
           </div>
-          <!-- load search script -->
-          <script defer src="/js/search.js"></script>
         </div>
       </div>
     </div>
