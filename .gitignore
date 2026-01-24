@@ -6,6 +6,7 @@ src/images/uploads/
 src/images/content/
 public/images/uploads/
 public/images/content/
+!src/favicon/
 
 # System files
 npm-debug.log*
