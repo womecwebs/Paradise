@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: paradise-pages/page.njk
 title: Contact Us
 permalink: /contact/
 ---

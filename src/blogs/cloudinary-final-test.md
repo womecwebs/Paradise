@@ -1,5 +1,5 @@
 ---
-layout: blog-post.njk
+layout: blogs-layouts/blog-post.njk
 title: "Cloudinary Final Test"
 description: "i love you digital economy."
 date: 2025-01-01

@@ -1,5 +1,5 @@
 ---
-layout: experience.njk
+layout: experience-layouts/experience.njk
 title: "Private Yacht Charter in Algarve"
 excerpt: "Luxury private yacht experience along the Algarve coast with skipper, champagne, and sunset views."
 

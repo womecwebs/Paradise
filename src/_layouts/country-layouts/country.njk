@@ -113,7 +113,24 @@ layout: base.njk
     </div>
   </section>
 
-  {% include "blocks/ebooks.njk" %}
+  <!-- EBOOKS -->
+  {% set relatedEbooks = collections.ebooks | ebooksForCountry(country) %}
+
+  {% if relatedEbooks.length %}
+  <section class="related-ebooks">
+    <h2>Recommended Travel Guides</h2>
+
+    <div class="max-w-1100 mt-80 mb-70 p-20">
+      {% for ebook in relatedEbooks %}
+        <article class="ebook-card">
+         {% include "ebooks/ebook-card" %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+
   {% include "blocks/faq.njk" %}  
   {% include "blocks/newsletter-social.njk" %}
   {% include "blocks/floating-menu.njk" %}

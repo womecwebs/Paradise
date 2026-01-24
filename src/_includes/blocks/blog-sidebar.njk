@@ -28,31 +28,6 @@
               >
               ›
             </li>
-            <li
-              itemprop="itemListElement"
-              itemscope
-              itemtype="https://schema.org/ListItem"
-              itemprop="position"
-              content="2"
-            >
-              <a
-                itemprop="item"
-                class="color-secondary"
-                ><span itemprop="name">{{ continent }}</span></a
-              >
-              ›
-            </li>
-            <li
-              itemprop="itemListElement"
-              itemscope
-              itemtype="https://schema.org/ListItem"
-              itemprop="position"
-              content="3"
-            >
-              <span class="color-secondary" itemprop="name"
-                >{{ title }}
-              </span>
-            </li>
           </ul>
         </div>
 
@@ -105,6 +80,11 @@
             </li>
           </ul>
         </div>
+
+        <!-- COMMENTS -->
+        <section class="mt-40">
+         {% include "blocks/comments.njk" %}
+        </section>
 
         <!-- affiliate cards -->
         <div class="affiliate-card">

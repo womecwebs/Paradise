@@ -1,0 +1,118 @@
+---
+layout: base.njk
+navType: none
+footerType: none
+---
+
+{% set learn = learning_outcomes %}
+{% set for_who = audience %}
+{% set why_different = differentiators or [] %}
+
+
+<article class="ebook-page-container">
+  <div class="single-ebook-page">
+    <!-- LEFT -->
+    <section class="ebook-left-side">
+      <div class="ebook-wrapper single-cover-ebook">
+        <img 
+          src="{{ cover }}"
+          alt="Ebook Cover"
+          loading="lazy"
+          width="600"
+          height="400"
+        />
+        <a href="{{ payhip_url }}" class="price-btn"> Buy Now — {{ price }} </a>
+      </div>
+    </section>
+
+    <!-- RIGHT -->
+    <section class="ebook-right-side">
+      <div class="ebook-fade-top"></div>
+
+      <div class="ebook-content">
+        <section>
+          <div>
+            <h1>{{ title }}</h1>
+            <p class="ebook-subtitle">{{ description }}</p>
+            <p class="ebook-trust">
+              Instant download • Secure checkout • Lifetime access
+            </p>
+          </div>
+        </section>
+
+        <!-- PAIN → SOLUTION -->
+        <section class="ebook-problem">
+          <h2>Why Most Travelers Get This Wrong</h2>
+          <p>
+            Planning luxury travel sounds easy — until overpriced experiences,
+            tourist traps, and bad timing ruin the trip. This guide exists to
+            prevent those mistakes.
+          </p>
+        </section>
+
+        <!-- VALUE -->
+        <section class="ebook-learn">
+          <h2>What You’ll Learn</h2>
+
+          <ul class="checklist">
+            {% for item in learn %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <!-- WHO IS IT FOR -->
+        <section class="ebook-for">
+          <h2>Who This Guide Is For</h2>
+
+          <ul>
+            {% for person in for_who %}
+            <li>{{ person }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section class="ebook-unique">
+          <h2>Why This Guide Is Different</h2>
+
+          <ul>
+            {% for point in why_different %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section class="ebook-includes">
+          <h2>What’s Included</h2>
+
+          <ul>
+            {% for item in includes %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="mt-40">
+          <h4 class="bold">Get the Guide</h4>
+          <p>Download today and plan your trip with confidence.</p>
+
+          <a href="{{ payhip_url }}" rel="noopener" class="price-btn">
+            Buy Now — {{ price }}
+          </a>
+        </section>        
+        
+        <!-- COMMENTS -->
+        <section class="mt-40">
+         {% include "blocks/comments.njk" %}
+        </section>
+
+        {% include "blocks/faq.njk" %} 
+        {% include "blocks/newsletter-social.njk" %} 
+        {% include "blocks/floating-menu-blue.njk" %}
+      </div>
+
+      <div class="ebook-fade-bottom"></div>
+    </section>
+  </div>
+</article>

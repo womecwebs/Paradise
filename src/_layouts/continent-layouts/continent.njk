@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+permalink: "/continents/{{ slug }}/"
 ---
 
 <article class="continent-page">
@@ -23,7 +24,7 @@ layout: base.njk
           <h1>{{ title }}</h1>
           <p class="color-secondary max-w-700">{{ description }}</p>
           <!-- AI SEARCH -->
-          <div id="search-container mb-40">
+          <div id="search-container">
            {%include "ai/ai-box.njk"%}
           </div>
         </div>
@@ -77,8 +78,8 @@ layout: base.njk
       loop.index <= 10 %}
       <article class="destination-cards">
         <img
-          src="{{ post.data.image }}"
-          alt="{{ post.data.title }}"
+          src="{{ c.data.image }}"
+          alt="{{ c.data.title }}"
           loading="lazy"
           width="600"
           height="400"
@@ -161,9 +162,26 @@ layout: base.njk
     </div>
   </section>
 
+  <!-- EBOOKS -->
+  {% set relatedEbooks = collections.ebooks | ebooksForContinent(slug) %}
+
+  {% if relatedEbooks.length %}
+  <section class="max-w-1100 mt-80 mb-70 p-20">
+    <h2>Expert Guides for This Experience</h2>
+
+    <div class="ebooks-grid">
+      {% for ebook in relatedEbooks %}
+        <article class="ebook-card">
+         {% include "ebooks/ebook-card" %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
 
-    {% include "blocks/ebooks.njk" %}
+
+    {% include "ebooks/ebooks-reusable-card.njk" %}
 
     {% include "blocks/faq.njk" %}  
    

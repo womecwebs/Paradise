@@ -1,5 +1,5 @@
 ---
-layout: experience.njk
+layout: experience-layouts/experience.njk
 title: Wild life in tanzania
 category: nature
 slug: adventures-in-serengeti

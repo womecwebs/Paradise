@@ -1,7 +1,7 @@
 ---
 title: North America Travel Guide
 slug: north-america
-layout: continent.njk
+layout: continent-layouts/continent.njk
 image: /images/los-angeles.webp
 heroImage: /images/los-angeles.webp
 

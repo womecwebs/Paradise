@@ -47,7 +47,7 @@ layout: base.njk
     </section>
   {% endif %}
 
-  {# --- MORE EXPERIENCES (SAFE VERSION) --- #}
+  {# --- MORE EXPERIENCES --- #}
   <section class="max-w-1100 mb-40 mt-70">
     <h2>Other Luxury Experiences</h2>
     <p>Curated luxury experiences worldwide.</p>
@@ -62,6 +62,24 @@ layout: base.njk
       {% endfor %}
     </div>
   </section>
+
+  {# --- EBOOKS FOR EXPERIENCE --- #}
+  {% set relatedEbooks = collections.ebooks | ebooksForExperience(slug) %}
+
+  {% if relatedEbooks.length %}
+  <section class="max-w-1100 mt-80 mb-70 p-20">
+    <h2>Expert Guides for This Experience</h2>
+
+    <div class="ebooks-grid">
+      {% for ebook in relatedEbooks %}
+        <article class="ebook-card">
+         {% include "ebooks/ebook-card" %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
 
   {% include "blocks/faq.njk" %}  
 </article>

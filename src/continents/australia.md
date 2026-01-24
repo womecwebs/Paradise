@@ -1,7 +1,7 @@
 ---
 title: Australia Travel Guide
 slug: australia
-layout: continent.njk
+layout: continent-layouts/continent.njk
 image: /images/beautiful-landscapes.jpg
 heroImage: /images/beautiful-landscapes.jpg
 

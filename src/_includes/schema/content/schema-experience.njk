@@ -4,45 +4,56 @@
 {% set countrySlug = country | slug %}
 {% set destSlug = destination | slug %}
 
+{% set relatedEbooks = collections.ebooks | ebooksForExperience(slug) %}
+
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristAttraction",
+      "@id": "https://paradize.life{{ page.url }}#experience",
 
-  {
-    "@type": "TouristAttraction",
-    "@id": "https://paradize.life{{ page.url }}#experience",
+      "name": "{{ title | escape }}",
+      "description": "{{ expDesc | escape }}",
+      "touristType": "Luxury traveler",
 
-    "name": "{{ title | escape }}",
-    "description": "{{ expDesc | escape }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://paradize.life{{ expImage }}"
+      },
 
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://paradize.life{{ expImage }}"
-    },
+      "isLocatedAt": {
+        "@type": "Place",
+        "name": "{{ destination }}",
+        "url": "https://paradize.life/destinations/{{ destSlug }}/",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "{{ country }}",
+          "url": "https://paradize.life/countries/{{ countrySlug }}/"
+        }
+      },
 
-    "touristType": "Luxury traveler",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Luxury traveler"
+      },
 
-    "isLocatedAt": {
-      "@type": "Place",
-      "name": "{{ destination }}",
-      "containedInPlace": {
-        "@type": "Country",
-        "name": "{{ country }}"
-      }
-    },
-
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "Luxury traveler"
-    },
-
-    "subjectOf": {
-      "@type": "WebPage",
-      "url": "https://paradize.life{{ page.url }}"
+      "subjectOf": [
+        {
+          "@type": "WebPage",
+          "@id": "https://paradize.life{{ page.url }}#webpage",
+          "url": "https://paradize.life{{ page.url }}"
+        }
+        {% if relatedEbooks.length %},{% endif %}
+        {% for ebook in relatedEbooks %}
+        {
+          "@type": "Product",
+          "@id": "https://paradize.life{{ ebook.url }}#ebook"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
     }
-  },
-
- ]
+  ]
 }
 </script>

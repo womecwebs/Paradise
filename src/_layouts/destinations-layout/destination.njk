@@ -11,9 +11,9 @@ layout: base.njk
 </section>
 
 
-<!-- Related Blogs -->
+<!-- RELATED BLOGS -->
 <section class="max-w-1100 mt-60 mb-60">
-  <h2>Luxury Travel Guides for {{ title }}</h2>
+  <h2>Top Travel Guides for {{ title }}</h2>
 
   {% set relatedBlogs = collections.blogs | relatedByDestination(page.fileSlug) %}
 
@@ -29,9 +29,9 @@ layout: base.njk
   {% endif %}
 </section>
 
-<!-- Related Experiences -->
+<!-- RELATED EXPERIENCES -->
 <section class="max-w-1100 mt-60 mb-60">
-  <h2>Luxury Experiences in {{ title }}</h2>
+  <h2>Best Experiences in {{ title }}</h2>
 
   {% set relatedExperiences = collections.experiences | experiencesForDestination(page.fileSlug) %}
 
@@ -47,9 +47,25 @@ layout: base.njk
   {% endif %}
 </section>
 
-    {% include "blocks/ebooks.njk" %}
+<!-- RELATED EBOOKS -->
+{% set relatedEbooks = collections.ebooks | ebooksForDestination(slug) %}
 
-     {% include "blocks/faq.njk" %}  
+{% if relatedEbooks.length %}
+<section class="max-w-1100 mt-60 mb-60">
+  <h2>Recommended Guides for {{ title }}</h2>
+
+  <div class="ebooks-grid">
+    {% for ebook in relatedEbooks %}
+      <article class="ebook-card">
+       {% include "ebooks/ebook-card" %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+
+{% include "blocks/faq.njk" %}  
    
-    {% include "blocks/newsletter-social.njk" %}
+{% include "blocks/newsletter-social.njk" %}
 

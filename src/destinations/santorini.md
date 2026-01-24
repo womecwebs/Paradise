@@ -1,6 +1,6 @@
 ---
 title: Santorini, Greece
-layout: destination.njk
+layout: destinations-layout/destination.njk
 tags: destination
 continent: europe
 slug: santorini

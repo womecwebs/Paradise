@@ -1,5 +1,5 @@
 ---
-layout: country.njk
+layout: country-layouts/country.njk
 title: Portugal
 slug: portugal
 excerpt: Discover Portugal’s cities, coastlines, culture, and luxury travel experiences.

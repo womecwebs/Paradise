@@ -1,0 +1,63 @@
+---
+layout: ebook-layouts/ebooks-hub.njk
+title: Premium Travel Ebooks
+description: Luxury travel ebooks, insider guides, and premium digital products for elite travelers.
+permalink: /ebooks/
+---
+
+<!-- TOP EBOOKS -->
+{% if collections.featuredEbooks.length %}
+<section id="ebooks" class="max-w-1100 mb-70 p-20">
+  <h2 class="mt-40 p-20">Top Guides To Read</h2>
+
+  <div class="featured-destinations">
+    <div class="swiper categories-swiper">
+      <div class="swiper-wrapper">
+        {% for ebook in collections.featuredEbooks %}
+        <article class="swiper-slide payed-ebook">
+          <img
+            src="{{ ebook.data.cover }}"
+            alt="{{ ebook.data.title }}"
+            loading="lazy"
+            width="600"
+            class="ebook-cover-three"
+            height="400"
+          />
+          <div class="ebook-hero-actions mt-20">
+            <a href="{{ ebook.data.payhip_url }}" class="btn3">
+              {{ ebook.data.price }}
+            </a>
+            <a href="{{ ebook.url }}" class="btn4"> View Ebook </a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ALL EBOOKS -->
+<section class="max-w-1100 mt-80 mb-70 p-20">
+  <h2 class="mt-40 p-20">Recommended Guides</h2>
+  <div class="destination-grid mt-40 mb-40">
+    {% for ebook in collections.ebooks %}
+    <article class="payed-ebook">
+      <img
+        src="{{ ebook.data.cover }}"
+        alt="{{ ebook.data.title }}"
+        loading="lazy"
+        width="600"
+        class="ebook-cover-three"
+        height="400"
+      />
+      <div class="ebook-hero-actions mt-20">
+        <a href="{{ ebook.data.payhip_url }}" class="btn3">
+          {{ ebook.data.price }}
+        </a>
+        <a href="{{ ebook.url }}" class="btn4"> View Ebook </a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

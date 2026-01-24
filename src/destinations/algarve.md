@@ -1,6 +1,6 @@
 ---
 title: Algarve
-layout: destination.njk
+layout: destinations-layout/destination.njk
 image: /images/algarve.webp
 imageAlt: Algarve luxury coast
 excerpt: Elite resorts, private beaches, and premium experiences.

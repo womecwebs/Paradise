@@ -1,0 +1,55 @@
+---
+layout: base.njk
+pageId: ebooks
+---
+
+<section class="ebooks-hub">
+
+<section class="ebook-hero">
+  <div class="ebook-hero-inner">
+    <!-- TEXT -->
+    <div class="ebook-hero-content">
+      <h1 class="ebook-hero-title">
+        Travel Smarter.<br />
+        <span class="pop-text">Not More Expensive.</span>
+      </h1>
+
+      <p>
+        {{ description }}
+      </p>
+
+      <div class="ebook-hero-actions">
+        <a href="#ebooks" class="btn3">Explore Ebooks</a>
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="ebook-hero-media">
+      <div class="free-ebook">
+        <img
+          src="https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648637/thailand-hotels_tiznqd.webp"
+          alt="Free Paradise Travel Guide"
+          width="420"
+          height="560"
+          class="ebook-cover-two"
+          loading="eager"
+        />
+        <a href="/free-guides" class="btn4 mt-20 color-secondary">
+          Download Free Guide
+        </a>
+      </div>
+    </div>  
+  </div>
+</section>
+
+
+    <!-- PAGE CONTENT -->
+    <main id="ebook-content">
+      {{ content | safe }}
+    </main>
+
+  {% include "blocks/faq.njk" %}  
+  {% include "blocks/newsletter-social.njk" %}
+  {% include "blocks/floating-menu.njk" %}
+
+</section>

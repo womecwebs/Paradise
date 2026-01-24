@@ -2,10 +2,6 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-S1G5HQZXP2"
-  ></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -90,12 +86,20 @@
     }
   </style>
 </head>
-<body>
-{% if page.filePathStem | startsWith("/blogs") or page.filePathStem == "/travellers/where-next" %}
+<body {% if pageId %}data-page="{{ pageId }}"{% endif %}>
+
+{# -------------------------------
+   NAVIGATION
+-------------------------------- #}
+
+{% set navType = navType | default("default") %}
+
+{% if navType == "none" %}
   {% include "nav-none.njk" %}
-{% else %}
+{% elseif navType == "default" %}
   {% include "nav-default.njk" %}
 {% endif %}
+
 
 
   <main>
@@ -104,7 +108,19 @@
   
   {% include "blocks/newslatter-popup.njk" %}
 
-  {% include "footer-default.njk" %}   
+{# -------------------------------
+   FOOTER
+-------------------------------- #}
+
+{% set footerType = footerType | default("default") %}
+
+{% if footerType == "none" %}
+  {# no footer #}
+{% elseif footerType == "minimal" %}
+  {% include "footer-minimal.njk" %}
+{% else %}
+  {% include "footer-default.njk" %}
+{% endif %} 
 
   <script>
     if (window.netlifyIdentity) {
@@ -118,8 +134,13 @@
     }
   </script>
 
+{% include "blocks/cookies.njk" %}
+
   <!-- js files -->
   <script defer src="/js/where-next.js"></script>
   <script defer src="/js/core.js"></script>
+  <script defer src="/js/page-ebooks.js"></script>
+  <script defer src="/js/comments-toggle.js"></script>
+  
 </body>
 </html>

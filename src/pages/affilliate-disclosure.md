@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: paradise-pages/page.njk
 title: Affilliate Disclosure
 permalink: /affilliate-disclosure/
 ---

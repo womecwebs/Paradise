@@ -1,5 +1,5 @@
 ---
-layout: experience.njk
+layout: experience-layouts/experience.njk
 title: Yacht Charter you two
 excerpt: Sail the Algarve coastline on a private luxury yacht with a professional crew.
 image: /images/water.webp

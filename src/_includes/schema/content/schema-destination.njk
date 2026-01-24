@@ -4,52 +4,63 @@
 {% set countrySlug = country | slug %}
 
 {% set relatedExperiences =
-  collections.experience
+  collections.experiences
   | selectattr("data.destination", "equalto", title | lower)
 %}
 
+{% set relatedEbooks = collections.ebooks | ebooksForDestination(slug) %}
+
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristDestination",
+      "@id": "https://paradize.life{{ page.url }}#destination",
 
-  {
-    "@type": "TouristDestination",
-    "@id": "https://paradize.life{{ page.url }}#destination",
+      "name": "{{ title | escape }}",
+      "description": "{{ destDesc | escape }}",
+      "touristType": "Luxury traveler",
 
-    "name": "{{ title | escape }}",
-    "description": "{{ destDesc | escape }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://paradize.life{{ destImage }}"
+      },
 
-    "touristType": "Luxury traveler",
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "{{ country }}",
+        "url": "https://paradize.life/countries/{{ countrySlug }}/"
+      },
 
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://paradize.life{{ destImage }}"
-    },
+      "hasPart": [
+        {% for exp in relatedExperiences %}
+        {
+          "@type": "TouristAttraction",
+          "@id": "https://paradize.life{{ exp.url }}#experience",
+          "name": "{{ exp.data.title | escape }}",
+          "url": "https://paradize.life{{ exp.url }}",
+          "description": "{{ exp.data.excerpt | default(exp.data.description) | escape }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
 
-    "containedInPlace": {
-      "@type": "Country",
-      "name": "{{ country }}",
-      "url": "https://paradize.life/countries/{{ countrySlug }}/"
-    },
-
-    "subjectOf": {
-      "@type": "WebPage",
-      "url": "https://paradize.life{{ page.url }}"
-    },
-
-    "hasPart": [
-      {% for exp in relatedExperiences %}
-      {
-        "@type": "TouristAttraction",
-        "name": "{{ exp.data.title | escape }}",
-        "url": "https://paradize.life{{ exp.url }}",
-        "description": "{{ exp.data.excerpt | default(exp.data.description) | escape }}"
-      }{% if not loop.last %},{% endif %}
-      {% endfor %}
-    ]
-  },
-
- ]
+      "subjectOf": [
+        {
+          "@type": "WebPage",
+          "@id": "https://paradize.life{{ page.url }}#webpage",
+          "url": "https://paradize.life{{ page.url }}"
+        }
+        {% if relatedEbooks.length %},{% endif %}
+        {% for ebook in relatedEbooks %}
+        {
+          "@type": "Product",
+          "@id": "https://paradize.life{{ ebook.url }}#ebook"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
 }
 </script>
+

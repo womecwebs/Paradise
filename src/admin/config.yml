@@ -34,7 +34,7 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "blog-post.njk",
+          default: "blogs-layouts/blog-post.njk",
         }
 
       - { label: "Title", name: "title", widget: "string" }
@@ -131,7 +131,7 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "destination.njk",
+          default: "destinations-layout/destination.njk",
         }
 
       - { label: "Title", name: "title", widget: "string" }
@@ -198,7 +198,7 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "experience.njk",
+          default: "experience-layouts/experience.njk",
         }
 
       - { label: "Title", name: "title", widget: "string" }
@@ -274,7 +274,7 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "country.njk",
+          default: "country-layouts/country.njk",
         }
 
       - { label: "Title", name: "title", widget: "string" }
@@ -309,6 +309,14 @@ collections:
 
       - { label: "Body", name: "body", widget: "markdown" }
 
+      - label: "FAQs"
+        name: "faqs"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+
   # -------- CONTINENTS --------
   - name: "continents"
     label: "Continents"
@@ -322,7 +330,7 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "continent.njk",
+          default: "continent-layouts/continent.njk",
         }
 
       - { label: "Title", name: "title", widget: "string" }
@@ -341,3 +349,105 @@ collections:
         default: ["continent"]
 
       - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "FAQs"
+        name: "faqs"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+
+  # =========================
+  # EBOOK COLLECTION =========
+
+  - name: "ebooks"
+    label: "Ebooks"
+    folder: "src/ebooks"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "ebooks/{{slug}}/"
+    editor:
+      preview: false
+
+    fields:
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "ebook-layouts/single-ebook.njk",
+        }
+
+      - { label: "Title", name: "title", widget: "string" }
+
+      - { label: "Description (SEO)", name: "description", widget: "text" }
+
+      - { label: "Cover Image", name: "cover", widget: "image" }
+
+      - { label: "Price", name: "price", widget: "number" }
+      - {
+          label: "Currency",
+          name: "currency",
+          widget: "string",
+          default: "USD",
+        }
+
+      - { label: "Payhip URL", name: "payhip_url", widget: "string" }
+
+      - { label: "Pages", name: "pages", widget: "number", required: false }
+      - { label: "Format", name: "format", widget: "string", default: "PDF" }
+
+      - label: "Rating"
+        name: "rating"
+        widget: "number"
+        required: false
+
+      - label: "Review Count"
+        name: "review_count"
+        widget: "number"
+        required: false
+
+      - label: "Related Content"
+        name: "related"
+        widget: "object"
+        fields:
+          - label: "Destinations"
+            name: "destinations"
+            widget: "list"
+            required: false
+
+          - label: "Countries"
+            name: "countries"
+            widget: "list"
+            required: false
+
+          - label: "Experiences"
+            name: "experiences"
+            widget: "list"
+            required: false
+
+      - label: "What You’ll Learn"
+        name: "learning_outcomes"
+        widget: "list"
+
+      - label: "Who This Is For"
+        name: "audience"
+        widget: "list"
+
+      - label: "What’s Included"
+        name: "includes"
+        widget: "list"
+
+      - label: "Why This Guide Is Different"
+        name: "differentiators"
+        widget: "list"
+
+      - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - label: "FAQs"
+        name: "faqs"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }

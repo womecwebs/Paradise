@@ -1,7 +1,7 @@
 ---
 title: CMS Pipeline Test
 date: 2025-12-30T14:02:05.187Z
-layout: blog-post.njk
+layout: blogs-layouts/blog-post.njk
 featured: true
 continent: europe
 country: italy

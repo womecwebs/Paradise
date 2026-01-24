@@ -1,5 +1,5 @@
 ---
-layout: destination.njk
+layout: destinations-layout/destination.njk
 title: Maldives
 slug: maldives
 featured: true # appears in Top Destinations swiper

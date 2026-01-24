@@ -1,5 +1,5 @@
 ---
-layout: country.njk
+layout: country-layouts/country.njk
 title: Italy
 slug: italy
 description: Explore Italy’s most iconic luxury destinations and experiences.

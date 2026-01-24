@@ -1,0 +1,68 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://paradize.life{{ page.url }}#ebook",
+
+  "name": "{{ title | escape }}",
+  "description": "{{ description | escape }}",
+
+  "image": [
+    "https://paradize.life{{ cover }}"
+  ],
+
+  "brand": {
+    "@type": "Organization",
+    "@id": "https://paradize.life/#org"
+  },
+
+  "category": "Ebook",
+  "material": "Digital",
+  "isAccessibleForFree": false,
+  "inLanguage": "{{ language or 'en' }}",
+
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ payhip_url }}",
+    "priceCurrency": "{{ currency or 'USD' }}",
+    "price": "{{ price }}",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+
+    "seller": {
+      "@type": "Organization",
+      "@id": "https://paradize.life/#org"
+    }
+  }
+
+  {% if rating %},
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ rating }}",
+    "reviewCount": "{{ review_count }}"
+  }
+  {% endif %}
+
+  {% if related %},
+  "mentions": [
+    {% if related.destinations %}
+    {% for slug in related.destinations %}
+    {
+      "@type": "TouristDestination",
+      "@id": "https://paradize.life/destinations/{{ slug }}/"
+    }{% if not loop.last or related.experiences %},{% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if related.experiences %}
+    {% for slug in related.experiences %}
+    {
+      "@type": "TouristAttraction",
+      "@id": "https://paradize.life/experiences/{{ slug }}/"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+    {% endif %}
+  ]
+  {% endif %}
+}
+</script>

@@ -1,7 +1,7 @@
 ---
 title: My First Eleventy Blog Post
 date: 2025-01-01
-layout: blog-post.njk
+layout: blogs-layouts/blog-post.njk
 featured: true
 image: /images/algarve.webp
 tags: blog

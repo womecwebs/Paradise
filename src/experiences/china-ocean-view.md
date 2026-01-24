@@ -1,5 +1,5 @@
 ---
-layout: experience.njk
+layout: experience-layouts/experience.njk
 title: "Ocean View in China"
 excerpt: "Luxury private yacht experience along the Algarve coast with skipper, champagne, and sunset views."
 

@@ -5,7 +5,7 @@ country: Tanzania
 continent: africa
 featured: true
 popularScore: 95
-layout: destination.njk
+layout: destinations-layout/destination.njk
 image: /images/paris-tower.webp
 excerpt: Luxury hotels, Michelin dining, Seine cruises.
 

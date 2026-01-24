@@ -12,40 +12,49 @@
 {# ===== PER LAYOUT ===== #}
 {# ===== content layout ===== #}
 
-{% if layout == "blog-post.njk" %}
+{% if layout == "blogs-layouts/blog-post.njk" %}
   {% include "schema/content/schema-blog.njk" %}
 {% endif %}
 
-{% if layout == "destination.njk" %}
+{% if layout == "destinations-layout/destination.njk" %}
   {% include "schema/content/schema-destination.njk" %}
 {% endif %}
 
-{% if layout == "experience.njk" %}
+{% if layout == "experience-layouts/experience.njk" %}
   {% include "schema/content/schema-experience.njk" %}
 {% endif %}
 
-{% if layout == "country.njk" %}
+{% if layout == "country-layouts/country.njk" %}
   {% include "schema/content/schema-country.njk" %}
 {% endif %}
 
-{% if layout == "continent.njk" %}
+{% if layout == "continent-layouts/continent.njk" %}
   {% include "schema/content/schema-continent.njk" %}
 {% endif %}
 
+{% if layout == "ebook-layouts/single-ebook.njk" %}
+  {% include "schema/content/schema-ebook.njk" %}
+{% endif %}
+
+
 {# ===== hubs layout ===== #}
 
-{% if layout == "country-hub.njk" %}
+{% if layout == "country-layouts/country-hub.njk" %}
   {% include "schema/hubs/countries-hub.njk" %}
 {% endif %}
 
-{% if layout == "destination-hub.njk" %}
+{% if layout == "destinations-layout/destination-hub.njk" %}
   {% include "schema/hubs/destinations-hub.njk" %}
 {% endif %}
 
-{% if layout == "blog-index.njk" %}
+{% if layout == "blogs-layouts/blog-index.njk" %}
   {% include "schema/hubs/blog-hub.njk" %}
 {% endif %}
 
-{% if layout == "experience-hub.njk" %}
+{% if layout == "experience-layouts/experience-hub.njk" %}
   {% include "schema/hubs/experiences-hub.njk" %}
+{% endif %}
+
+{% if page.url == "/ebooks/" %}
+  {% include "schema/hubs/ebook-hub.njk" %}
 {% endif %}

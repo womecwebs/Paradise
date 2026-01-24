@@ -69,6 +69,67 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/continents/*.md");
   });
 
+  /* ---------------- EBOOKS COLLECTION ---------------- */
+
+  // ebooks collection
+  eleventyConfig.addCollection("ebooks", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/ebooks/*.md")
+      .filter((item) => item.data.published !== false)
+      .sort((a, b) => b.date - a.date);
+  });
+
+  // featured ebooks
+  eleventyConfig.addCollection("featuredEbooks", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/ebooks/*.md")
+      .filter(
+        (item) => item.data.featured === true && item.data.published !== false,
+      )
+      .sort((a, b) => (b.data.popularScore || 0) - (a.data.popularScore || 0))
+      .slice(0, 6);
+  });
+
+  // ebooks for destination
+  eleventyConfig.addFilter("ebooksForDestination", (ebooks, slug) => {
+    if (!Array.isArray(ebooks) || !slug) return [];
+    return ebooks.filter(
+      (ebook) =>
+        Array.isArray(ebook.data.destinations) &&
+        ebook.data.destinations.includes(slug),
+    );
+  });
+
+  // ebooks for country
+  eleventyConfig.addFilter("ebooksForCountry", (ebooks, country) => {
+    if (!Array.isArray(ebooks) || !country) return [];
+    return ebooks.filter(
+      (ebook) =>
+        Array.isArray(ebook.data.countries) &&
+        ebook.data.countries.includes(country),
+    );
+  });
+
+  // ebooks for continent
+  eleventyConfig.addFilter("ebooksForContinent", (ebooks, continent) => {
+    if (!Array.isArray(ebooks) || !continent) return [];
+    return ebooks.filter(
+      (ebook) =>
+        Array.isArray(ebook.data.continents) &&
+        ebook.data.continents.includes(continent),
+    );
+  });
+
+  // ebooks for experience
+  eleventyConfig.addFilter("ebooksForExperience", (ebooks, slug) => {
+    if (!Array.isArray(ebooks) || !slug) return [];
+    return ebooks.filter(
+      (ebook) =>
+        Array.isArray(ebook.data.experiences) &&
+        ebook.data.experiences.includes(slug),
+    );
+  });
+
   /* ---------------- LINKING COLLECTIONS ---------------- */
 
   // Countries collection

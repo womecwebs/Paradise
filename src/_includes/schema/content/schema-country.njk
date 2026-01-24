@@ -34,5 +34,19 @@
      "url": "https://paradize.life/countries/{{ slug }}/blog/"
    }
  ],
+
+ {% set relatedEbooks = collections.ebooks | ebooksForCountry(slug) %}
+
+{% if relatedEbooks.length %},
+"subjectOf": [
+  {% for ebook in relatedEbooks %}
+  {
+    "@type": "Product",
+    "@id": "https://paradize.life{{ ebook.url }}#ebook"
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+]
+{% endif %}
+
 }
 </script>

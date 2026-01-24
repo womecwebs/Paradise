@@ -1,5 +1,5 @@
 ---
-layout: blog-post.njk
+layout: blogs-layouts/blog-post.njk
 title: Why Portugal’s Algarve Is the Hidden Luxury Gem
 excerpt: Discover why Algarve is becoming Europe’s most exclusive luxury destination.
 image: /images/paris-tower.webp

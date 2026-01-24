@@ -1,5 +1,5 @@
 ---
-layout: experience.njk
+layout: experience-layouts/experience.njk
 title: Santorini Luxury Sunset Cruise
 category: culture
 slug: santorini-sunset-cruise

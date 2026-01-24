@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://paradize.life{{ page.url }}#ebook-hub",
+
+  "name": "{{ title | escape }}",
+  "description": "{{ description | escape }}",
+
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://paradize.life/#website"
+  },
+
+  "about": {
+    "@type": "Thing",
+    "name": "Luxury Travel Ebooks"
+  },
+
+  "hasPart": [
+    {% for ebook in collections.ebooks %}
+    {
+      "@type": "Product",
+      "@id": "https://paradize.life{{ ebook.url }}#ebook",
+      "name": "{{ ebook.data.title | escape }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

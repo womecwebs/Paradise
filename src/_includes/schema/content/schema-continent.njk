@@ -33,6 +33,20 @@
      "name": "Blogs about {{ title }}",
      "url": "https://paradize.life/continents/{{ slug }}/blog/"
    }
- ]
+ ],
+
+{% set relatedEbooks = collections.ebooks | ebooksForContinent(slug) %}
+
+{% if relatedEbooks.length %},
+"subjectOf": [
+  {% for ebook in relatedEbooks %}
+  {
+    "@type": "Product",
+    "@id": "https://paradize.life{{ ebook.url }}#ebook"
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+]
+{% endif %}
+
 }
 </script>

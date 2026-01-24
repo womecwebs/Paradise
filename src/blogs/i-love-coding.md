@@ -1,5 +1,5 @@
 ---
-layout: blog-post.njk
+layout: blogs-layouts/blog-post.njk
 title: "I Love Coding"
 description: "Why coding has become one of the most valuable skills in the modern digital economy."
 date: 2025-01-01

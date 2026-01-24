@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+navType: none
 ---
 
 <div class="blog-layout">
@@ -74,8 +75,12 @@ layout: base.njk
         </section>
       {% endif %}
 
+      {% include "blocks/faq.njk" %}   
 
-      {% include "blocks/faq.njk" %}    
+      <!-- COMMENTS -->
+      <section class="mt-40">
+        {% include "blocks/comments.njk" %}
+      </section>
 
       {% include "blocks/related-blogs.njk" %}
 

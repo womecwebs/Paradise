@@ -1,7 +1,7 @@
 ---
 title: South America Travel Guide
 slug: south-america
-layout: continent.njk
+layout: continent-layouts/continent.njk
 image: /images/lisbon.webp
 heroImage: /images/lisbon.webp
 
