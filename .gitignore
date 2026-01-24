@@ -1,10 +1,13 @@
 node_modules/
 _site/
 
-# IGNORE LOCAL IMAGE LIBRARY
-images/
-src/images/
-public/images/
+# Ignore large content images only
+src/images/uploads/
+src/images/content/
+public/images/uploads/
+public/images/content/
 
+# System files
 npm-debug.log*
 .DS_Store
+
