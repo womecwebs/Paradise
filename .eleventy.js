@@ -291,6 +291,7 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  eleventyConfig.addPassthroughCopy("src/favicons");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/llms.txt");
 
