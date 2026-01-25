@@ -548,15 +548,13 @@
 
   /* ---------- LEAD MAGNET MODAL (FREE EBOOKS) ---------- */
   function initLeadModal() {
-    const buttons = document.querySelectorAll("[data-open-lead]");
     const modal = document.getElementById("leadModal");
     const frame = document.getElementById("beehiivFrame");
+    const closeBtn = modal?.querySelector(".close-modal");
 
-    if (!buttons.length || !modal || !frame) return;
+    if (!modal || !frame) return;
 
-    const closeBtn = modal.querySelector(".close-modal");
-
-    buttons.forEach((btn) => {
+    document.querySelectorAll("[data-open-lead]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const ebookSlug = btn.dataset.ebook;
         if (!ebookSlug) return;
@@ -574,16 +572,18 @@
       });
     });
 
-    function closeModal() {
+    closeBtn?.addEventListener("click", () => {
       modal.classList.add("hidden");
       modal.setAttribute("aria-hidden", "true");
       frame.src = "";
-    }
-
-    closeBtn?.addEventListener("click", closeModal);
+    });
 
     modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+        modal.setAttribute("aria-hidden", "true");
+        frame.src = "";
+      }
     });
   }
 
