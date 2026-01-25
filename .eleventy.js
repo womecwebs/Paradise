@@ -3,7 +3,7 @@ const toc = require("eleventy-plugin-toc");
 module.exports = function (eleventyConfig) {
   /* ---------------- PASSTHROUGH ---------------- */
   eleventyConfig.addPassthroughCopy("src/admin");
-  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("src/ebook-pdfs");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
 
@@ -289,6 +289,15 @@ module.exports = function (eleventyConfig) {
       changefreq: "weekly",
       priority: 0.8,
     },
+  });
+
+  eleventyConfig.addCollection("ebooksData", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/ebooks/**/*.{md,njk}")
+      .map((e) => ({
+        slug: e.data.slug,
+        download_url: e.data.download_url,
+      }));
   });
 
   eleventyConfig.addPassthroughCopy("src/favicons");

@@ -2,12 +2,13 @@
 layout: ebook-layouts/single-ebook.njk
 title: "Luxury Thailand Travel Guide 2026"
 description: "A premium ebook covering luxury hotels, VIP experiences, private transport, and insider travel tips in Thailand."
-price: "$29"
-payhip_url: "https://payhip.com/b/XXXX"
-cover: "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648637/thailand-hotels_tiznqd.webp"
+type: free
+download_url: "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648069/nyc-june_qk2zu1.jpg"
+cover: "https://res.cloudinary.com/dxqnpsj8k/image/upload/v1768648069/nyc-june_qk2zu1.jpg"
 featured: true
 category: "Luxury Travel"
 published: true
+slug: luxury-travel-guide
 date: 2026-01-10
 seo:
   canonical: "https://paradize.life/ebooks/luxury-thailand-guide/"

@@ -24,9 +24,19 @@ permalink: /ebooks/
             height="400"
           />
           <div class="ebook-hero-actions mt-20">
-            <a href="{{ ebook.data.payhip_url }}" class="btn3">
-              {{ ebook.data.price }}
-            </a>
+        {% if ebook.data.type == "paid" %}
+          <a href="{{ ebook.data.payhip_url }}" class="btn3">
+            {{ ebook.data.currency }} {{ ebook.data.price }}
+          </a>
+        {% else %}
+          <button
+            class="btn3"
+            data-open-lead
+            data-ebook="{{ ebook.fileSlug }}"
+          >
+            Get Free
+          </button>
+        {% endif %}
             <a href="{{ ebook.url }}" class="btn4"> View Ebook </a>
           </div>
         </article>
@@ -40,6 +50,7 @@ permalink: /ebooks/
 <!-- ALL EBOOKS -->
 <section class="max-w-1100 mt-80 mb-70 p-20">
   <h2 class="mt-40 p-20">Recommended Guides</h2>
+
   <div class="destination-grid mt-40 mb-40">
     {% for ebook in collections.ebooks %}
     <article class="payed-ebook">
@@ -48,14 +59,26 @@ permalink: /ebooks/
         alt="{{ ebook.data.title }}"
         loading="lazy"
         width="600"
-        class="ebook-cover-three"
         height="400"
+        class="ebook-cover-three"
       />
+
       <div class="ebook-hero-actions mt-20">
-        <a href="{{ ebook.data.payhip_url }}" class="btn3">
-          {{ ebook.data.price }}
-        </a>
-        <a href="{{ ebook.url }}" class="btn4"> View Ebook </a>
+        {% if ebook.data.type == "paid" %}
+          <a href="{{ ebook.data.payhip_url }}" class="btn3">
+            {{ ebook.data.currency }} {{ ebook.data.price }}
+          </a>
+        {% else %}
+          <button
+            class="btn3"
+            data-open-lead
+            data-ebook="{{ ebook.fileSlug }}"
+          >
+            Get Free
+          </button>
+        {% endif %}
+
+        <a href="{{ ebook.url }}" class="btn4">View Ebook</a>
       </div>
     </article>
     {% endfor %}

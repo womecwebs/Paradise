@@ -21,7 +21,18 @@ footerType: none
           width="600"
           height="400"
         />
-        <a href="{{ payhip_url }}" class="price-btn"> Buy Now — {{ price }} </a>
+{% if type == "paid" %}
+  <!-- PAID CTA -->
+  <a href="{{ payhip_url }}" class="price-btn">
+    Buy Now — {{ price }}
+  </a>
+
+{% elseif type == "free" %}
+  <!-- FREE LEAD MAGNET CTA -->
+  <button class="price-btn" data-open-lead  data-ebook="{{ slug }}">
+    Get This Free Guide
+  </button>
+{% endif %}
       </div>
     </section>
 
@@ -97,9 +108,22 @@ footerType: none
           <h4 class="bold">Get the Guide</h4>
           <p>Download today and plan your trip with confidence.</p>
 
-          <a href="{{ payhip_url }}" rel="noopener" class="price-btn">
-            Buy Now — {{ price }}
-          </a>
+{% if type == "paid" %}
+  <a href="{{ payhip_url }}" class="price-btn">
+    Buy for {{ currency }} {{ price }}
+  </a>
+{% else %}
+  <button
+    class="price-btn"
+    data-open-lead
+    data-ebook="{{ slug }}"
+    aria-label="Download free ebook"
+  >
+    Download Free
+  </button>
+{% endif %}
+
+
         </section>        
         
         <!-- COMMENTS -->
