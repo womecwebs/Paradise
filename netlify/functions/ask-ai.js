@@ -1,6 +1,6 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-export async function handler(event) {
+exports.handler = async function (event) {
   try {
     const body = JSON.parse(event.body || "{}");
     const question = body.question;
@@ -12,8 +12,17 @@ export async function handler(event) {
       };
     }
 
+    if (!process.env.GEMINI_API_KEY) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "Missing GEMINI_API_KEY" }),
+      };
+    }
+
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.5-flash",
+    });
 
     const prompt = `
 You are a professional travel advisor AI.
@@ -42,13 +51,18 @@ User question:
 
     return {
       statusCode: 200,
+      headers: { "Content-Type": "application/json" },
       body: text,
     };
   } catch (error) {
-    console.error(error);
+    console.error("AI ERROR:", error);
+
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "AI failed" }),
+      body: JSON.stringify({
+        error: "AI failed",
+        details: error.message,
+      }),
     };
   }
-}
+};
