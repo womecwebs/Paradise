@@ -1,6 +1,6 @@
-const { GoogleGenerativeAI } = require("@google/genai");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-exports.handler = async function (event) {
+exports.handler = async (event) => {
   try {
     const body = JSON.parse(event.body || "{}");
     const question = body.question;
@@ -19,27 +19,22 @@ exports.handler = async function (event) {
       };
     }
 
-    const genAI = new GoogleGenerativeAI({
-      apiKey: process.env.GEMINI_API_KEY,
-    });
+    // ✅ Correct constructor
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+    // ✅ Best model for Netlify + JSON
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.0-pro",
+      model: "gemini-1.5-flash",
       generationConfig: {
+        temperature: 0.4,
         responseMimeType: "application/json",
       },
     });
 
-    const prompt = {
-      contents: [
-        {
-          role: "user",
-          parts: [
-            {
-              text: `
-You are a professional travel advisor AI.
+    const prompt = `
+Return ONLY valid JSON. No markdown. No explanations.
 
-Return ONLY valid JSON in this exact format:
+Format:
 {
   "video": { "title": "", "youtube_query": "" },
   "answer_html": "",
@@ -48,21 +43,22 @@ Return ONLY valid JSON in this exact format:
   ]
 }
 
-User question:
+Question:
 "${question}"
-              `,
-            },
-          ],
-        },
-      ],
-    };
+`;
 
     const result = await model.generateContent(prompt);
-    const json = JSON.parse(result.response.text());
+    const text = result.response.text();
+
+    // 🔒 Final safety validation
+    const json = JSON.parse(text);
 
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
       body: JSON.stringify(json),
     };
   } catch (error) {
