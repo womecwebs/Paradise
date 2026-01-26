@@ -6,33 +6,37 @@ navType: none
 footerType: none
 permalink: /paradise-ai/
 ---
+<section class="paradise-ai">
+  <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open menu">
+    ☰
+  </button> 
+    
+    {% include "paradise-ai-content/paradise-ai-navbar.njk" %}
 
-<section class="ai-hero">
-  <h1>AI Travel Assistant</h1>
-  <p>
-    Ask travel questions. Get expert answers, videos, and curated guides —
-    powered by AI.
-  </p>
 
-  <div class="ai-input-box">
-    <input
-      id="ai-question"
-      type="text"
-      placeholder="e.g. Is Maldives a good destination this year?"
-    />
-    <button id="ask-ai-btn">Ask AI</button>
+  <div class="ai-layout">
+    {% include "paradise-ai-content/paradise-ai-sidebar.njk" %}
+
+    <div class="ai-main">
+
+      <div class="input-wrapper" id="inputWrapper">
+      <div class="chat" id="chat"></div>
+
+      <div class="ai-empty-state" id="ai-emptyState">
+
+        <div class="typing-title" id="typing"></div>
+        
+        <div class="trust">Powered by AI • Luxury • Ethical • Travel-only</div>
+      </div>
+        <div class="input-box">
+          <textarea class="paradise-textarea" id="ai-input" rows="1" placeholder="Ask about your next luxury trip..."></textarea>
+          <button class="ai-send-btn" onclick="send()">➤</button>
+        </div>
+      </div>
+
+    </div>
   </div>
+    
+
+    
 </section>
-
-<section id="ai-loading" hidden>
-  <p>Thinking… ✈️</p>
-</section>
-
-<section id="ai-result" hidden>
-  <div id="ai-video" class="ai-video"></div>
-  <article id="ai-answer" class="ai-answer"></article>
-
-  <h3>Related Travel Guides</h3>
-  <div id="ai-guides" class="ai-guides"></div>
-</section>
-
