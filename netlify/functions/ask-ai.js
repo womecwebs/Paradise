@@ -24,10 +24,9 @@ exports.handler = async (event) => {
 
     // ✅ Best model for Netlify + JSON
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash",
+      model: "gemini-1.0-pro",
       generationConfig: {
         temperature: 0.4,
-        responseMimeType: "application/json",
       },
     });
 
