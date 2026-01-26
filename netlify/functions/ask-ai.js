@@ -1,5 +1,16 @@
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
 exports.handler = async function (event) {
   try {
+    // Only allow POST
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        body: JSON.stringify({ error: "Method not allowed" }),
+      };
+    }
+
+    // Parse body
     const body = JSON.parse(event.body || "{}");
     const question = body.question;
 
@@ -10,6 +21,7 @@ exports.handler = async function (event) {
       };
     }
 
+    // Check API key
     if (!process.env.GEMINI_API_KEY) {
       return {
         statusCode: 500,
@@ -17,47 +29,41 @@ exports.handler = async function (event) {
       };
     }
 
-    const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" +
-        process.env.GEMINI_API_KEY,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [
-            {
-              role: "user",
-              parts: [
-                {
-                  text: `
-You are a professional travel advisor AI.
+    // Init Gemini
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-Return ONLY valid JSON in this exact format:
+    const model = genAI.getGenerativeModel({
+      model: "models/gemini-flash-latest",
+      generationConfig: {
+        responseMimeType: "application/json",
+        temperature: 0.6,
+      },
+    });
+
+    const prompt = `
+You are a professional luxury travel advisor.
+
+Return ONLY valid JSON in this exact structure.
+Do NOT use markdown.
+Do NOT add extra text.
+
 {
-  "video": { "title": "", "youtube_query": "" },
+  "video": {
+    "title": "",
+    "youtube_query": ""
+  },
   "answer_html": "",
   "related_guides": [
     { "title": "", "image": "", "url": "" }
   ]
 }
 
-User question: "${question}"
-`,
-                },
-              ],
-            },
-          ],
-        }),
-      },
-    );
+User question:
+"${question}"
+`;
 
-    const data = await response.json();
-
-    if (!data.candidates) {
-      throw new Error(JSON.stringify(data));
-    }
-
-    const text = data.candidates[0].content.parts[0].text;
+    const result = await model.generateContent(prompt);
+    const jsonText = result.response.text();
 
     return {
       statusCode: 200,
@@ -65,7 +71,7 @@ User question: "${question}"
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
-      body: text, // already JSON
+      body: jsonText,
     };
   } catch (error) {
     console.error("AI ERROR:", error);
