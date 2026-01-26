@@ -1,8 +1,7 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleGenerativeAI } = require("@google/genai");
 
 exports.handler = async function (event) {
   try {
-    // Parse request body
     const body = JSON.parse(event.body || "{}");
     const question = body.question;
 
@@ -20,24 +19,27 @@ exports.handler = async function (event) {
       };
     }
 
-    // Init Gemini
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({
-      model: "gemini-pro",
+    const genAI = new GoogleGenerativeAI({
+      apiKey: process.env.GEMINI_API_KEY,
     });
 
-    // Prompt
-    const prompt = `
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.0-pro",
+      generationConfig: {
+        responseMimeType: "application/json",
+      },
+    });
+
+    const prompt = {
+      contents: [
+        {
+          role: "user",
+          parts: [
+            {
+              text: `
 You are a professional travel advisor AI.
 
-Rules:
-- Return ONLY valid JSON.
-- Do NOT wrap JSON in markdown.
-- Use clean HTML.
-- Embed 3–5 affiliate links naturally.
-- Be honest and accurate.
-
-Output format:
+Return ONLY valid JSON in this exact format:
 {
   "video": { "title": "", "youtube_query": "" },
   "answer_html": "",
@@ -48,31 +50,16 @@ Output format:
 
 User question:
 "${question}"
-`;
+              `,
+            },
+          ],
+        },
+      ],
+    };
 
-    // Generate
     const result = await model.generateContent(prompt);
-    let text = result.response.text();
+    const json = JSON.parse(result.response.text());
 
-    // Clean markdown if AI adds it anyway
-    text = text
-      .replace(/```json/g, "")
-      .replace(/```/g, "")
-      .trim();
-
-    // Validate JSON
-    let json;
-    try {
-      json = JSON.parse(text);
-    } catch (err) {
-      console.error("Invalid JSON from AI:", text);
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: "Invalid AI JSON format" }),
-      };
-    }
-
-    // Success
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
