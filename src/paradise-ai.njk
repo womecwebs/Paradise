@@ -1,0 +1,38 @@
+---
+title: AI Travel Assistant | Plan Smarter Trips
+description: Ask our AI travel assistant for destinations, seasons, visas, and luxury travel advice.
+layout: base.njk
+navType: none
+footerType: none
+permalink: /paradise-ai/
+---
+
+<section class="ai-hero">
+  <h1>AI Travel Assistant</h1>
+  <p>
+    Ask travel questions. Get expert answers, videos, and curated guides —
+    powered by AI.
+  </p>
+
+  <div class="ai-input-box">
+    <input
+      id="ai-question"
+      type="text"
+      placeholder="e.g. Is Maldives a good destination this year?"
+    />
+    <button id="ask-ai-btn">Ask AI</button>
+  </div>
+</section>
+
+<section id="ai-loading" hidden>
+  <p>Thinking… ✈️</p>
+</section>
+
+<section id="ai-result" hidden>
+  <div id="ai-video" class="ai-video"></div>
+  <article id="ai-answer" class="ai-answer"></article>
+
+  <h3>Related Travel Guides</h3>
+  <div id="ai-guides" class="ai-guides"></div>
+</section>
+
