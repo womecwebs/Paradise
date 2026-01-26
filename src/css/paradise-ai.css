@@ -191,11 +191,13 @@
 /* ===== INPUT ===== */
 .input-wrapper,
 .chat-wrapper {
-  position: fixed;
   bottom: 24px;
   left: 260px;
   right: 24px;
   transition: left 0.3s ease;
+}
+.chat-wrapper {
+  position: fixed;
 }
 
 .ai-sidebar.collapsed ~ .ai-main .input-wrapper,
