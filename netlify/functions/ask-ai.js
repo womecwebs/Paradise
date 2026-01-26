@@ -74,7 +74,10 @@ exports.handler = async function (event) {
     /* -----------------------------
        6. SYSTEM INSTRUCTION (KEY)
     ------------------------------ */
-    const systemInstruction = `
+    /* -----------------------------
+       7. USER PROMPT
+    ------------------------------ */
+    const prompt = `
 You are an expert luxury travel advisor AI for a premium travel website.
 
 MANDATORY RULES:
@@ -92,7 +95,6 @@ FORMAT RULES:
 - Do NOT add extra text.
 - Use clean semantic HTML in answer_html.
 - Use <h3>, <p>, <ul>, <li>.
-- Recommend experiences with reasoning (WHY, not just WHAT).
 
 JSON STRUCTURE (STRICT):
 {
@@ -102,12 +104,7 @@ JSON STRUCTURE (STRICT):
     { "title": "", "image": "", "url": "" }
   ]
 }
-`;
 
-    /* -----------------------------
-       7. USER PROMPT
-    ------------------------------ */
-    const userPrompt = `
 User question:
 "${question}"
 `;
