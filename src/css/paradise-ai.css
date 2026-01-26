@@ -189,7 +189,8 @@
 }
 
 /* ===== INPUT ===== */
-.input-wrapper {
+.input-wrapper,
+.chat-wrapper {
   position: fixed;
   bottom: 24px;
   left: 260px;
@@ -197,7 +198,8 @@
   transition: left 0.3s ease;
 }
 
-.ai-sidebar.collapsed ~ .ai-main .input-wrapper {
+.ai-sidebar.collapsed ~ .ai-main .input-wrapper,
+.ai-sidebar.collapsed ~ .ai-main .chat-wrapper {
   left: 64px;
 }
 
@@ -235,7 +237,8 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .input-wrapper {
+  .input-wrapper,
+  .chat-wrapper {
     left: 16px;
     right: 16px;
   }
