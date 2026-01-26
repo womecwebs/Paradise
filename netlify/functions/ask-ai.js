@@ -1,6 +1,4 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
-
-exports.handler = async (event) => {
+exports.handler = async function (event) {
   try {
     const body = JSON.parse(event.body || "{}");
     const question = body.question;
@@ -19,21 +17,22 @@ exports.handler = async (event) => {
       };
     }
 
-    // ✅ Correct constructor
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    const response = await fetch(
+      "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" +
+        process.env.GEMINI_API_KEY,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [
+            {
+              role: "user",
+              parts: [
+                {
+                  text: `
+You are a professional travel advisor AI.
 
-    // ✅ Best model for Netlify + JSON
-    const model = genAI.getGenerativeModel({
-      model: "gemini-1.0-pro",
-      generationConfig: {
-        temperature: 0.4,
-      },
-    });
-
-    const prompt = `
-Return ONLY valid JSON. No markdown. No explanations.
-
-Format:
+Return ONLY valid JSON in this exact format:
 {
   "video": { "title": "", "youtube_query": "" },
   "answer_html": "",
@@ -42,15 +41,23 @@ Format:
   ]
 }
 
-Question:
-"${question}"
-`;
+User question: "${question}"
+`,
+                },
+              ],
+            },
+          ],
+        }),
+      },
+    );
 
-    const result = await model.generateContent(prompt);
-    const text = result.response.text();
+    const data = await response.json();
 
-    // 🔒 Final safety validation
-    const json = JSON.parse(text);
+    if (!data.candidates) {
+      throw new Error(JSON.stringify(data));
+    }
+
+    const text = data.candidates[0].content.parts[0].text;
 
     return {
       statusCode: 200,
@@ -58,7 +65,7 @@ Question:
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
-      body: JSON.stringify(json),
+      body: text, // already JSON
     };
   } catch (error) {
     console.error("AI ERROR:", error);
