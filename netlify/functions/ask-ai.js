@@ -1,8 +1,8 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const { getStore } = require("@netlify/blobs");
+// const { getStore } = require("@netlify/blobs");
 const crypto = require("crypto");
 
-const store = getStore("ai-cache");
+// const store = getStore("ai-cache");
 
 function normalizeQuestion(q) {
   return q.toLowerCase().replace(/\s+/g, " ").trim();
@@ -27,7 +27,7 @@ exports.handler = async function (event) {
     const cacheKey = hashKey(normalized);
 
     /* ===== CACHE CHECK ===== */
-    const cached = await store.get(cacheKey, { type: "json" });
+    // const cached = await store.get(cacheKey, { type: "json" });
     if (cached) {
       return {
         statusCode: 200,
@@ -127,20 +127,23 @@ USER QUESTION:
     };
 
     /* ===== SAVE TO CACHE ===== */
-    await store.set(cacheKey, responsePayload, {
-      metadata: { question: normalized },
-    });
+    // await store.set(cacheKey, responsePayload, {
+    //   metadata: { question: normalized },
+    // });
 
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(responsePayload),
     };
-  } catch (err) {
-    console.error("AI ERROR:", err);
+  } catch (error) {
+    console.error("AI ERROR:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "AI failed" }),
+      body: JSON.stringify({
+        error: "AI failed",
+        details: error.message,
+      }),
     };
   }
 };
