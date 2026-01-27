@@ -92,7 +92,12 @@ USER QUESTION:
 `;
 
     const aiResult = await model.generateContent(prompt);
-    const aiData = JSON.parse(aiResult.response.text());
+    let aiData;
+    try {
+      aiData = JSON.parse(aiResult.response.text());
+    } catch {
+      throw new Error("Gemini returned invalid JSON");
+    }
 
     /* ===== YOUTUBE (CHANNEL ONLY) ===== */
     let video = null;
