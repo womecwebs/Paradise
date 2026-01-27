@@ -1,37 +1,48 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { getStore } = require("@netlify/blobs");
+const crypto = require("crypto");
+
+const store = getStore("ai-cache");
+
+function normalizeQuestion(q) {
+  return q.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function hashKey(str) {
+  return crypto.createHash("sha256").update(str).digest("hex");
+}
 
 exports.handler = async function (event) {
   try {
-    /* ===== METHOD GUARD ===== */
     if (event.httpMethod !== "POST") {
-      return {
-        statusCode: 405,
-        body: JSON.stringify({ error: "Method not allowed" }),
-      };
+      return { statusCode: 405, body: "Method Not Allowed" };
     }
 
-    /* ===== INPUT GUARD ===== */
-    const body = JSON.parse(event.body || "{}");
-    const question = body.question?.trim();
-
+    const { question } = JSON.parse(event.body || "{}");
     if (!question || question.length < 6) {
+      return { statusCode: 400, body: "Invalid question" };
+    }
+
+    const normalized = normalizeQuestion(question);
+    const cacheKey = hashKey(normalized);
+
+    /* ===== CACHE CHECK ===== */
+    const cached = await store.get(cacheKey, { type: "json" });
+    if (cached) {
       return {
-        statusCode: 400,
-        body: JSON.stringify({ error: "Invalid question" }),
+        statusCode: 200,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...cached, cached: true }),
       };
     }
 
     /* ===== ENV GUARD ===== */
     const { GEMINI_API_KEY, YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = process.env;
-
     if (!GEMINI_API_KEY || !YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: "Server configuration error" }),
-      };
+      throw new Error("Missing environment variables");
     }
 
-    /* ===== GEMINI INIT ===== */
+    /* ===== GEMINI ===== */
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({
       model: "models/gemini-flash-latest",
@@ -41,7 +52,6 @@ exports.handler = async function (event) {
       },
     });
 
-    /* ===== AI PROMPT (STRICT) ===== */
     const prompt = `
 You are Paradise AI, a professional luxury travel advisor.
 
@@ -50,7 +60,6 @@ STRICT RULES:
 - NO guessing or hallucination
 - NO markdown
 - NO emojis
-- NO affiliate language
 - Family-safe, luxury-only
 
 CONTENT STYLE:
@@ -67,9 +76,6 @@ OUTPUT REQUIREMENTS:
 - Recommend premium destinations only
 
 
-OUTPUT:
-Return ONLY valid JSON.
-
 JSON FORMAT:
 {
   "video_query": "",
@@ -82,70 +88,59 @@ JSON FORMAT:
 If no relevant video exists, set "video_query" to empty string.
 
 USER QUESTION:
-"${question}"
+"${normalized}"
 `;
 
     const aiResult = await model.generateContent(prompt);
-    const aiText = aiResult.response.text();
+    const aiData = JSON.parse(aiResult.response.text());
 
-    let aiData;
-    try {
-      aiData = JSON.parse(aiText);
-    } catch {
-      throw new Error("AI returned invalid JSON");
-    }
-
-    /* ===== YOUTUBE LOOKUP (CHANNEL ONLY) ===== */
+    /* ===== YOUTUBE (CHANNEL ONLY) ===== */
     let video = null;
 
     if (aiData.video_query) {
       const ytRes = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?` +
+        "https://www.googleapis.com/youtube/v3/search?" +
           new URLSearchParams({
             key: YOUTUBE_API_KEY,
             channelId: YOUTUBE_CHANNEL_ID,
-            part: "snippet",
             q: aiData.video_query,
+            part: "snippet",
             maxResults: 1,
             type: "video",
             safeSearch: "strict",
           }),
       );
 
-      const ytData = await ytRes.json();
-
-      if (ytData.items && ytData.items.length > 0) {
-        const v = ytData.items[0];
+      const yt = await ytRes.json();
+      if (yt.items?.length) {
         video = {
-          videoId: v.id.videoId,
-          title: v.snippet.title,
+          videoId: yt.items[0].id.videoId,
+          title: yt.items[0].snippet.title,
         };
       }
     }
 
-    /* ===== FINAL RESPONSE ===== */
+    const responsePayload = {
+      video,
+      answer_html: aiData.answer_html,
+      related_guides: aiData.related_guides || [],
+    };
+
+    /* ===== SAVE TO CACHE ===== */
+    await store.set(cacheKey, responsePayload, {
+      metadata: { question: normalized },
+    });
+
     return {
       statusCode: 200,
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        video, // null OR { videoId, title }
-        answer_html: aiData.answer_html,
-        related_guides: Array.isArray(aiData.related_guides)
-          ? aiData.related_guides
-          : [],
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(responsePayload),
     };
-  } catch (error) {
-    console.error("AI ERROR:", error);
+  } catch (err) {
+    console.error("AI ERROR:", err);
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        error: "AI failed",
-        details: error.message,
-      }),
+      body: JSON.stringify({ error: "AI failed" }),
     };
   }
 };
