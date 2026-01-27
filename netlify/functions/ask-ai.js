@@ -121,23 +121,23 @@ USER QUESTION:
     answerHtml = answerHtml
       .replaceAll(
         "{{AFF_FLIGHTS}}",
-        `<a href="${AFFILIATES.flights}" target="_blank" rel="noopener">premium flights</a>`,
+        `<a class="link" href="${AFFILIATES.flights}" target="_blank" rel="noopener">premium flights</a>`,
       )
       .replaceAll(
         "{{AFF_HOTELS}}",
-        `<a href="${AFFILIATES.hotels}" target="_blank" rel="noopener">luxury hotels</a>`,
+        `<a class="link" href="${AFFILIATES.hotels}" target="_blank" rel="noopener">luxury hotels</a>`,
       )
       .replaceAll(
         "{{AFF_TOURS}}",
-        `<a href="${AFFILIATES.tours}" target="_blank" rel="noopener">private tours</a>`,
+        `<a class="link" href="${AFFILIATES.tours}" target="_blank" rel="noopener">private tours</a>`,
       )
       .replaceAll(
         "{{AFF_TRANSFERS}}",
-        `<a href="${AFFILIATES.transfers}" target="_blank" rel="noopener">luxury transfers</a>`,
+        `<a class="link" href="${AFFILIATES.transfers}" target="_blank" rel="noopener">luxury transfers</a>`,
       )
       .replaceAll(
         "{{AFF_JETS}}",
-        `<a href="${AFFILIATES.jets}" target="_blank" rel="noopener">private jet charters</a>`,
+        `<a class="link" href="${AFFILIATES.jets}" target="_blank" rel="noopener">private jet charters</a>`,
       );
 
     /* ─────────────────────────────────────────────── */

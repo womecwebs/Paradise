@@ -1,3 +1,15 @@
+/* ===== Guides Data (Eleventy) ===== */
+let ALL_GUIDES = [];
+
+fetch("/_data/guides.json")
+  .then((res) => res.json())
+  .then((data) => {
+    ALL_GUIDES = Array.isArray(data) ? data : [];
+  })
+  .catch(() => {
+    ALL_GUIDES = [];
+  });
+
 /* ===== Sidebar ===== */
 const sidebarToggleBtn = document.getElementById("sidebarToggle");
 
@@ -46,6 +58,39 @@ typeEffect();
 const input = document.getElementById("ai-input");
 const chat = document.getElementById("chat");
 const emptyState = document.getElementById("ai-emptyState");
+
+/* ===== Render Related Guides ===== */
+function renderRelatedGuides(aiGuides) {
+  const container = document.getElementById("related-guides");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  if (!Array.isArray(aiGuides) || !aiGuides.length) return;
+  if (!ALL_GUIDES.length) return;
+
+  const matched = ALL_GUIDES.filter((g) =>
+    aiGuides.some((ai) => ai.title === g.title),
+  );
+
+  if (!matched.length) return;
+
+  container.innerHTML = `
+    <h3 class="guides-title">Related Luxury Guides</h3>
+    <div class="guides-row">
+      ${matched
+        .map(
+          (guide) => `
+        <a href="${guide.url}" class="guide-card">
+          <img src="${guide.image}" alt="${guide.title}" loading="lazy">
+          <h4>${guide.title}</h4>
+        </a>
+      `,
+        )
+        .join("")}
+    </div>
+  `;
+}
 
 async function send() {
   const question = input.value.trim();
@@ -137,26 +182,10 @@ async function send() {
         ${data.answer_html}
       </div>
     `;
+    /* ===== Related Guides ===== */
+    renderRelatedGuides(data.related_guides);
 
     /* ===== Related Guides ===== */
-    if (Array.isArray(data.related_guides)) {
-      const guidesHTML = data.related_guides
-        .map(
-          (g) => `
-        <a href="${g.url}" class="guide-card">
-          <img src="${g.image}" alt="${g.title}" loading="lazy">
-          <h4>${g.title}</h4>
-        </a>
-      `,
-        )
-        .join("");
-
-      chat.innerHTML += `
-        <div class="guides">
-          ${guidesHTML}
-        </div>
-      `;
-    }
   } catch (err) {
     loader.remove();
     chat.innerHTML += `

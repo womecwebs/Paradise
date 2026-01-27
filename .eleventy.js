@@ -300,6 +300,16 @@ module.exports = function (eleventyConfig) {
       }));
   });
 
+  /* ---------------- RELATED GUIDES IN PARADISE AI ---------------- */
+  eleventyConfig.addCollection("guides", function (collectionApi) {
+    return collectionApi.getFilteredByTag("blog").map((item) => ({
+      title: item.data.title,
+      url: item.url,
+      image: item.data.image || "/images/placeholder.jpg",
+      description: item.data.description || "",
+    }));
+  });
+
   eleventyConfig.addPassthroughCopy("src/favicons");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/llms.txt");
