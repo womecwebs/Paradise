@@ -195,9 +195,11 @@
   left: 260px;
   right: 24px;
   transition: left 0.3s ease;
-}
-.input-wrapper {
   position: fixed;
+}
+
+.chat-wrapper {
+  overflow-y: auto;
 }
 
 .ai-sidebar.collapsed ~ .ai-main .input-wrapper,
