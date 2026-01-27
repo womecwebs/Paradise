@@ -1,42 +1,97 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const guides = require("../../src/_data/guides.json");
+
+const AFFILIATES = {
+  flights: "https://expedia.com/affiliates/expedia-home.hMJbWB1",
+  hotels: "https://expedia.com/affiliate/kpS9be0",
+  tours:
+    "https://www.viator.com/?pid=P00218939&mcid=42383&medium=link&medium_version=selector",
+  transfers: "https://kiwitaxi.tpk.mx/7OgDoKGT",
+  jets: "https://www.villiersjets.com/?id=9474",
+};
 
 exports.handler = async function (event) {
   try {
+    /* ─────────────────────────────────────────────── */
+    /* 1️⃣ METHOD & INPUT VALIDATION */
+    /* ─────────────────────────────────────────────── */
     if (event.httpMethod !== "POST") {
       return { statusCode: 405, body: "Method Not Allowed" };
     }
 
     const { question } = JSON.parse(event.body || "{}");
-    if (!question || question.length < 6) {
-      return { statusCode: 400, body: "Invalid question" };
+
+    if (!question || question.trim().length < 6) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Invalid question" }),
+      };
     }
 
+    /* ─────────────────────────────────────────────── */
+    /* 2️⃣ ENV VARS */
+    /* ─────────────────────────────────────────────── */
     const { GEMINI_API_KEY, YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = process.env;
+
     if (!GEMINI_API_KEY || !YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
       throw new Error("Missing environment variables");
     }
 
+    /* ─────────────────────────────────────────────── */
+    /* 3️⃣ GEMINI SETUP */
+    /* ─────────────────────────────────────────────── */
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+
     const model = genAI.getGenerativeModel({
       model: "models/gemini-flash-latest",
       generationConfig: {
-        responseMimeType: "application/json",
         temperature: 0.4,
+        responseMimeType: "application/json",
       },
     });
 
+    /* ─────────────────────────────────────────────── */
+    /* 4️⃣ GUIDES (AUTO FROM ELEVENTY DATA) */
+    /* ─────────────────────────────────────────────── */
+    const guideTitles = guides.map((g) => g.title).join("\n- ");
+
+    /* ─────────────────────────────────────────────── */
+    /* 5️⃣ PROMPT */
+    /* ─────────────────────────────────────────────── */
     const prompt = `
 You are Paradise AI, a professional luxury travel advisor.
 
 STRICT RULES:
 - NO nightlife, alcohol, clubs, gambling
-- NO guessing or hallucination
+- NO hallucination or guessing
 - NO markdown
 - NO emojis
 - Family-safe, luxury-only
 
-OUTPUT:
-Return ONLY valid JSON.
+CONTENT STYLE:
+- Calm, expert, factual
+- Luxury-focused
+- High-end experiences only
+
+OUTPUT REQUIREMENTS:
+- Return ONLY valid JSON
+- Use clean semantic HTML (<p>, <h3>, <ul>, <li>)
+- Do NOT invent URLs
+- Use placeholders ONLY
+
+AFFILIATE PLACEHOLDERS:
+{{AFF_FLIGHTS}}
+{{AFF_HOTELS}}
+{{AFF_TOURS}}
+{{AFF_TRANSFERS}}
+{{AFF_JETS}}
+
+AVAILABLE GUIDES (USE TITLES ONLY):
+- ${guideTitles}
+
+RULES FOR GUIDES:
+- Recommend max 3
+- If none fit, return empty array
 
 JSON FORMAT:
 {
@@ -51,9 +106,43 @@ USER QUESTION:
 "${question}"
 `;
 
+    /* ─────────────────────────────────────────────── */
+    /* 6️⃣ AI CALL */
+    /* ─────────────────────────────────────────────── */
     const aiResult = await model.generateContent(prompt);
-    const aiData = JSON.parse(aiResult.response.text());
+    const aiText = aiResult.response.text();
+    const aiData = JSON.parse(aiText);
 
+    /* ─────────────────────────────────────────────── */
+    /* 7️⃣ AFFILIATE INJECTION */
+    /* ─────────────────────────────────────────────── */
+    let answerHtml = aiData.answer_html || "";
+
+    answerHtml = answerHtml
+      .replaceAll(
+        "{{AFF_FLIGHTS}}",
+        `<a href="${AFFILIATES.flights}" target="_blank" rel="noopener">premium flights</a>`,
+      )
+      .replaceAll(
+        "{{AFF_HOTELS}}",
+        `<a href="${AFFILIATES.hotels}" target="_blank" rel="noopener">luxury hotels</a>`,
+      )
+      .replaceAll(
+        "{{AFF_TOURS}}",
+        `<a href="${AFFILIATES.tours}" target="_blank" rel="noopener">private tours</a>`,
+      )
+      .replaceAll(
+        "{{AFF_TRANSFERS}}",
+        `<a href="${AFFILIATES.transfers}" target="_blank" rel="noopener">luxury transfers</a>`,
+      )
+      .replaceAll(
+        "{{AFF_JETS}}",
+        `<a href="${AFFILIATES.jets}" target="_blank" rel="noopener">private jet charters</a>`,
+      );
+
+    /* ─────────────────────────────────────────────── */
+    /* 8️⃣ YOUTUBE SEARCH */
+    /* ─────────────────────────────────────────────── */
     let video = null;
 
     if (aiData.video_query) {
@@ -71,7 +160,8 @@ USER QUESTION:
       );
 
       const yt = await ytRes.json();
-      if (yt.items?.length) {
+
+      if (yt.items && yt.items.length > 0) {
         video = {
           videoId: yt.items[0].id.videoId,
           title: yt.items[0].snippet.title,
@@ -79,22 +169,26 @@ USER QUESTION:
       }
     }
 
+    /* ─────────────────────────────────────────────── */
+    /* 9️⃣ RESPONSE */
+    /* ─────────────────────────────────────────────── */
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         video,
-        answer_html: aiData.answer_html,
+        answer_html: answerHtml,
         related_guides: aiData.related_guides || [],
       }),
     };
   } catch (error) {
     console.error("AI ERROR:", error);
+
     return {
       statusCode: 500,
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        error: "AI failed",
-        details: error.message,
+        error: "The AI service is temporarily unavailable. Please try again.",
       }),
     };
   }
