@@ -1,8 +1,9 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const fetch = require("node-fetch");
 
 exports.handler = async function (event) {
   try {
-    // Allow POST only
+    /* ===== METHOD GUARD ===== */
     if (event.httpMethod !== "POST") {
       return {
         statusCode: 405,
@@ -10,45 +11,48 @@ exports.handler = async function (event) {
       };
     }
 
+    /* ===== INPUT GUARD ===== */
     const body = JSON.parse(event.body || "{}");
-    const question = body.question;
+    const question = body.question?.trim();
 
-    if (!question) {
+    if (!question || question.length < 6) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: "Question is required" }),
+        body: JSON.stringify({ error: "Invalid question" }),
       };
     }
 
-    if (!process.env.GEMINI_API_KEY) {
+    /* ===== ENV GUARD ===== */
+    const { GEMINI_API_KEY, YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = process.env;
+
+    if (!GEMINI_API_KEY || !YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: "Missing GEMINI_API_KEY" }),
+        body: JSON.stringify({ error: "Server configuration error" }),
       };
     }
 
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
+    /* ===== GEMINI INIT ===== */
+    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({
       model: "models/gemini-flash-latest",
       generationConfig: {
         responseMimeType: "application/json",
-        temperature: 0.6,
+        temperature: 0.4,
       },
     });
 
+    /* ===== AI PROMPT (STRICT) ===== */
     const prompt = `
-SYSTEM ROLE:
-You are "Paradise AI", a professional, conservative, luxury travel advisor.
+You are Paradise AI, a professional luxury travel advisor.
 
-STRICT RULES (MANDATORY):
-- NO nightlife, bars, clubs, parties, alcohol, gambling
-- NO unsafe, illegal, or unethical advice
-- NO hallucinations or guesses — if unsure, say so
+STRICT RULES:
+- NO nightlife, alcohol, clubs, gambling
+- NO guessing or hallucination
 - NO markdown
 - NO emojis
-- NO exaggerated claims
-- NO affiliate disclosure text
+- NO affiliate language
+- Family-safe, luxury-only
 
 CONTENT STYLE:
 - Calm, expert, trustworthy tone
@@ -63,32 +67,77 @@ OUTPUT REQUIREMENTS:
 - All links must be realistic (example.com allowed)
 - Recommend premium destinations only
 
-JSON FORMAT (STRICT):
+
+OUTPUT:
+Return ONLY valid JSON.
+
+JSON FORMAT:
 {
-  "video": {
-    "title": "",
-    "youtube_query": ""
-  },
+  "video_query": "",
   "answer_html": "",
   "related_guides": [
     { "title": "", "image": "", "url": "" }
   ]
 }
 
+If no relevant video exists, set "video_query" to empty string.
+
 USER QUESTION:
 "${question}"
 `;
 
-    const result = await model.generateContent(prompt);
-    const jsonText = result.response.text();
+    const aiResult = await model.generateContent(prompt);
+    const aiText = aiResult.response.text();
 
+    let aiData;
+    try {
+      aiData = JSON.parse(aiText);
+    } catch {
+      throw new Error("AI returned invalid JSON");
+    }
+
+    /* ===== YOUTUBE LOOKUP (CHANNEL ONLY) ===== */
+    let video = null;
+
+    if (aiData.video_query) {
+      const ytRes = await fetch(
+        `https://www.googleapis.com/youtube/v3/search?` +
+          new URLSearchParams({
+            key: YOUTUBE_API_KEY,
+            channelId: YOUTUBE_CHANNEL_ID,
+            part: "snippet",
+            q: aiData.video_query,
+            maxResults: 1,
+            type: "video",
+            safeSearch: "strict",
+          }),
+      );
+
+      const ytData = await ytRes.json();
+
+      if (ytData.items && ytData.items.length > 0) {
+        const v = ytData.items[0];
+        video = {
+          videoId: v.id.videoId,
+          title: v.snippet.title,
+        };
+      }
+    }
+
+    /* ===== FINAL RESPONSE ===== */
     return {
       statusCode: 200,
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
-      body: jsonText,
+      body: JSON.stringify({
+        video, // null OR { videoId, title }
+        answer_html: aiData.answer_html,
+        related_guides: Array.isArray(aiData.related_guides)
+          ? aiData.related_guides
+          : [],
+      }),
     };
   } catch (error) {
     console.error("AI ERROR:", error);

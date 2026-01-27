@@ -68,7 +68,7 @@ async function send() {
   chat.style.display = "block";
 
   // User message
-  chat.innerHTML += `<div class="message user">${question}</div>`;
+  chat.innerHTML += `<div class="message user"><p class="color-secondary">${question}</p></div>`;
 
   // Skeleton loading
   const loader = document.createElement("div");
@@ -113,22 +113,22 @@ async function send() {
       return;
     }
 
-    /* ===== YouTube Embed ===== */
-    if (data.video?.youtube_query) {
+    /* ===== YouTube Embed (Paradise Channel Only) ===== */
+    if (data.video?.videoId) {
       chat.innerHTML += `
-        <div class="message ai">
-          <iframe
-            loading="lazy"
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(
-              data.video.youtube_query,
-            )}"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
-        </div>
-      `;
+    <div class="message ai video">
+      <div class="video-wrapper">
+        <iframe
+          loading="lazy"
+          src="https://www.youtube.com/embed/${data.video.videoId}"
+          title="${data.video.title || "Paradise Travel Video"}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  `;
     }
 
     /* ===== AI Answer ===== */
