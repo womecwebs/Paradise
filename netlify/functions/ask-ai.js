@@ -1,5 +1,4 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const fetch = require("node-fetch");
 
 exports.handler = async function (event) {
   try {
