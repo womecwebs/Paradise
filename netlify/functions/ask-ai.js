@@ -1,16 +1,4 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-// const { getStore } = require("@netlify/blobs");
-const crypto = require("crypto");
-
-// const store = getStore("ai-cache");
-
-function normalizeQuestion(q) {
-  return q.toLowerCase().replace(/\s+/g, " ").trim();
-}
-
-function hashKey(str) {
-  return crypto.createHash("sha256").update(str).digest("hex");
-}
 
 exports.handler = async function (event) {
   try {
@@ -23,26 +11,11 @@ exports.handler = async function (event) {
       return { statusCode: 400, body: "Invalid question" };
     }
 
-    const normalized = normalizeQuestion(question);
-    const cacheKey = hashKey(normalized);
-
-    /* ===== CACHE CHECK ===== */
-    // const cached = await store.get(cacheKey, { type: "json" });
-    if (cached) {
-      return {
-        statusCode: 200,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...cached, cached: true }),
-      };
-    }
-
-    /* ===== ENV GUARD ===== */
     const { GEMINI_API_KEY, YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = process.env;
     if (!GEMINI_API_KEY || !YOUTUBE_API_KEY || !YOUTUBE_CHANNEL_ID) {
       throw new Error("Missing environment variables");
     }
 
-    /* ===== GEMINI ===== */
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({
       model: "models/gemini-flash-latest",
@@ -62,19 +35,8 @@ STRICT RULES:
 - NO emojis
 - Family-safe, luxury-only
 
-CONTENT STYLE:
-- Calm, expert, trustworthy tone
-- Luxury-focused, family-safe
-- High-end experiences only
-- Clear, factual, helpful
-
-OUTPUT REQUIREMENTS:
-- Return ONLY valid JSON
-- Do NOT add extra keys
-- Use clean semantic HTML (<p>, <h3>, <ul>, <li>)
-- All links must be realistic (example.com allowed)
-- Recommend premium destinations only
-
+OUTPUT:
+Return ONLY valid JSON.
 
 JSON FORMAT:
 {
@@ -85,21 +47,13 @@ JSON FORMAT:
   ]
 }
 
-If no relevant video exists, set "video_query" to empty string.
-
 USER QUESTION:
-"${normalized}"
+"${question}"
 `;
 
     const aiResult = await model.generateContent(prompt);
-    let aiData;
-    try {
-      aiData = JSON.parse(aiResult.response.text());
-    } catch {
-      throw new Error("Gemini returned invalid JSON");
-    }
+    const aiData = JSON.parse(aiResult.response.text());
 
-    /* ===== YOUTUBE (CHANNEL ONLY) ===== */
     let video = null;
 
     if (aiData.video_query) {
@@ -125,21 +79,14 @@ USER QUESTION:
       }
     }
 
-    const responsePayload = {
-      video,
-      answer_html: aiData.answer_html,
-      related_guides: aiData.related_guides || [],
-    };
-
-    /* ===== SAVE TO CACHE ===== */
-    // await store.set(cacheKey, responsePayload, {
-    //   metadata: { question: normalized },
-    // });
-
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(responsePayload),
+      body: JSON.stringify({
+        video,
+        answer_html: aiData.answer_html,
+        related_guides: aiData.related_guides || [],
+      }),
     };
   } catch (error) {
     console.error("AI ERROR:", error);
