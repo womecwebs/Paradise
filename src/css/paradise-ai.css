@@ -169,13 +169,13 @@
 
 /* ===== AI Video Embed ===== */
 .message.ai.video {
-  margin: 1rem auto;
+  margin: 1rem 0;
 }
 
 .video-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9; /* modern, clean */
+  aspect-ratio: 16 / 9;
   background: #000;
   border-radius: 14px;
   overflow: hidden;
@@ -210,7 +210,13 @@
   border-radius: 14px;
   line-height: 1.6;
 }
-
+.ai-link {
+  color: blue;
+}
+.ai-link:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
 /* ===== LOADING SKELETON ===== */
 .skeleton {
   height: 120px;

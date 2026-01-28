@@ -113,7 +113,7 @@ async function send() {
   chat.style.display = "block";
 
   // User message
-  chat.innerHTML += `<div class="message user"><p class="color-secondary">${question}</p></div>`;
+  chat.innerHTML += `<div class="message user"><p class="color-secondary mt-70 bg-ai-accent p-20 rounded-lg">${question}</p></div>`;
 
   // Skeleton loading
   const loader = document.createElement("div");
