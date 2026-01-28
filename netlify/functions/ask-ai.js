@@ -9,6 +9,19 @@ async function getGuides(origin) {
   }
 }
 
+/* ===== IN-MEMORY SAFETY LAYERS ===== */
+
+// Cache: normalized question → AI response
+const RESPONSE_CACHE = new Map();
+
+// Rate limiting: IP → { count, reset }
+const RATE_LIMIT = new Map();
+
+// Config
+const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const RATE_LIMIT_MAX = 10; // requests per window
+
 const AFFILIATES = {
   flights: "https://expedia.com/affiliates/expedia-home.hMJbWB1",
   hotels: "https://expedia.com/affiliate/kpS9be0",
@@ -17,6 +30,52 @@ const AFFILIATES = {
   transfers: "https://kiwitaxi.tpk.mx/7OgDoKGT",
   jets: "https://www.villiersjets.com/?id=9474",
 };
+
+function normalizeQuestion(q) {
+  return q.toLowerCase().trim().replace(/\s+/g, " ");
+}
+
+function getClientIP(event) {
+  return (
+    event.headers["x-forwarded-for"]?.split(",")[0] ||
+    event.headers["client-ip"] ||
+    "unknown"
+  );
+}
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = RATE_LIMIT.get(ip);
+
+  if (!entry || now > entry.reset) {
+    RATE_LIMIT.set(ip, { count: 1, reset: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  if (entry.count >= RATE_LIMIT_MAX) return true;
+
+  entry.count++;
+  return false;
+}
+
+function getCachedResponse(key) {
+  const cached = RESPONSE_CACHE.get(key);
+  if (!cached) return null;
+
+  if (Date.now() > cached.expires) {
+    RESPONSE_CACHE.delete(key);
+    return null;
+  }
+
+  return cached.data;
+}
+
+function setCachedResponse(key, data) {
+  RESPONSE_CACHE.set(key, {
+    data,
+    expires: Date.now() + CACHE_TTL_MS,
+  });
+}
 
 exports.handler = async function (event) {
   try {
@@ -33,6 +92,22 @@ exports.handler = async function (event) {
       return {
         statusCode: 400,
         body: JSON.stringify({ error: "Invalid question" }),
+      };
+    }
+
+    /* ─────────────────────────────────────────────── */
+    /* 🚦 RATE LIMITING */
+    /* ─────────────────────────────────────────────── */
+
+    const ip = getClientIP(event);
+
+    if (isRateLimited(ip)) {
+      return {
+        statusCode: 429,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error: "Too many requests. Please slow down and try again shortly.",
+        }),
       };
     }
 
@@ -128,6 +203,21 @@ USER QUESTION:
 `;
 
     /* ─────────────────────────────────────────────── */
+    /* 🧠 RESPONSE CACHE */
+    /* ─────────────────────────────────────────────── */
+
+    const cacheKey = normalizeQuestion(question);
+    const cachedResponse = getCachedResponse(cacheKey);
+
+    if (cachedResponse) {
+      return {
+        statusCode: 200,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(cachedResponse),
+      };
+    }
+
+    /* ─────────────────────────────────────────────── */
     /* 6️⃣ AI CALL */
     /* ─────────────────────────────────────────────── */
     const aiResult = await model.generateContent(prompt);
@@ -193,14 +283,19 @@ USER QUESTION:
     /* ─────────────────────────────────────────────── */
     /* 9️⃣ RESPONSE */
     /* ─────────────────────────────────────────────── */
+    const finalResponse = {
+      video,
+      answer_html: answerHtml,
+      related_guides: aiData.related_guides || [],
+    };
+
+    // Save to cache
+    setCachedResponse(cacheKey, finalResponse);
+
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        video,
-        answer_html: answerHtml,
-        related_guides: aiData.related_guides || [],
-      }),
+      body: JSON.stringify(finalResponse),
     };
   } catch (error) {
     console.error("AI ERROR:", error);

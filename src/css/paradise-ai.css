@@ -169,7 +169,7 @@
 
 /* ===== AI Video Embed ===== */
 .message.ai.video {
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 
 .video-wrapper {
@@ -384,6 +384,7 @@
 /* ===== AI RESPONSE TYPOGRAPHY ===== */
 .message.ai h2,
 .message.ai h3,
-.message.ai p {
+.message.ai p,
+.message.ai ul li {
   color: white;
 }
