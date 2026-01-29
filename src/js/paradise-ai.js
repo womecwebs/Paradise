@@ -10,6 +10,111 @@ fetch("/_data/guides.json")
     ALL_GUIDES = [];
   });
 
+/* ===== STATE + STORAGE ===== */
+const STORAGE_KEY = "paradise_ai_chats";
+
+const AI_STATE = {
+  chats: [],
+  activeChatId: null,
+};
+
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(AI_STATE));
+}
+
+function loadState() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return;
+  try {
+    const parsed = JSON.parse(raw);
+    AI_STATE.chats = parsed.chats || [];
+    AI_STATE.activeChatId = parsed.activeChatId || null;
+  } catch {}
+}
+
+/* ===== CHAT CREATION LOGIC ===== */
+function createNewChat(firstMessage) {
+  const chat = {
+    id: Date.now().toString(),
+    title: generateChatTitle(firstMessage),
+    createdAt: Date.now(),
+    messages: [],
+  };
+
+  AI_STATE.chats.unshift(chat);
+  AI_STATE.activeChatId = chat.id;
+  saveState();
+  return chat;
+}
+
+/* ===== Title generator (UX-critical) ===== */
+function generateChatTitle(text) {
+  return text.replace(/[?.!]/g, "").slice(0, 40).trim();
+}
+
+/* ===== MESSAGE APPENDING (SAFE & CLEAN) ===== */
+function getActiveChat() {
+  return AI_STATE.chats.find((c) => c.id === AI_STATE.activeChatId);
+}
+
+function addMessage(role, content) {
+  const chat = getActiveChat();
+  if (!chat) return;
+
+  chat.messages.push({
+    role,
+    content,
+    timestamp: Date.now(),
+  });
+
+  saveState();
+}
+
+/* ===== RENDER CHAT HISTORY SIDEBAR ===== */
+function renderChatHistory() {
+  const list = document.getElementById("chatHistoryList");
+  if (!list) return;
+
+  list.innerHTML = "";
+
+  AI_STATE.chats.forEach((chat) => {
+    const li = document.createElement("li");
+    li.className =
+      "chat-history-item" +
+      (chat.id === AI_STATE.activeChatId ? " active" : "");
+    li.textContent = chat.title;
+
+    li.onclick = () => {
+      AI_STATE.activeChatId = chat.id;
+      saveState();
+      renderMessages();
+      renderChatHistory();
+    };
+
+    list.appendChild(li);
+  });
+}
+
+/* ===== RENDER CHAT MESSAGES ===== */
+function renderMessages() {
+  chat.innerHTML = "";
+  const chatData = getActiveChat();
+  if (!chatData) return;
+
+  chatData.messages.forEach((msg) => {
+    chat.innerHTML += `
+      <div class="message ${msg.role}">
+        <div class="${msg.role === "ai" ? "ai" : ""}">
+          ${msg.content}
+        </div>
+      </div>
+    `;
+  });
+
+  chat.style.display = "block";
+  emptyState.style.display = "none";
+}
+
 /* ===== Sidebar ===== */
 const sidebarToggleBtn = document.getElementById("sidebarToggle");
 
@@ -95,6 +200,12 @@ function renderRelatedGuides(aiGuides) {
 async function send() {
   const question = input.value.trim();
 
+  // Create chat if none exists
+  if (!AI_STATE.activeChatId) {
+    createNewChat(question);
+    renderChatHistory();
+  }
+
   // Guardrail: empty
   if (!question) return;
 
@@ -114,6 +225,8 @@ async function send() {
 
   // User message
   chat.innerHTML += `<div class="message user"><p class="color-secondary mt-70 bg-ai-accent p-20 rounded-lg">${question}</p></div>`;
+
+  addMessage("user", question);
 
   // Skeleton loading
   const loader = document.createElement("div");
@@ -140,6 +253,9 @@ async function send() {
       The AI service is temporarily unavailable. Please try again.
     </div>
   `;
+      addMessage("ai", data.answer_html);
+      renderChatHistory();
+
       return;
     }
 
@@ -206,3 +322,10 @@ input.addEventListener("keydown", (e) => {
     send();
   }
 });
+
+loadState();
+renderChatHistory();
+
+if (AI_STATE.activeChatId) {
+  renderMessages();
+}

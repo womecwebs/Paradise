@@ -546,47 +546,6 @@
     };
   }
 
-  /* ---------- LEAD MAGNET MODAL (FREE EBOOKS) ---------- */
-  function initLeadModal() {
-    const modal = document.getElementById("leadModal");
-    const frame = document.getElementById("beehiivFrame");
-    const closeBtn = modal?.querySelector(".close-modal");
-
-    if (!modal || !frame) return;
-
-    document.querySelectorAll("[data-open-lead]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const ebookSlug = btn.dataset.ebook;
-        if (!ebookSlug) return;
-
-        const redirectUrl = encodeURIComponent(
-          `https://paradize.life/.netlify/functions/download?ebook=${ebookSlug}`,
-        );
-
-        frame.src =
-          "https://subscribe-forms.beehiiv.com/3b7a92f9-e06c-41c9-a6db-0868df2b13ef" +
-          `?redirect_url=${redirectUrl}`;
-
-        modal.classList.remove("hidden");
-        modal.setAttribute("aria-hidden", "false");
-      });
-    });
-
-    closeBtn?.addEventListener("click", () => {
-      modal.classList.add("hidden");
-      modal.setAttribute("aria-hidden", "true");
-      frame.src = "";
-    });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.add("hidden");
-        modal.setAttribute("aria-hidden", "true");
-        frame.src = "";
-      }
-    });
-  }
-
   /* ---------- DOM READY ---------- */
   document.addEventListener("DOMContentLoaded", function () {
     initMenuToggle();
@@ -602,6 +561,5 @@
     initContentImageRotator();
     initEbookStack();
     initCookieConsent();
-    initLeadModal();
   });
 })();

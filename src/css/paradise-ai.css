@@ -92,7 +92,7 @@
 .ai-sidebar-item {
   display: flex;
   align-items: center;
-  padding: 1px 16px;
+  padding: 0 16px;
   color: var(--ai-text-muted);
   cursor: pointer;
   white-space: nowrap;
@@ -387,4 +387,64 @@
 .message.ai p,
 .message.ai ul li {
   color: white;
+}
+
+/* ===== CHAT HISTORY (SIDEBAR) 1 ===== */
+
+.ai-chat-history {
+  margin-top: 24px;
+  padding: 0 12px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ai-chat-history-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  font-size: 13px;
+  color: var(--ai-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#chatHistoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-history-item {
+  padding: 4px 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--ai-text-muted);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.chat-history-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ai-text-main);
+}
+
+.chat-history-item.active {
+  background: linear-gradient(
+    90deg,
+    rgba(77, 163, 255, 0.18),
+    rgba(77, 163, 255, 0.05)
+  );
+  color: var(--ai-text-main);
+}
+
+.chat-title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ai-sidebar.collapsed .ai-chat-history-header,
+.ai-sidebar.collapsed .chat-title {
+  display: none;
 }

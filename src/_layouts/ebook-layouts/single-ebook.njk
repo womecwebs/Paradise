@@ -113,14 +113,12 @@ footerType: none
     Buy for {{ currency }} {{ price }}
   </a>
 {% else %}
-  <button
+  <a
     class="price-btn"
-    data-open-lead
-    data-ebook="{{ slug }}"
-    aria-label="Download free ebook"
+    href="https://subscribe-forms.beehiiv.com/3b7a92f9-e06c-41c9-a6db-0868df2b13ef?redirect_url=https://paradize.life/.netlify/functions/download?ebook={{ slug }}"
   >
     Download Free
-  </button>
+  </a>
 {% endif %}
 
 
