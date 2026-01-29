@@ -18,6 +18,11 @@ const AI_STATE = {
   activeChatId: null,
 };
 
+/* ===== DOM REFERENCES (MUST COME EARLY) ===== */
+const input = document.getElementById("ai-input");
+const chat = document.getElementById("chat");
+const emptyState = document.getElementById("ai-emptyState");
+
 function saveState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(AI_STATE));
 }
@@ -159,11 +164,6 @@ function typeEffect() {
 }
 typeEffect();
 
-/* ===== AI Chat ===== */
-const input = document.getElementById("ai-input");
-const chat = document.getElementById("chat");
-const emptyState = document.getElementById("ai-emptyState");
-
 /* ===== Render Related Guides ===== */
 function renderRelatedGuides(aiGuides) {
   const container = document.getElementById("related-guides");
@@ -200,14 +200,14 @@ function renderRelatedGuides(aiGuides) {
 async function send() {
   const question = input.value.trim();
 
-  // Create chat if none exists
+  // Guardrail: empty
+  if (!question) return;
+
+  // Create chat only AFTER validation
   if (!AI_STATE.activeChatId) {
     createNewChat(question);
     renderChatHistory();
   }
-
-  // Guardrail: empty
-  if (!question) return;
 
   // Guardrail: too short
   if (question.length < 6) {
@@ -247,15 +247,25 @@ async function send() {
     loader.remove();
 
     // Guardrail: backend error
-    if (data.error) {
-      chat.innerHTML += `
-    <div class="message ai error">
-      The AI service is temporarily unavailable. Please try again.
-    </div>
-  `;
-      addMessage("ai", data.answer_html);
-      renderChatHistory();
+    //   if (data.error) {
+    //     chat.innerHTML += `
+    //   <div class="message ai error">
+    //     The AI service is temporarily unavailable. Please try again.
+    //   </div>
+    // `;
+    //     addMessage("ai", data.answer_html);
+    //     renderChatHistory();
 
+    //     return;
+    //   }
+
+    if (data.error) {
+      const errorMsg = "The AI service is temporarily unavailable.";
+      chat.innerHTML += `
+    <div class="message ai error">${errorMsg}</div>
+  `;
+      addMessage("ai", errorMsg);
+      renderChatHistory();
       return;
     }
 
@@ -266,11 +276,6 @@ async function send() {
       I couldn’t generate a reliable answer. Please rephrase your question.
     </div>
   `;
-      return;
-    }
-
-    if (data.error) {
-      chat.innerHTML += `<div class="message ai error">AI failed. Please try again.</div>`;
       return;
     }
 
@@ -298,6 +303,10 @@ async function send() {
         ${data.answer_html}
       </div>
     `;
+
+    addMessage("ai", data.answer_html);
+    renderChatHistory();
+
     /* ===== Related Guides ===== */
     renderRelatedGuides(data.related_guides);
 
@@ -326,6 +335,10 @@ input.addEventListener("keydown", (e) => {
 loadState();
 renderChatHistory();
 
-if (AI_STATE.activeChatId) {
-  renderMessages();
-}
+// DO NOT auto-open any chat
+AI_STATE.activeChatId = null;
+saveState();
+
+// Show empty state explicitly
+chat.style.display = "none";
+emptyState.style.display = "flex";
